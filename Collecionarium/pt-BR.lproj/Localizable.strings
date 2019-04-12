@@ -1,0 +1,82 @@
+/*
+ Localizable.strings
+ Collecionarium
+ 
+ Created by Rubens Gondek on 10/16/15.
+ Copyright © 2015 BEPiD. All rights reserved.
+ */
+
+DTT_STRING = "Texto pequeno";
+DTT_TEXT = "Texto Grande";
+DTT_NUMBER = "Número";
+DTT_YEAR = "Ano";
+DTT_DATE = "Data";
+
+DONE = "Pronto";
+EDIT = "Editar";
+CANCEL = "Cancelar";
+
+CAMERA = "Câmera";
+PHOTO_LIBRARY = "Biblioteca de fotos";
+
+YES = "Sim";
+NO = "Não";
+
+ITEMS = "Itens";
+INFORMATION = "Informação";
+INFORMATIONS = "Informações";
+INFORMATIONS_ITEM = "Informações dos itens";
+TYPE = "Tipo";
+YEAR = "Ano";
+PHOTOS = "Fotos";
+
+CUSTOM = "Personalizada";
+
+WARNING = "Aviso";
+
+LEAVE_WITHOUT_SAVE = "Você deseja mesmo sair sem salvar?";
+ONLY_TEN = "Você só pode adicionar 10 informações!";
+FILL_THE_FIELDS = "Preencha os campos corretamente!";
+FILL_INFO_NAME = "Preencha o nome da informação corretamente!";
+CHOOSE_INFO_TYPE = "Escolha o tipo da informação!";
+SAVE_NO_PHOTOS = "Deseja mesmo salvar o item sem fotos?";
+
+DELETE_ITEM = "Excluir Item";
+DELETE_PHOTO = "Excluir Foto";
+
+DEL_PHOTO_CONFIRM = "Deseja mesmo excluir essa foto?";
+
+NO_COLLECTION = "Você não tem nenhuma coleção, clique no botão '+' para adicionar uma";
+NO_ITEM = "Você não tem nenhum item, clique no botão '+' para adicionar um";
+
+ADD_PHOTO = "Adicionar foto";
+PHOTO_SOURCE = "Escolha a fonte da foto";
+
+SHARE_FACEBOOK = "Compartilhar no facebook";
+
+EVENT_ADDED = "Anúncio adicionado!";
+EVENT_REMOVED = "Anúncio removido!";
+
+ITEM_REMOVED_FROM_TRADE = "Item removido do mural";
+
+SHARED_COLLECTION = "Coleção compartilhada";
+NEW_ITEM = "Novo item adicionado";
+ITEM_SALE = "Item à venda";
+ITEM_TRADE = "Item disponível para troca";
+
+ADD_SALE = "Vender";
+ADD_TRADE = "Trocar";
+
+REMOVE_SALE = "Remover item de venda";
+REMOVE_TRADE = "Remover item da troca";
+
+INVALID_LOGIN = "Login e/ou senha inválidos";
+SUCCESS = "Sucesso";
+USER_CREATED = "O usuário \(username) foi criado";
+
+LOGOUT = "Deseja mesmo sair?";
+
+PASSWORD_6 = "A senha deve ter pelo menos 6 letras";
+PASSWORD_MATCH = "As senhas não coincidem";
+
+
