@@ -1,18 +1,11 @@
 //
-//  PredefinedCollectionsView.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 9/29/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class PredefinedCollectionsView: UICollectionViewController, UICollectionViewDelegateFlowLayout, PDCParseDelegate {
+class PredefinedCollectionsView: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    var collections: [PFObject]! = []
-    let pdcParse = PDCollectionParse.sharedInstance
     let cManager = CollectionManager.sharedInstance
     var loadingView: UIView!
     var activity: UIActivityIndicatorView!
@@ -21,97 +14,77 @@ class PredefinedCollectionsView: UICollectionViewController, UICollectionViewDel
         super.viewDidLoad()
 
         self.clearsSelectionOnViewWillAppear = false
-        
-        pdcParse.delegate = self
-        
+
         configureLoading()
-        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        pdcParse.getAll()
-        loadingView.hidden = false
+    override func viewWillAppear(_ animated: Bool) {
+        loadingView.isHidden = false
         activity.startAnimating()
     }
     
     func configureLoading() {
-        loadingView = UIView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height-64))
+        loadingView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        activity = UIActivityIndicatorView(style: .whiteLarge)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
-        loadingView.hidden = true
+        loadingView.isHidden = true
         self.collectionView?.addSubview(loadingView)
-    }
-    
-    // MARK: - Parse Delegate 
-    func didGetPDCollections(objs: [PFObject]) {
-        collections = objs
-        collectionView?.reloadData()
-        activity.stopAnimating()
-        loadingView.hidden = true
-    }
-    
-    func didFinishWithError(msg: String) {
-        print(msg)
-        activity.stopAnimating()
-        loadingView.hidden = true
     }
 
     // MARK: - Flow layout Delegate
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let x = self.view.frame.width/3 - 10
         return CGSize(width: x, height: x+30)
     }
     
     // MARK: - CollectionView Data Source
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collections.count + 1
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PreDefCell", forIndexPath: indexPath) as! PreDefCell
-        if indexPath.row == 0 {
-            cell.name = NSLocalizedString("CUSTOM", comment: "")
-            cell.imgName = "Custom"
-        }
-        else {
-            cell.name = collections[indexPath.row-1]["name"] as! String
-            cell.imgName = collections[indexPath.row-1]["imageName"] as! String
-        }
-        
-        // Configure the cell
-        return cell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreDefCell", for: indexPath) as! PreDefCell
+//        if indexPath.row == 0 {
+//            cell.name = NSLocalizedString("CUSTOM", comment: "")
+//            cell.imgName = "Custom"
+//        }
+//        else {
+//            cell.name = collections[indexPath.row-1]["name"] as! String
+//            cell.imgName = collections[indexPath.row-1]["imageName"] as! String
+//        }
+//
+//        // Configure the cell
+        return UICollectionViewCell()
     }
     
     
     // MARK: - Navigation
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            performSegueWithIdentifier("CustomCollection", sender: nil)
+            performSegue(withIdentifier: "CustomCollection", sender: nil)
         }
     }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "PreDefSegue" {
-            let item = (collectionView?.indexPathsForSelectedItems()?.first?.item)!
-            if item == 0 {
-                return false
-            }
-        }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "PreDefSegue" {
+//            let item = (collectionView?.indexPathsForSelectedItems?.first?.item)!
+//            if item == 0 {
+//                return false
+//            }
+//        }
         return true
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "PreDefSegue" {
-            let nColl = segue.destinationViewController as! NewCollectionTableView
-            let item = (collectionView?.indexPathsForSelectedItems()?.first?.item)!
-            nColl.preDefColl = collections[item-1]
-        }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "PreDefSegue" {
+//            let nColl = segue.destination as! NewCollectionTableView
+//            let item = (collectionView?.indexPathsForSelectedItems()?.first?.item)!
+//        }
     }
 }

@@ -1,9 +1,5 @@
 //
-//  Hey.swift
-//  BigApp
-//
-//  Created by Rubens Gondek on 8/17/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import Foundation
@@ -49,7 +45,7 @@ public struct reuseID {
 }
 
 public func getIMG(img: String) -> UIImage?{
-    return UIImage(contentsOfFile: img.stringByAppendingString(".jpeg"))
+    return UIImage(contentsOfFile: img.appendingFormat(".jpeg"))
 }
 
 class Hey {

@@ -3,7 +3,7 @@
 //  Collecionarium
 //
 //  Created by Rubens Gondek on 9/29/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit

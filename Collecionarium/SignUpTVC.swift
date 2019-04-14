@@ -1,19 +1,14 @@
 //
-//  SignUpTVC.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 11/16/15.
-//  Copyright © 2015 Gondek. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
-import Parse
 
 @objc protocol SignUpDelegate {
-    optional func didSignUp(user: String)
+    @objc optional func didSignUp(user: String)
 }
 
-class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UParseDelegate {
+class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPass1: UITextField!
@@ -24,10 +19,6 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     var activity: UIActivityIndicatorView!
 
     var delegate: SignUpDelegate?
-    
-    let uParse = ParseUser.sharedInstance
-    
-    var photo: PFFile?
     
     @IBOutlet weak var photoBtn: DesignButton!
     
@@ -42,42 +33,42 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func configureLoading() {
-        loadingView = UIView(frame: CGRectMake(0, 0, tableView.frame.width, tableView.frame.height-64))
+        loadingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        activity = UIActivityIndicatorView(style: .whiteLarge)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
-        loadingView.hidden = true
+        loadingView.isHidden = true
         self.tableView.addSubview(loadingView)
     }
     
     func endRefresh(error: Bool) {
-        loadingView.hidden = true
+        loadingView.isHidden = true
         activity.stopAnimating()
-        if !error {
-            delegate?.didSignUp!(txtUsername.text!)
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+//        if !error {
+//            delegate?.didSignUp!(txtUsername.text!)
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//        }
     }
     
     func didSignUp(username: String) {
-        let alert = UIAlertController(title: NSLocalizedString("SUCCESS", comment: ""), message: NSLocalizedString("USER_CREATED", comment: ""), preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            self.endRefresh(false)
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: NSLocalizedString("SUCCESS", comment: ""), message: NSLocalizedString("USER_CREATED", comment: ""), preferredStyle: .Alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+//            self.endRefresh(false)
+//        }))
+//        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func didSignUpWithError(error: String) {
-        let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: "\(error)", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            self.endRefresh(true)
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: "\(error)", preferredStyle: .Alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+//            self.endRefresh(true)
+//        }))
+//        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func cancelBtn(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func addBtn(sender: AnyObject) {
@@ -85,24 +76,24 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-        if txtPass1.text == txtPass2.text {
-            if txtPass1.text?.characters.count >= 6 {
-                loadingView.hidden = false
-                activity.startAnimating()
-                uParse.delegate = self
-                uParse.newUser(txtUsername.text!, pass: txtPass1.text!, email: txtEmail.text!, photo: photo)
-            }
-            else {
-                let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("PASSWORD_6", comment: ""), preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-        }
-        else {
-            let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("PASSWORD_MATCH", comment: ""), preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+//        if txtPass1.text == txtPass2.text {
+//            if txtPass1.text?.characters.count >= 6 {
+//                loadingView.hidden = false
+//                activity.startAnimating()
+//                uParse.delegate = self
+//                uParse.newUser(txtUsername.text!, pass: txtPass1.text!, email: txtEmail.text!, photo: photo)
+//            }
+//            else {
+//                let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("PASSWORD_6", comment: ""), preferredStyle: .Alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//                self.presentViewController(alert, animated: true, completion: nil)
+//            }
+//        }
+//        else {
+//            let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("PASSWORD_MATCH", comment: ""), preferredStyle: .Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
     }
     
     // MARK: TextField
@@ -119,38 +110,38 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Image Picker
     func pickImage() {
-        let imgPicker = UIImagePickerController()
-        imgPicker.delegate = self
-        imgPicker.editing = true
-        imgPicker.allowsEditing = true
-        
-        let aSheet = UIAlertController(title: NSLocalizedString("ADD_PHOTO", comment: ""), message: NSLocalizedString("PHOTO_SOURCE", comment: ""), preferredStyle: .ActionSheet)
-        aSheet.addAction(UIAlertAction(title: NSLocalizedString("CAMERA", comment: ""), style: .Default, handler: { (al: UIAlertAction) -> Void in
-            imgPicker.sourceType = .Camera
-            imgPicker.showsCameraControls = true
-            self.presentViewController(imgPicker, animated: true, completion: nil)
-        }))
-        aSheet.addAction(UIAlertAction(title: NSLocalizedString("PHOTO_LIBRARY", comment: ""), style: .Default, handler: { (al: UIAlertAction) -> Void in
-            imgPicker.sourceType = .PhotoLibrary
-            self.presentViewController(imgPicker, animated: true, completion: nil)
-        }))
-        aSheet.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: ""), style: .Cancel, handler: nil))
-        aSheet.popoverPresentationController?.sourceView = tableView.viewWithTag(0)
-        self.presentViewController(aSheet, animated: true, completion: nil)
+//        let imgPicker = UIImagePickerController()
+//        imgPicker.delegate = self
+//        imgPicker.editing = true
+//        imgPicker.allowsEditing = true
+//
+//        let aSheet = UIAlertController(title: NSLocalizedString("ADD_PHOTO", comment: ""), message: NSLocalizedString("PHOTO_SOURCE", comment: ""), preferredStyle: .ActionSheet)
+//        aSheet.addAction(UIAlertAction(title: NSLocalizedString("CAMERA", comment: ""), style: .Default, handler: { (al: UIAlertAction) -> Void in
+//            imgPicker.sourceType = .Camera
+//            imgPicker.showsCameraControls = true
+//            self.presentViewController(imgPicker, animated: true, completion: nil)
+//        }))
+//        aSheet.addAction(UIAlertAction(title: NSLocalizedString("PHOTO_LIBRARY", comment: ""), style: .Default, handler: { (al: UIAlertAction) -> Void in
+//            imgPicker.sourceType = .PhotoLibrary
+//            self.presentViewController(imgPicker, animated: true, completion: nil)
+//        }))
+//        aSheet.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: ""), style: .Cancel, handler: nil))
+//        aSheet.popoverPresentationController?.sourceView = tableView.viewWithTag(0)
+//        self.presentViewController(aSheet, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        guard let img = info[UIImagePickerControllerEditedImage] else {
-            return
-        }
-        
-        let jpegData = UIImageJPEGRepresentation(img as! UIImage, 0.0)
-        
-        photo = PFFile(data: jpegData!)
-        photoBtn.setBackgroundImage(UIImage(data: jpegData!), forState: .Normal)
-        photoBtn.setTitle("", forState: .Normal)
-        
-        dismissViewControllerAnimated(true, completion: nil)
+//        guard let img = info[UIImagePickerControllerEditedImage] else {
+//            return
+//        }
+//
+//        let jpegData = UIImageJPEGRepresentation(img as! UIImage, 0.0)
+//
+//        photo = PFFile(data: jpegData!)
+//        photoBtn.setBackgroundImage(UIImage(data: jpegData!), forState: .Normal)
+//        photoBtn.setTitle("", forState: .Normal)
+//
+//        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

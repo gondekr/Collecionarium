@@ -1,9 +1,5 @@
 //
-//  ItemDetailCell.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 10/7/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +13,7 @@ class ItemDetailCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         super.setSelected(false, animated: true)
 
@@ -27,12 +23,12 @@ class ItemDetailCell: UITableViewCell {
     // MARK: - Public API
     var fieldName : String? {
         didSet {
-            didSetName(fieldName!)
+            didSetName(name: fieldName!)
         }
     }
     var value : String? {
         didSet {
-            didSetValue(value!)
+            didSetValue(value: value!)
         }
     }
 

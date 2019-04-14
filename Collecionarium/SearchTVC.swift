@@ -1,22 +1,13 @@
 //
-//  SearchTVC.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 11/11/15.
-//  Copyright © 2015 Gondek. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class SearchTVC: UITableViewController, UISearchBarDelegate, CParseDelegate {
-
+class SearchTVC: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var search: UISearchBar!
     @IBOutlet weak var searchView: UIView!
-    
-    let cParse = CollectionParse.sharedInstance
-    
-    var collections: [PFObject] = []
+
     var loadingView: UIView!
     var activity: UIActivityIndicatorView!
     
@@ -26,86 +17,65 @@ class SearchTVC: UITableViewController, UISearchBarDelegate, CParseDelegate {
         configureLoading()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        cParse.delegate = self
-    }
-    
     func configureLoading() {
-        loadingView = UIView(frame: CGRectMake(0, 0, tableView.frame.width, tableView.frame.height-64))
+        loadingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        activity = UIActivityIndicatorView(style: .whiteLarge)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
-        loadingView.hidden = true
+        loadingView.isHidden = true
         self.tableView.addSubview(loadingView)
     }
     
     func endRefresh() {
-        loadingView.hidden = true
+        loadingView.isHidden = true
         activity.stopAnimating()
         tableView.reloadData()
     }
-    
-    // MARK: - Parse Delegate
-    func didGetCollections(objs: [PFObject]) {
-        collections = objs
-        endRefresh()
-    }
-    
-    func didFinishWithError(msg: String) {
-        print(msg)
-        endRefresh()
-    }
 
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         search.showsCancelButton = false
         search.resignFirstResponder()
     }
     
-    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         search.showsCancelButton = true
         return true
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        cParse.getByName(searchBar.text!)
-        
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         search.showsCancelButton = false
         search.resignFirstResponder()
-        loadingView.hidden = false
+        loadingView.isHidden = false
         activity.startAnimating()
     }
     
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collections.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath)
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         
-        let obj = collections[indexPath.row]
-        
-        cell.textLabel?.text = obj["name"] as? String
-        let user = obj["user"] as! PFObject
-        do {
-            try user.fetchIfNeeded()
-            cell.detailTextLabel?.text = user["username"] as? String
-        } catch {}
+//        cell.textLabel?.text = obj["name"] as? String
+//        let user = obj["user"] as! PFObject
+//        do {
+//            try user.fetchIfNeeded()
+//            cell.detailTextLabel?.text = user["username"] as? String
+//        } catch {}
         
         return cell
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "userCollection" {
-            let view = segue.destinationViewController as! UserCollectionVC
+            let view = segue.destination as! UserCollectionVC
             let index = tableView.indexPathForSelectedRow?.row
-            view.userColl = collections[index!]
-            view.user = collections[index!]["user"] as? PFObject
         }
     }
 }

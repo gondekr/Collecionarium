@@ -1,9 +1,5 @@
 //
-//  ItemBoolCell.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 10/20/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
@@ -12,13 +8,10 @@ class ItemBoolCell: ItemDetailCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     // MARK: - Outlets
@@ -34,10 +27,10 @@ class ItemBoolCell: ItemDetailCell {
     }
     
     override func didSetValue(value: String) {
-        sw.on = (value == "true")
+        sw.isOn = (value == "true")
     }
     
     override func updateValue() {
-        self.value = "\(sw.on)"
+        self.value = "\(sw.isOn)"
     }
 }

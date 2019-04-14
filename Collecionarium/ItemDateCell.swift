@@ -1,16 +1,12 @@
 //
-//  ItemDateCell.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 10/7/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
 
 class ItemDateCell: ItemDetailCell, DatePickerDelegate {
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
@@ -22,23 +18,23 @@ class ItemDateCell: ItemDetailCell, DatePickerDelegate {
     }
     
     override func didSetValue(value: String) {
-        dateBtn.setTitle(value, forState: .Normal)
+        dateBtn.setTitle(value, for: .normal)
     }
     
     func didPickDate(date: String) {
-        dateBtn.setTitle(date, forState: .Normal)
+        dateBtn.setTitle(date, for: .normal)
     }
     
     override func updateValue() {
-        self.value = dateBtn.titleForState(.Normal)
+        self.value = dateBtn.title(for: .normal)
     }
     
     @IBOutlet weak var dateBtn: UIButton!
     @IBOutlet weak var lblFieldName: UILabel!
     @IBAction func pickDate(sender: AnyObject) {
-        let dateView = viewController!.storyboard?.instantiateViewControllerWithIdentifier("DatePickerVC") as! DatePickerVC
+        let dateView = viewController!.storyboard?.instantiateViewController(withIdentifier: "DatePickerVC") as! DatePickerVC
         dateView.delegate = self
-        viewController?.presentViewController(dateView, animated: true, completion: nil)
+        viewController?.present(dateView, animated: true, completion: nil)
         self.setSelected(true, animated: true)
     }
 

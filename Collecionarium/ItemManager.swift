@@ -1,14 +1,9 @@
 //
-//  ItemManager.swift
-//  BigApp
-//
-//  Created by Rubens Gondek on 8/24/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import CoreData
 import UIKit
-import Parse
 
 class ItemManager {
     
@@ -17,14 +12,14 @@ class ItemManager {
     
     // Default Methods
     lazy var managedObjectContext: NSManagedObjectContext = {
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
         }()
     
     // Create Item
     func newItem() -> Item {
-        let item = NSEntityDescription.insertNewObjectForEntityForName(ItemManager.entityName, inManagedObjectContext: managedObjectContext) as! Item
-        item.id = fetchItems().count
+        let item = NSEntityDescription.insertNewObject(forEntityName: ItemManager.entityName, into: managedObjectContext) as! Item
+        item.id = fetchItems().count as NSNumber
         return item
     }
     
@@ -48,10 +43,10 @@ class ItemManager {
     
     // Read Items
     func fetchItems() -> Array<Item> {
-        let fetchRequest = NSFetchRequest(entityName: ItemManager.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ItemManager.entityName)
         
         do {
-            let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
             if let results = fetchedResults as? [Item] {
                 return results
@@ -64,10 +59,10 @@ class ItemManager {
     }
     
     func fetchItems(collect: Collection) -> Array<Item> {
-        let fetchRequest = NSFetchRequest(entityName: ItemManager.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ItemManager.entityName)
         fetchRequest.predicate = NSPredicate(format: "collection == %@", collect)
         do {
-            let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
             if let results = fetchedResults as? [Item] {
                 return results;
@@ -80,10 +75,10 @@ class ItemManager {
     }
     
     func getItem(id: Int) -> Item{
-        let fetchRequest = NSFetchRequest(entityName: ItemManager.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ItemManager.entityName)
         fetchRequest.predicate = NSPredicate(format: "id == %d", id)
         do {
-            let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
             if let results = fetchedResults as? [Item] {
                 return results.first!;
@@ -98,24 +93,24 @@ class ItemManager {
     
     // Delete Items
     func deleteItem(item: Item) {
-        managedObjectContext.deleteObject(item)
+        managedObjectContext.delete(item)
         save()
     }
     
     // Update Field
     func deleteField(collect: Collection, index: Int) {
-        let items = fetchItems(collect)
+        let items = fetchItems(collect: collect)
         for item in items {
-            item.values.removeAtIndex(index)
+            item.values.remove(at: index)
         }
-        if collect.titleIndex == index {
+        if collect.titleIndex?.intValue == index {
             collect.titleIndex = -1
         }
         save()
     }
     
     func addField(collect: Collection) {
-        let items = fetchItems(collect)
+        let items = fetchItems(collect: collect)
         for item in items {
             item.values.append("")
         }
@@ -125,8 +120,8 @@ class ItemManager {
 
     // Update Photos
     func deletePhoto(item: Item, photoIndex: Int) -> Item {
-        item.photos.removeAtIndex(photoIndex)
-        item.subtitle.removeAtIndex(photoIndex)
+        item.photos.remove(at: photoIndex)
+        item.subtitle.remove(at: photoIndex)
         save()
         
         return item
@@ -141,10 +136,10 @@ class ItemManager {
 //    }
     
     func defineCover(item: Item, photoIndex: Int) -> Item {
-        item.photos.insert(item.photos[photoIndex], atIndex: 0)
-        item.photos.removeAtIndex(photoIndex+1)
-        item.subtitle.insert(item.subtitle[photoIndex], atIndex: 0)
-        item.subtitle.removeAtIndex(photoIndex+1)
+        item.photos.insert(item.photos[photoIndex], at: 0)
+        item.photos.remove(at: photoIndex+1)
+        item.subtitle.insert(item.subtitle[photoIndex], at: 0)
+        item.subtitle.remove(at: photoIndex+1)
         save()
         
         return item

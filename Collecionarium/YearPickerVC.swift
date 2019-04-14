@@ -1,19 +1,14 @@
 //
-//  YearPickerVC.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 11/18/15.
-//  Copyright © 2015 Gondek. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
 
 @objc protocol YearPickerDelegate {
-    optional func didPickYear(year: String)
+    @objc optional func didPickYear(year: String)
 }
 
 class YearPickerVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
     @IBOutlet weak var pickerView: UIPickerView!
     
     var years: [String] = []
@@ -39,21 +34,21 @@ class YearPickerVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     
     @IBAction func doneBtn(sender: AnyObject) {
-        let year =  years[pickerView!.selectedRowInComponent(0)]
-        delegate!.didPickYear!(year)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let year =  years[pickerView!.selectedRow(inComponent: 0)]
+        delegate!.didPickYear!(year: year)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: Picker View
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return years.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return years[row]
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 }

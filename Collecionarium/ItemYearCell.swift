@@ -1,16 +1,12 @@
 //
-//  ItemYearCell.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 9/30/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
 
 class ItemYearCell: ItemDetailCell, YearPickerDelegate {
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -23,23 +19,23 @@ class ItemYearCell: ItemDetailCell, YearPickerDelegate {
     }
     
     override func didSetValue(value: String) {
-        yearBtn.setTitle(value, forState: .Normal)
+        yearBtn.setTitle(value, for: .normal)
     }
     
     func didPickYear(year: String) {
-        yearBtn.setTitle(year, forState: .Normal)
+        yearBtn.setTitle(year, for: .normal)
     }
     
     override func updateValue() {
-        self.value = yearBtn.titleForState(.Normal)
+        self.value = yearBtn.title(for: .normal)
     }
     
     @IBOutlet weak var lblFieldName: UILabel!
     @IBOutlet weak var yearBtn: UIButton!
     @IBAction func selectYear(sender: UIButton) {
-        let yearView = viewController!.storyboard?.instantiateViewControllerWithIdentifier("YearPickerVC") as! YearPickerVC
+        let yearView = viewController!.storyboard?.instantiateViewController(withIdentifier: "YearPickerVC") as! YearPickerVC
         yearView.delegate = self
-        viewController?.presentViewController(yearView, animated: true, completion: nil)
+        viewController?.present(yearView, animated: true, completion: nil)
         self.setSelected(true, animated: true)
     }
 }
