@@ -1,13 +1,8 @@
 //
-//  UserItemVC.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 11/12/15.
-//  Copyright © 2015 Gondek. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
-import Parse
 import MessageUI
 
 class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate {
@@ -21,27 +16,22 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     var loadingView: UIView!
     var activity: UIActivityIndicatorView!
     
-    var item: PFObject?
-    var user: PFObject!
-    var coll: PFObject?
-    
     var fields: [String]! = []
     var values: [String]! = []
-    var photos: [PFFile]! = []
     var trade: Bool! = false
     
     func configureLoading() {
-        loadingView = UIView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
+        loadingView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        activity = UIActivityIndicatorView(style: .whiteLarge)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
-        loadingView.hidden = true
+        loadingView.isHidden = true
         self.collectionView.addSubview(loadingView)
     }
     
     func endRefresh() {
-        loadingView.hidden = true
+        loadingView.isHidden = true
         activity.stopAnimating()
         collectionView.reloadData()
         tableView.reloadData()
@@ -51,40 +41,19 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         super.viewDidLoad()
         
         configureLoading()
-        loadingView.hidden = false
+        loadingView.isHidden = false
     
         activity.startAnimating()
-        do {
-            try item?.fetchIfNeeded()
-            values = item!["values"] as! [String]
-            photos = item!["photos"] as! [PFFile]
-            try coll?.fetchIfNeeded()
-            fields = coll!["fields"] as! [String]
-            user = coll!["user"] as! PFObject
-            try user.fetchIfNeeded()
-            pageIndicator.numberOfPages = photos.count
-            pageIndicator.currentPage = 0
-            endRefresh()
-        }
-        catch {
-            print("Não fetchou alguma coisa")
-            fields = []
-            values = []
-            endRefresh()
-        }
-        
-        
-        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        getBtn.hidden = !trade
+    override func viewWillAppear(_ animated: Bool) {
+        getBtn.isHidden = !trade
     }
 
     @IBAction func sendEmail(sender: AnyObject) {
         let mail = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mail, animated: true, completion: nil)
+            self.present(mail, animated: true, completion: nil)
         } else {
             self.showSendMailErrorAlert()
         }
@@ -93,7 +62,6 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients([user["email"] as! String])
         mailComposerVC.setSubject("EU QUERO! - Collecionarium")
         mailComposerVC.setMessageBody("Estou interessado no seu item e gostaria de obter mais informações", isHTML: false)
         
@@ -101,23 +69,18 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .Alert)
-        sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(sendMailErrorAlert, animated: true, completion: nil)
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Scroll View
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageIndicator.currentPage = Int(collectionView.contentOffset.x / collectionView.frame.size.width)
     }
     
@@ -126,20 +89,17 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fields.count
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return NSLocalizedString("INFORMATIONS", comment: "")
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("userItemInfoCell", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = fields[indexPath.row]
-        cell.detailTextLabel?.text = values[indexPath.row]
-        
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userItemInfoCell", for: indexPath)
+
         return cell
     }
     
@@ -150,30 +110,22 @@ class UserItemVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoCell", forIndexPath: indexPath) as! UserItemPhotoCell
-        
-        cell.photo = photos[indexPath.row]
-        
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath)
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let x = (collectionView.frame.size.width - collectionView.frame.height)/2
         return UIEdgeInsets(top: 0, left: x, bottom: 0, right: x)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return collectionView.frame.width-collectionView.frame.height
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let x = collectionView.frame.height
-        return CGSize(width: x, height: x)
     }
     
     /*

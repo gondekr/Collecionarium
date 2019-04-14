@@ -1,15 +1,11 @@
 //
-//  DatePickerVC.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 11/18/15.
-//  Copyright © 2015 Gondek. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
 
 @objc protocol DatePickerDelegate {
-    optional func didPickDate(date: String)
+    @objc optional func didPickDate(date: String)
 }
 
 class DatePickerVC: UIViewController {
@@ -21,7 +17,7 @@ class DatePickerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        datePicker.datePickerMode = .Date
+        datePicker.datePickerMode = .date
         // Do any additional setup after loading the view.
     }
 
@@ -33,11 +29,11 @@ class DatePickerVC: UIViewController {
     @IBAction func doneBtn(sender: AnyObject) {
         let date = datePicker.date
         
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         
-        delegate?.didPickDate!(formatter.stringFromDate(date))
-        self.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.didPickDate!(date: formatter.string(from: date))
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

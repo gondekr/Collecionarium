@@ -1,9 +1,5 @@
 //
-//  TitleFieldCell.swift
-//  BigApp
-//
-//  Created by Rubens Gondek on 9/14/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +13,7 @@ class TitleFieldCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

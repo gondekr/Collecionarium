@@ -1,13 +1,8 @@
 //
-//  EventCell.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 10/30/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
-import Parse
 
 class EventCell: UITableViewCell {
 
@@ -23,41 +18,12 @@ class EventCell: UITableViewCell {
                   UIColor(red: 247/255, green: 202/255, blue: 24/255, alpha: 1),
                   UIColor(red: 246/255, green: 71/255, blue: 71/255, alpha: 1)]
     
-    let pH = ParseHelper.sharedInstance
-    
-    var event: PFObject? {
-        didSet {
-            eventName.text = NSLocalizedString((event!["name"] as! String), comment: "")
-            collectionName.text = event!["collectionName"] as? String
-            let type = event!["type"] as! Int
-            if type == 3 {
-                imgItem.image = UIImage(named: "hue")
-            }
-            else {
-                imgItem.image = UIImage(named: "noimage")
-            }
-            imgType.image = UIImage(named: "EventType\(type)")
-            imgType.borderColor = colors[type]
-            cellBody.borderColor = colors[type]
-            userName.text = event!["userName"] as? String
-            let photo = event?["itemPhoto"]
-            if photo != nil {
-                (photo as! PFFile).getDataInBackgroundWithBlock { (data, error) -> Void in
-                    if error == nil {
-                        self.imgItem.image = UIImage(data: data!)
-                    }
-                }
-            }
-        }
-    }
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

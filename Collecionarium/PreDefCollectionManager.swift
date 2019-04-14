@@ -1,9 +1,5 @@
 //
-//  PreDefCollectionManager.swift
-//  Collecionarium
-//
-//  Created by Rubens Gondek on 9/29/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import CoreData
@@ -35,13 +31,13 @@ class PreDefCollectionManager {
     let title  = [1,0,1,0,0,0]
 
     lazy var managedObjectContext: NSManagedObjectContext = {
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
         }()
     
     func newPreDefCollection() -> PreDefCollection {
-        let coll = (NSEntityDescription.insertNewObjectForEntityForName(PreDefCollectionManager.entityName, inManagedObjectContext: managedObjectContext) as? PreDefCollection)!
-        coll.id = fetchPreDefCollections().count
+        let coll = (NSEntityDescription.insertNewObject(forEntityName: PreDefCollectionManager.entityName, into: managedObjectContext) as? PreDefCollection)!
+        coll.id = fetchPreDefCollections().count as NSNumber
         return coll
     }
     
@@ -54,10 +50,10 @@ class PreDefCollectionManager {
     }
     
     func fetchPreDefCollections() -> Array<PreDefCollection> {
-        let fetchRequest = NSFetchRequest(entityName: PreDefCollectionManager.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: PreDefCollectionManager.entityName)
         
         do {
-            let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
             if let results = fetchedResults as? [PreDefCollection] {
                 return results;
@@ -70,14 +66,14 @@ class PreDefCollectionManager {
     }
     
     func deletePreDefCollection(coll: PreDefCollection) {
-        managedObjectContext.deleteObject(coll)
+        managedObjectContext.delete(coll)
         save()
     }
     
     func deleteAllPreDefCollections() {
         let predefs = fetchPreDefCollections()
         for pdc in predefs {
-            deletePreDefCollection(pdc)
+            deletePreDefCollection(coll: pdc)
         }
     }
     
@@ -86,7 +82,7 @@ class PreDefCollectionManager {
             let coll = newPreDefCollection()
             coll.name = names[i]
             coll.fields = fields[i]
-            coll.titleIndex = title[i]
+            coll.titleIndex = title[i] as NSNumber
             for type in types[i] {
                 coll.types.append(dataTypes[type])
             }

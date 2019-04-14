@@ -3,7 +3,7 @@
 //  BigApp
 //
 //  Created by Rubens Gondek on 8/27/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit

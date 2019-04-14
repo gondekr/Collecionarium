@@ -1,29 +1,23 @@
 //
-//  CollectionManager.swift
-//  BigApp
-//
 //  Created by Rubens Gondek.
 //
 
 import CoreData
 import UIKit
-import Parse
 
 class CollectionManager {
-    
     static let sharedInstance = CollectionManager()
-    let iParse = ItemParse.sharedInstance
     let iManager = ItemManager.sharedInstance
     static let entityName = "Collection"
     
     lazy var managedObjectContext: NSManagedObjectContext = {
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
         }()
     
     func newCollection() -> Collection {
-        let coll = (NSEntityDescription.insertNewObjectForEntityForName(CollectionManager.entityName, inManagedObjectContext: managedObjectContext) as? Collection)!
-        coll.id = fetchCollections().count
+        let coll = (NSEntityDescription.insertNewObject(forEntityName: CollectionManager.entityName, into: managedObjectContext) as? Collection)!
+        coll.id = fetchCollections().count as NSNumber
         return coll
     }
     
@@ -41,7 +35,7 @@ class CollectionManager {
         coll.name = name
         coll.types = types
         coll.fields = fields
-        coll.titleIndex = titleIndex
+        coll.titleIndex = titleIndex as NSNumber
         save()
         return (coll,())
     }
@@ -55,13 +49,13 @@ class CollectionManager {
     }
     
     func fetchCollections() -> Array<Collection> {
-        let fetchRequest = NSFetchRequest(entityName: CollectionManager.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: CollectionManager.entityName)
         
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         do {
-            let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
             if let results = fetchedResults as? [Collection] {
                 return results;
@@ -74,28 +68,14 @@ class CollectionManager {
     }
     
     func deleteCollection(coll: Collection) {
-        managedObjectContext.deleteObject(coll)
+        managedObjectContext.delete(coll)
         save()
-    }
-    
-    func addItemsToParse(cloudColl: PFObject, coll: Collection) {
-        let items = iManager.fetchItems(coll)
-        for it in items {
-            var ph: [PFFile] = []
-            for p in it.photos {
-                ph.append(PFFile(data: p)!)
-            }
-            
-            iParse.newItem(it.values, ph: ph, subs: it.subtitle, coll: cloudColl)
-            
-            iManager.deleteItem(it)
-        }
     }
     
     func resetLocal() {
         let collections = fetchCollections()
         for coll in collections {
-            managedObjectContext.deleteObject(coll)
+            managedObjectContext.delete(coll)
         }
         save()
     }

@@ -1,9 +1,5 @@
 //
-//  ItemIntCell.swift
-//  BigApp
-//
-//  Created by Rubens Gondek on 8/21/15.
-//  Copyright © 2015 BEPiD. All rights reserved.
+//  Copyright © 2019 GondekR. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +12,7 @@ class ItemIntCell: ItemDetailCell, UITextFieldDelegate{
         txtValue.delegate = self
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -39,8 +35,8 @@ class ItemIntCell: ItemDetailCell, UITextFieldDelegate{
     }
     
     // MARK: - Delegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        delegate?.nextField!(self.tag)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.nextField!(tag: self.tag)
         return true
     }
 }
