@@ -13,13 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
-    // Initialize Parse
-    fileprivate func setupParse() {
-//        Parse.enableLocalDatastore()
-//        Parse.setApplicationId("1ZYxAKg1nVMpR7phkfFXEMO8UlLz442pDhgKtgJG",
-//                               clientKey: "ar6NdqHSUtor1Hr9TCfgnl5VwhB8ah5LinZOjsCp")
-    }
-
     fileprivate func setupFirebase() {
         FirebaseApp.configure()
     }
@@ -42,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        setupParse()
         setupFabric()
         setupFirebase()
         checkUserLogged()
