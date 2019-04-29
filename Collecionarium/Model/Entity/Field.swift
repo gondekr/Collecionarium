@@ -11,5 +11,5 @@ public class Field: NSManagedObject {
     @NSManaged public var type: String?
     @NSManaged public var id: String?
     @NSManaged public var isTitle: NSNumber?
-    @NSManaged public var collection: Collection?
+    @NSManaged public var group: Group?
 }
