@@ -6,7 +6,7 @@
 extension Group {
     func toData() -> GroupData {
         var data = GroupData()
-        data.id = id ?? ""
+        data.id = id?.uuidString ?? ""
         data.name = name ?? ""
         if let fields = fields?.array as? [Field] {
             data.fields = fields.map { $0.toData() }
@@ -18,9 +18,10 @@ extension Group {
 extension Field {
     func toData() -> FieldData {
         var data = FieldData()
-        data.id = id ?? ""
+        data.id = id?.uuidString ?? ""
         data.name = name ?? ""
         data.type = DataType(rawValue: type ?? "") ?? .string
         data.isTitle = isTitle?.boolValue ?? false
+        return data
     }
 }

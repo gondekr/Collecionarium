@@ -26,8 +26,14 @@ class GroupListVC: UIViewController {
         GroupListConfigurator.shared.configure(viewController: self)
     }
 
+    func registerCell() {
+        let nib = UINib(nibName: GroupCell.nibName, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: GroupCell.identifier)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
         output.askForGroups()
     }
 }
@@ -42,7 +48,17 @@ extension GroupListVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.identifier, for: indexPath) as! GroupCell
+
+        let group = items[indexPath.row]
+        cell.setupGroup(group)
+        return cell
+    }
+}
+
+extension GroupListVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(items[indexPath.row])
     }
 }
 

@@ -13,7 +13,7 @@ extension LoginVC {
 }
 
 extension LoginVC: LoginPresenterOutput {
-    func showAlert() {
+    func showAlert(_ alert: UIAlertController) {
         displayAlert(alert)
     }
 
@@ -23,11 +23,15 @@ extension LoginVC: LoginPresenterOutput {
 }
 
 extension LoginInteractor: LoginVCOutput {
-
+    func askForLogin(email: String, password: String) {
+        fetchSomething()
+    }
 }
 
 extension LoginPresenter: LoginInteractorOutput {
+    func presentSomething() {
 
+    }
 }
 
 class LoginConfigurator {

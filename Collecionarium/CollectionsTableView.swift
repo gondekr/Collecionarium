@@ -7,7 +7,7 @@ import UIKit
 class CollectionsTableView: UITableViewController {
     @IBOutlet weak var editBtn: UIBarButtonItem!
     
-    var localColls: [Collection]!
+//    var localColls: [Collection]!
     var cloudCont: [Int] = []
     let cManager = CollectionManager.sharedInstance
     var tutoView: UIView!
@@ -41,8 +41,8 @@ class CollectionsTableView: UITableViewController {
     }
     
     func loadTable() {
-        localColls = cManager.fetchCollections()
-        
+//        localColls = cManager.fetchCollections()
+
         if editBtn.tag == 1 {
             switchEdit()
         }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6212A95C2277EE4B009F60C8 /* FieldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A95B2277EE4B009F60C8 /* FieldData.swift */; };
 		6212A9602277F1AA009F60C8 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A95F2277F1AA009F60C8 /* Transformer.swift */; };
+		6212A964227862B5009F60C8 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A962227862B5009F60C8 /* GroupCell.swift */; };
+		6212A965227862B5009F60C8 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6212A963227862B5009F60C8 /* GroupCell.xib */; };
+		6212A96722786A02009F60C8 /* Collections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6212A96622786A02009F60C8 /* Collections.storyboard */; };
 		6215AACB1BFCE79B007ADC84 /* YearPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6215AACA1BFCE79B007ADC84 /* YearPickerVC.swift */; };
 		6215AACD1BFD0E4A007ADC84 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */; };
 		6217D54D1BFA4140004D5E8E /* SignUpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */; };
@@ -97,6 +100,9 @@
 /* Begin PBXFileReference section */
 		6212A95B2277EE4B009F60C8 /* FieldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldData.swift; sourceTree = "<group>"; };
 		6212A95F2277F1AA009F60C8 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		6212A962227862B5009F60C8 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		6212A963227862B5009F60C8 /* GroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		6212A96622786A02009F60C8 /* Collections.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collections.storyboard; sourceTree = "<group>"; };
 		6215AACA1BFCE79B007ADC84 /* YearPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearPickerVC.swift; sourceTree = "<group>"; };
 		6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTVC.swift; sourceTree = "<group>"; };
@@ -204,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6212A96122786256009F60C8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6212A962227862B5009F60C8 /* GroupCell.swift */,
+				6212A963227862B5009F60C8 /* GroupCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6217D5501BFA5FB9004D5E8E /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				625E596B2268F826003FFCEF /* Login.storyboard */,
+				6212A96622786A02009F60C8 /* Collections.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -346,11 +362,12 @@
 				62FCE2652276335D00272AC5 /* Workers */,
 				6297B0D22266C3430031F52B /* Model */,
 				627632EC2267F68D00379B74 /* Scenes */,
+				6212A96122786256009F60C8 /* Cells */,
 				625E596A2268F811003FFCEF /* Storyboard */,
 				62D61F931BE92DB70058D1EF /* Hey.swift */,
 				6222B33A1BEA692D00254324 /* DesignableView.swift */,
 				62B927441BF3A183000D02DF /* data */,
-				62D61FEB1BE92EC00058D1EF /* Cells */,
+				62D61FEB1BE92EC00058D1EF /* OldCells */,
 				626CF0B71BEC064200EBBA22 /* Custom Picker */,
 				62B927431BF3A146000D02DF /* Collection Stream */,
 				62B927461BF3A279000D02DF /* Item Stream */,
@@ -398,7 +415,7 @@
 			name = "xib Cells";
 			sourceTree = "<group>";
 		};
-		62D61FEB1BE92EC00058D1EF /* Cells */ = {
+		62D61FEB1BE92EC00058D1EF /* OldCells */ = {
 			isa = PBXGroup;
 			children = (
 				62D61F9B1BE92DB70058D1EF /* ItemFieldDelegate.swift */,
@@ -423,7 +440,7 @@
 				628BFDE51BF126A30005BB1D /* OnlineSwitchCell.swift */,
 				628BFDE71BF127BA0005BB1D /* SharedSwitchCell.swift */,
 			);
-			name = Cells;
+			name = OldCells;
 			sourceTree = "<group>";
 		};
 		62FCE2572276216B00272AC5 /* Collections */ = {
@@ -574,9 +591,11 @@
 				625E596C2268F826003FFCEF /* Login.storyboard in Resources */,
 				62D61FC41BE92DB70058D1EF /* EventCell.xib in Resources */,
 				62D61FB91BE92DB70058D1EF /* Boolean.xib in Resources */,
+				6212A965227862B5009F60C8 /* GroupCell.xib in Resources */,
 				62D61FB71BE92DB70058D1EF /* Assets.xcassets in Resources */,
 				62D61FBE1BE92DB70058D1EF /* Date.xib in Resources */,
 				62D61FE41BE92DB70058D1EF /* Text.xib in Resources */,
+				6212A96722786A02009F60C8 /* Collections.storyboard in Resources */,
 				627B538E226347440017FEAB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +652,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -648,7 +667,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -693,6 +712,7 @@
 				62D61FD51BE92DB70058D1EF /* ItemTextCell.swift in Sources */,
 				6297B0D72266C3DA0031F52B /* Collecionarium.xcdatamodeld in Sources */,
 				62FCE2742277ED2700272AC5 /* GroupData.swift in Sources */,
+				6212A964227862B5009F60C8 /* GroupCell.swift in Sources */,
 				6215AACB1BFCE79B007ADC84 /* YearPickerVC.swift in Sources */,
 				62FF3ED81BF65151006A134D /* UserItemPhotoCell.swift in Sources */,
 				62D61FD31BE92DB70058D1EF /* ItemsCollectionView.swift in Sources */,
@@ -827,7 +847,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -868,7 +888,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -892,7 +912,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Collecionarium/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -917,7 +937,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Collecionarium/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";

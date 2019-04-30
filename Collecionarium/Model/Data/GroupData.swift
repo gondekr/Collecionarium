@@ -3,8 +3,11 @@
 //  Copyright © 2019 Gondek. All rights reserved.
 //
 
+import UIKit
+
 struct GroupData {
     var id: String = ""
     var name: String = ""
+    var color: UIColor = .white
     var fields: [FieldData] = []
 }

@@ -15,8 +15,8 @@ protocol LoginInteractorOutput {
 
 class LoginInteractor: LoginInteractorInput {
   var output: LoginInteractorOutput!
-  var worker: LoginWorker!
-  
+//  var worker: LoginWorker!
+
   // MARK: Business logic
   func fetchSomething() {
     output.presentSomething()

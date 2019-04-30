@@ -26,11 +26,6 @@ class NewCollectionTableView: UITableViewController, NewFieldDelegate, AddFieldD
     let emptyImg = UIImage()
     
     // MARK: Public API
-    var localColl: Collection? {
-        didSet {
-            editingCollection = true
-        }
-    }
     
     @IBOutlet weak var btnBack: UIBarButtonItem!
     @IBAction func voltar(sender: AnyObject) {

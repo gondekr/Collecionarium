@@ -14,12 +14,13 @@ class GroupDAO: BaseDAO<Group> {
 
     private func newGroup() -> Group? {
         let item = new()
-        item?.id = UUID().uuidString
+        item?.id = UUID()
         return item
     }
 
     func insertGroup(name: String, fields: [(key: String, type: DataType, title: Bool)]) {
         guard let group = newGroup() else { return }
+        group.name = name
         let form: [Field] = fields.map({ (field) -> Field? in
             let field = fieldDao.newField(
                 group: group,

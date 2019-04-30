@@ -31,10 +31,10 @@ class UserTVC: UITableViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func resetLocal(sender: AnyObject) {
         let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: "Do you really want to do it?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "YES", style: .destructive, handler: { (action) -> Void in
-            CollectionManager.sharedInstance.resetLocal()
-            let success = UIAlertController(title: NSLocalizedString("SUCCESS", comment: ""), message: "Local data successfully erased", preferredStyle: .alert)
-            success.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(success, animated: true, completion: nil)
+//            CollectionManager.sharedInstance.resetLocal()
+//            let success = UIAlertController(title: NSLocalizedString("SUCCESS", comment: ""), message: "Local data successfully erased", preferredStyle: .alert)
+//            success.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(success, animated: true, completion: nil)
         }))
         alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)

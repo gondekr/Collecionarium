@@ -15,7 +15,6 @@ enum DataType: String {
 }
 
 class PreDefCollectionManager {
-
     static let sharedInstance = PreDefCollectionManager()
     static let entityName = "PreDefCollection"
 
@@ -39,72 +38,4 @@ class PreDefCollectionManager {
                   [.string, .string, .year, .string],
                   [.year, .string, .number]]
     let title  = [1,0,1,0,0,0]
-
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.managedObjectContext
-        }()
-    
-    func newPreDefCollection() -> Group {
-        let coll = (NSEntityDescription.insertNewObject(forEntityName: PreDefCollectionManager.entityName, into: managedObjectContext) as? Group)!
-        return coll
-    }
-    
-    func save() {
-        do {
-            try managedObjectContext.save()
-        } catch {
-            
-        }
-    }
-    
-    func fetchPreDefCollections() -> Array<Group> {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: PreDefCollectionManager.entityName)
-        
-        do {
-            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
-            
-            if let results = fetchedResults as? [Group] {
-                return results;
-            }
-        } catch {
-            
-        }
-        
-        return Array<Group>()
-    }
-    
-    func deletePreDefCollection(coll: Group) {
-        managedObjectContext.delete(coll)
-        save()
-    }
-    
-    func deleteAllPreDefCollections() {
-        let predefs = fetchPreDefCollections()
-        for pdc in predefs {
-            deletePreDefCollection(coll: pdc)
-        }
-    }
-    
-    func addCollections(){
-        for i in 0..<names.count {
-            let coll = newPreDefCollection()
-            coll.name = names[i]
-            coll.id = ids[i]
-            for f in 0..<fields[i].count {
-                let field = newField()
-                field.id = "\(String(describing: coll.id))-\(f)"
-                field.isTitle = (title[i] == f) as NSNumber
-                field.name = fields[i][f]
-                field.type = types[i][f].rawValue
-                coll.addToFields(field)
-            }
-            save()
-        }
-    }
-
-    func newField() -> Field {
-        let field = (NSEntityDescription.insertNewObject(forEntityName: "Field", into: managedObjectContext) as? Field)!
-        return field
-    }
 }

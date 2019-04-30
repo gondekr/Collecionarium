@@ -15,7 +15,7 @@ protocol LoginPresenterOutput: class {
     func showSuccessLogin()
 }
 
-class LoginPresenterPresenter: LoginPresenterInput {
+class LoginPresenter: LoginPresenterInput {
     weak var output: LoginPresenterOutput!
 
     func presentError() {

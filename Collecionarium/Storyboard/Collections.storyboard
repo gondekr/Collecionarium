@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o0t-VI-Oao">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collections-->
+        <scene sceneID="U1M-YH-thC">
+            <objects>
+                <viewController id="vWh-Eg-RSE" customClass="GroupListVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5vZ-YA-Zsz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-3e-e2t">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" name="Void"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vWh-Eg-RSE" id="W0U-Gk-X5e"/>
+                                    <outlet property="delegate" destination="vWh-Eg-RSE" id="TH9-Vm-LwD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="kdS-mv-Gzx" firstAttribute="trailing" secondItem="DrX-3e-e2t" secondAttribute="trailing" id="0iE-KA-FYq"/>
+                            <constraint firstAttribute="bottom" secondItem="DrX-3e-e2t" secondAttribute="bottom" id="2JH-mn-fab"/>
+                            <constraint firstItem="DrX-3e-e2t" firstAttribute="leading" secondItem="kdS-mv-Gzx" secondAttribute="leading" id="7y1-kP-Bfo"/>
+                            <constraint firstItem="DrX-3e-e2t" firstAttribute="top" secondItem="kdS-mv-Gzx" secondAttribute="top" id="bd0-gB-c1t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kdS-mv-Gzx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Collections" largeTitleDisplayMode="always" id="Dp9-Ap-WKj"/>
+                    <connections>
+                        <outlet property="tableView" destination="DrX-3e-e2t" id="3It-wa-0jI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-p1-qRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188.40579710144928" y="22.098214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DIZ-zd-LJF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0t-VI-Oao" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8fu-no-msj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.82399314639999999" green="0.30057847500000001" blue="0.33944854140000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vWh-Eg-RSE" kind="relationship" relationship="rootViewController" id="FGR-3G-o6T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQS-En-uDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="22"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Void">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -12,7 +12,7 @@ class FieldDAO: BaseDAO<Field> {
 
     func newField(group: Group, name: String, type: DataType, title: Bool) -> Field? {
         let item = new()
-        item?.id = UUID().uuidString
+        item?.id = UUID()
         item?.name = name
         item?.type = type.rawValue
         item?.isTitle = NSNumber(value: title)

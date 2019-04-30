@@ -6,9 +6,10 @@ public class Group: NSManagedObject {
         return NSFetchRequest<Group>(entityName: "Group")
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var userId: String?
+    @NSManaged public var color: String?
     @NSManaged public var modificationDate: String?
     @NSManaged public var predefined: NSNumber?
     @NSManaged public var items: NSSet?

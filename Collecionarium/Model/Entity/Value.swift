@@ -7,7 +7,7 @@ public class Value: NSManagedObject {
         return NSFetchRequest<Value>(entityName: "Value")
     }
 
+    @NSManaged public var id: UUID?
     @NSManaged public var value: String?
-    @NSManaged public var id: String?
     @NSManaged public var field: Field?
 }

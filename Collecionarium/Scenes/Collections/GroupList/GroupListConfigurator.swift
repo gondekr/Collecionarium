@@ -14,19 +14,27 @@ extension GroupListVC {
 
 extension GroupListVC: GroupListPresenterOutput {
     func showAlert() {
+        DispatchQueue.main.async {
 
+        }
+    }
+
+    func showGroups(_ groups: [GroupData]) {
+        DispatchQueue.main.async {
+            self.displayGroups(groups)
+        }
     }
 }
 
 extension GroupListInteractor: GroupListVCOutput {
-    func askForSomething() {
-
+    func askForGroups() {
+        fetchGroups()
     }
 }
 
 extension GroupListPresenter: GroupListInteractorOutput {
-    func presentSomething() {
-
+    func presentGroups(_ groups: [GroupData]) {
+        formatGroups(groups)
     }
 }
 

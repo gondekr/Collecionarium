@@ -30,12 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     fileprivate func checkUserLogged() {}
 
+    fileprivate func addCollection() {
+        let fields = [(key: "Image", type: DataType.string, title: false)]
+        GroupDAO().insertGroup(name: "Grupo 2", fields: fields)
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         setupFabric()
         setupFirebase()
         checkUserLogged()
         setupBaseColor()
-        
+//        addCollection()
+
         return true
     }
 

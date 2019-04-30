@@ -6,7 +6,7 @@ public class Item: NSManagedObject {
         return NSFetchRequest<Item>(entityName: "Item")
     }
 
-    @NSManaged public var id: NSNumber?
+    @NSManaged public var id: UUID?
     @NSManaged public var photos: NSObject?
     @NSManaged public var subtitle: NSObject?
     @NSManaged public var values: NSObject?
