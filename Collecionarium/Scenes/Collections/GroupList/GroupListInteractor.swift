@@ -6,20 +6,20 @@
 import UIKit
 
 protocol GroupListInteractorInput {
-    func fetchSomething()
+    func fetchGroups()
 }
 
 protocol GroupListInteractorOutput {
-    func presentSomething()
+    func presentGroups(_ groups: [GroupData])
 }
 
 class GroupListInteractor: GroupListInteractorInput {
     var output: GroupListInteractorOutput!
     var worker: GroupListWorker!
 
-    // MARK: Business logic
-    func fetchSomething() {
-        output.presentSomething()
+    func fetchGroups() {
+        let groups = worker.getGroups()
+        output.presentGroups(groups)
     }
 }
 

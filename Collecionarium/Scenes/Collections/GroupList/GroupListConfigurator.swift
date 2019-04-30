@@ -42,7 +42,11 @@ class GroupListConfigurator {
         let presenter = GroupListPresenter()
         presenter.output = viewController
 
+        let worker = GroupListWorker()
+        worker.dao = GroupDAO()
+
         let interactor = GroupListInteractor()
+        interactor.worker = worker
         interactor.output = presenter
 
         viewController.output = interactor

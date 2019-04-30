@@ -6,16 +6,19 @@
 import UIKit
 
 protocol GroupListVCInput {
-    func displaySomething()
+    func displayGroups(_ groups: [GroupData])
 }
 
 protocol GroupListVCOutput {
-    func askForSomething()
+    func askForGroups()
 }
 
 class GroupListVC: UIViewController {
     var output: GroupListVCOutput!
     var router: GroupListRouter!
+
+    var items = [GroupData]()
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -25,17 +28,28 @@ class GroupListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomethingOnLoad()
+        output.askForGroups()
+    }
+}
+
+extension GroupListVC: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 
-    func doSomethingOnLoad() {
-        output.askForSomething()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
 
 extension GroupListVC: GroupListVCInput {
-    func displaySomething() {
-        // Use results
+    func displayGroups(_ groups: [GroupData]) {
+        items = groups
+        tableView.reloadData()
     }
 }
 

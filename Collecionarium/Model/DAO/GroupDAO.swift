@@ -6,14 +6,30 @@
 import Foundation
 
 class GroupDAO: BaseDAO<Group> {
+    let fieldDao = FieldDAO()
 
-    func newGroup() -> Group? {
+    convenience init() {
+        self.init(entityName: "Group")
+    }
+
+    private func newGroup() -> Group? {
         let item = new()
         item?.id = UUID().uuidString
         return item
     }
 
-    func insertGroup() {
-
+    func insertGroup(name: String, fields: [(key: String, type: DataType, title: Bool)]) {
+        guard let group = newGroup() else { return }
+        let form: [Field] = fields.map({ (field) -> Field? in
+            let field = fieldDao.newField(
+                group: group,
+                name: field.key,
+                type: field.type,
+                title: field.title)
+            return field
+        }).filter { $0 != nil }.map { $0! }
+        let set = NSOrderedSet(array: form)
+        group.addToFields(set)
+        save()
     }
 }
