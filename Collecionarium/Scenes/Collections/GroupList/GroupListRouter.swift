@@ -7,6 +7,7 @@ import UIKit
 
 protocol GroupListRouterInput {
     func navigateToGroup()
+    func passDataToNextScene(_ segue: UIStoryboardSegue)
 }
 
 class GroupListRouter: GroupListRouterInput {
