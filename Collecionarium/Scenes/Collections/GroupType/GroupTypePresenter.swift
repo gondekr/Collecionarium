@@ -19,7 +19,10 @@ class GroupTypePresenter: GroupTypePresenterInput {
     weak var output: GroupTypePresenterOutput!
 
     func formatTypes(_ types: [GroupData]) {
-        output.showTypes(types)
+        let sorted = types.sorted { (data1, data2) -> Bool in
+            data1.name > data2.name
+        }
+        output.showTypes(sorted)
     }
 
     func formatError() {

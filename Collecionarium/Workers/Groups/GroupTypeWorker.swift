@@ -37,7 +37,8 @@ class GroupTypeWorker {
                 FieldData(id: "", name: "Ano", type: .year, isTitle: true),
                 FieldData(id: "", name: "Pais", type: .string, isTitle: false),
                 FieldData(id: "", name: "Valor", type: .string, isTitle: false)
-                ], predefined: true)
+                ], predefined: true),
+            GroupData(id: "Custom", name: "Personalizada", color: "", fields: [], predefined: true)
         ]
     }
 }

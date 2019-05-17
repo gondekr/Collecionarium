@@ -13,8 +13,7 @@ class GroupTypeCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
 
     func setGroup(data: GroupData) {
-        let imageName = data.predefined ? data.id : "Custom"
-        imgType.image = UIImage(named: imageName)
+        imgType.image = UIImage(named: data.id)
         lblName.text = data.name
     }
 }

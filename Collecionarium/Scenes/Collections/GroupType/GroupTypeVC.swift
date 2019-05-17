@@ -49,11 +49,13 @@ extension GroupTypeVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: GroupTypeCell.identifier, for: indexPath) as! GroupTypeCell
+        return tableView.dequeueReusableCell(withIdentifier: GroupTypeCell.identifier, for: indexPath)
+    }
 
-        let group = items[indexPath.row]
-        cell.setGroup(data: group)
-        return cell
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let typeCell = cell as? GroupTypeCell else { return }
+        let type = items[indexPath.row]
+        typeCell.setGroup(data: type)
     }
 }
 
