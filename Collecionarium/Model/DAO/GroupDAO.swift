@@ -18,15 +18,15 @@ class GroupDAO: BaseDAO<Group> {
         return item
     }
 
-    func insertGroup(name: String, fields: [(key: String, type: DataType, title: Bool)]) {
+    func insertGroup(data: GroupData) {
         guard let group = newGroup() else { return }
-        group.name = name
-        let form: [Field] = fields.map({ (field) -> Field? in
+        group.name = data.name
+        let form: [Field] = data.fields.map({ (field) -> Field? in
             let field = fieldDao.newField(
                 group: group,
-                name: field.key,
+                name: field.name,
                 type: field.type,
-                title: field.title)
+                title: field.isTitle)
             return field
         }).filter { $0 != nil }.map { $0! }
         let set = NSOrderedSet(array: form)

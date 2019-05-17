@@ -14,15 +14,7 @@ class GroupCell: UITableViewCell {
 
     func setupGroup(_ group: GroupData) {
         lblName.text = group.name
-        tagColor.backgroundColor = group.color
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        tagColor.backgroundColor = UIColor(hex: group.color)
     }
 
     override func prepareForReuse() {

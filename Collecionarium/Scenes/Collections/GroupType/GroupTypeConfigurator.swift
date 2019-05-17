@@ -19,18 +19,22 @@ extension GroupTypeVC: GroupTypePresenterOutput {
         }
     }
 
-    func showSuccessGroupType() {}
+    func showTypes(_ types: [GroupData]) {
+        DispatchQueue.main.async {
+            self.displayTypes(types)
+        }
+    }
 }
 
 extension GroupTypeInteractor: GroupTypeVCOutput {
-    func askForSomething() {
-
+    func askForTypes() {
+        fetchTypes()
     }
 }
 
 extension GroupTypePresenter: GroupTypeInteractorOutput {
-    func presentSomething() {
-
+    func presentTypes(_ types: [GroupData]) {
+        formatTypes(types)
     }
 }
 
@@ -47,6 +51,7 @@ class GroupTypeConfigurator {
         presenter.output = viewController
 
         let interactor = GroupTypeInteractor()
+        interactor.worker = GroupTypeWorker()
         interactor.output = presenter
 
         viewController.output = interactor

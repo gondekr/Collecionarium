@@ -6,10 +6,38 @@
 import Foundation
 
 class GroupTypeWorker {
-    var dao: GroupDAO!
-
-    func getGroups() -> [GroupData] {
-        let predicate = NSPredicate(format: "predefined == %@", true)
-        return dao.fetch(predicate: predicate).map { $0.toData() }
+    func getTypes() -> [GroupData] {
+        return [
+            GroupData(id: "Miniaturas", name: "Miniaturas", color: "", fields: [
+                FieldData(id: "", name: "Ano", type: .year, isTitle: false),
+                FieldData(id: "", name: "Modelo", type: .string, isTitle: true)
+                ], predefined: true),
+            GroupData(id: "Moedas", name: "Moedas", color: "", fields: [
+                FieldData(id: "", name: "Ano", type: .year, isTitle: true),
+                FieldData(id: "", name: "Pais", type: .string, isTitle: false),
+                FieldData(id: "", name: "Valor", type: .string, isTitle: false)
+                ], predefined: true),
+            GroupData(id: "Ingressos", name: "Ingressos", color: "", fields: [
+                FieldData(id: "", name: "Ano", type: .year, isTitle: false),
+                FieldData(id: "", name: "Evento", type: .string, isTitle: true)
+                ], predefined: true),
+            GroupData(id: "Games", name: "Games", color: "", fields: [
+                FieldData(id: "", name: "Nome", type: .string, isTitle: true),
+                FieldData(id: "", name: "Empresa", type: .string, isTitle: false),
+                FieldData(id: "", name: "Ano", type: .string, isTitle: false),
+                FieldData(id: "", name: "Genero", type: .string, isTitle: false),
+                ], predefined: true),
+            GroupData(id: "Livros", name: "Livros", color: "", fields: [
+                FieldData(id: "", name: "Título", type: .string, isTitle: true),
+                FieldData(id: "", name: "Autor", type: .string, isTitle: false),
+                FieldData(id: "", name: "Ano", type: .year, isTitle: false),
+                FieldData(id: "", name: "Editora", type: .string, isTitle: false),
+                ], predefined: true),
+            GroupData(id: "Selos", name: "Selos", color: "", fields: [
+                FieldData(id: "", name: "Ano", type: .year, isTitle: true),
+                FieldData(id: "", name: "Pais", type: .string, isTitle: false),
+                FieldData(id: "", name: "Valor", type: .string, isTitle: false)
+                ], predefined: true)
+        ]
     }
 }

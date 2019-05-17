@@ -83,17 +83,22 @@
         <!--Group Type-->
         <scene sceneID="mYd-2n-Kf0">
             <objects>
-                <viewController title="Group Type" id="xMg-yK-F7x" sceneMemberID="viewController">
+                <viewController title="Group Type" id="xMg-yK-F7x" customClass="GroupTypeVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgk-cQ-PBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-y3-W4d">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-y3-W4d">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Void"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xMg-yK-F7x" id="eBN-Vw-5V1"/>
+                                    <outlet property="delegate" destination="xMg-yK-F7x" id="iIj-l2-E5k"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Void"/>
                         <constraints>
                             <constraint firstItem="nUd-y3-W4d" firstAttribute="top" secondItem="Rpu-nk-gHW" secondAttribute="top" id="0OQ-Xf-DcA"/>
                             <constraint firstItem="Rpu-nk-gHW" firstAttribute="trailing" secondItem="nUd-y3-W4d" secondAttribute="trailing" id="BvP-AD-Wlq"/>
@@ -102,6 +107,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rpu-nk-gHW"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="nUd-y3-W4d" id="2nl-SQ-tSN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BM-0G-0QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

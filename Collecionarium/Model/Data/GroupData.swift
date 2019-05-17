@@ -8,6 +8,7 @@ import UIKit
 struct GroupData {
     var id: String = ""
     var name: String = ""
-    var color: UIColor = .white
+    var color: String = ""
     var fields: [FieldData] = []
+    var predefined: Bool = false
 }

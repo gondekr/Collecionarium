@@ -6,11 +6,11 @@
 import UIKit
 
 protocol GroupTypeInteractorInput {
-    func fetchSomething()
+    func fetchTypes()
 }
 
 protocol GroupTypeInteractorOutput {
-    func presentSomething()
+    func presentTypes(_ types: [GroupData])
 }
 
 class GroupTypeInteractor: GroupTypeInteractorInput {
@@ -18,7 +18,8 @@ class GroupTypeInteractor: GroupTypeInteractorInput {
     var worker: GroupTypeWorker!
 
     // MARK: Business logic
-    func fetchSomething() {
-        output.presentSomething()
+    func fetchTypes() {
+        let types = worker.getTypes()
+        output.presentTypes(types)
     }
 }

@@ -30,10 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     fileprivate func checkUserLogged() {}
 
     fileprivate func addCollection() {
-        let fields = [(key: "Image", type: DataType.string, title: false)]
-        let fields2 = [(key: "Name", type: DataType.string, title: true)]
-        GroupDAO().insertGroup(name: "Grupo 1", fields: fields)
-        GroupDAO().insertGroup(name: "Grupo 2", fields: fields2)
+        let worker = NewGroupWorker()
+        worker.dao = GroupDAO()
+
+        let fields: [String: DataType] = ["Name": .string, "Year": .year]
+        let fields2: [String: DataType] = ["Name": .string, "URL": .string]
+
+        worker.saveGroup(name: "Grupo 1", color: "#00A5DB", fields: fields, title: "Name")
+        worker.saveGroup(name: "Grupo 2", color: "#FFFFFF", fields: fields2, title: "Name")
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
