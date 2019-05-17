@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="vWh-Eg-RSE" customClass="GroupListVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5vZ-YA-Zsz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-3e-e2t">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                                 <color key="backgroundColor" name="Void"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -38,9 +38,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kdS-mv-Gzx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Collections" largeTitleDisplayMode="always" id="Dp9-Ap-WKj"/>
+                    <navigationItem key="navigationItem" title="Collections" largeTitleDisplayMode="always" id="Dp9-Ap-WKj">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="hYc-dQ-ZbT">
+                            <connections>
+                                <action selector="btnNewGroupPressed:" destination="vWh-Eg-RSE" id="h5M-lu-tYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="DrX-3e-e2t" id="3It-wa-0jI"/>
+                        <segue destination="xMg-yK-F7x" kind="show" identifier="groupType" id="Fvo-1E-FrP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-p1-qRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -52,7 +59,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0t-VI-Oao" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8fu-no-msj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="8fu-no-msj">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,6 +79,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQS-En-uDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="22"/>
+        </scene>
+        <!--Group Type-->
+        <scene sceneID="mYd-2n-Kf0">
+            <objects>
+                <viewController title="Group Type" id="xMg-yK-F7x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hgk-cQ-PBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-y3-W4d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nUd-y3-W4d" firstAttribute="top" secondItem="Rpu-nk-gHW" secondAttribute="top" id="0OQ-Xf-DcA"/>
+                            <constraint firstItem="Rpu-nk-gHW" firstAttribute="trailing" secondItem="nUd-y3-W4d" secondAttribute="trailing" id="BvP-AD-Wlq"/>
+                            <constraint firstItem="nUd-y3-W4d" firstAttribute="leading" secondItem="Rpu-nk-gHW" secondAttribute="leading" id="NJb-hx-pWb"/>
+                            <constraint firstAttribute="bottom" secondItem="nUd-y3-W4d" secondAttribute="bottom" id="ZKQ-FJ-kYW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rpu-nk-gHW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8BM-0G-0QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="22"/>
         </scene>
     </scenes>
     <resources>

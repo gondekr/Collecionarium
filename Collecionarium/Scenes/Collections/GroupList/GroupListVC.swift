@@ -20,6 +20,10 @@ class GroupListVC: UIViewController {
     var items = [GroupData]()
     @IBOutlet weak var tableView: UITableView!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get { return .lightContent }
+    }
+
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +39,10 @@ class GroupListVC: UIViewController {
         super.viewDidLoad()
         registerCell()
         output.askForGroups()
+    }
+
+    @IBAction func btnNewGroupPressed(_ sender: UIBarButtonItem) {
+        router.navigateToGroupType()
     }
 }
 

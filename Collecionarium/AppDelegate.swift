@@ -25,14 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     fileprivate func setupBaseColor() {
         self.window?.tintColor = UIColor(red: 210/255, green: 77/255, blue: 87/255, alpha: 1)
-        UIApplication.shared.statusBarStyle = .default
     }
 
     fileprivate func checkUserLogged() {}
 
     fileprivate func addCollection() {
         let fields = [(key: "Image", type: DataType.string, title: false)]
-        GroupDAO().insertGroup(name: "Grupo 2", fields: fields)
+        let fields2 = [(key: "Name", type: DataType.string, title: true)]
+        GroupDAO().insertGroup(name: "Grupo 1", fields: fields)
+        GroupDAO().insertGroup(name: "Grupo 2", fields: fields2)
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -40,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         setupFirebase()
         checkUserLogged()
         setupBaseColor()
-//        addCollection()
+        addCollection()
 
         return true
     }
