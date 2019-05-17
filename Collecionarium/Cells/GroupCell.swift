@@ -16,9 +16,4 @@ class GroupCell: UITableViewCell {
         lblName.text = group.name
         tagColor.backgroundColor = UIColor(hex: group.color)
     }
-
-    override func prepareForReuse() {
-        lblName.text = ""
-        tagColor.backgroundColor = UIColor.clear
-    }
 }

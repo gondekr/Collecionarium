@@ -21,6 +21,7 @@ class GroupDAO: BaseDAO<Group> {
     func insertGroup(data: GroupData) {
         guard let group = newGroup() else { return }
         group.name = data.name
+        group.color = data.color
         let form: [Field] = data.fields.map({ (field) -> Field? in
             let field = fieldDao.newField(
                 group: group,

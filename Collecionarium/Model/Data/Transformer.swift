@@ -8,6 +8,7 @@ extension Group {
         var data = GroupData()
         data.id = id?.uuidString ?? ""
         data.name = name ?? ""
+        data.color = color ?? "#FFF"
         if let fields = fields?.array as? [Field] {
             data.fields = fields.map { $0.toData() }
         }

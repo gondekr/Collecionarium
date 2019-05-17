@@ -56,11 +56,13 @@ extension GroupListVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.identifier, for: indexPath) as! GroupCell
+        return tableView.dequeueReusableCell(withIdentifier: GroupCell.identifier, for: indexPath) as! GroupCell
+    }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let groupCell = cell as? GroupCell else { return }
         let group = items[indexPath.row]
-        cell.setupGroup(group)
-        return cell
+        groupCell.setupGroup(group)
     }
 }
 
