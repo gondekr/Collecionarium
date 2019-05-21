@@ -4,14 +4,14 @@
 
 import UIKit
 
-@objc protocol AddFieldDelegate {
+@objc protocol AddFieldDelegateOld {
     @objc optional func buttonTapped()
 }
 
 class AddNewFieldCell: UITableViewCell {
 
     @IBOutlet weak var btn: UIButton!
-    var delegate: AddFieldDelegate?
+    var delegate: AddFieldDelegateOld?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -4,7 +4,7 @@
 
 import UIKit
 
-class NewCollectionTableView: UITableViewController, NewFieldDelegate, AddFieldDelegate {
+class NewCollectionTableView: UITableViewController, NewFieldDelegate, AddFieldDelegateOld {
     
     // MARK: - Privates
     // MARK: Variables

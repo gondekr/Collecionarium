@@ -41,30 +41,10 @@ extension UIView {
             layer.cornerRadius = (newValue ? frame.height/2 : 0)
         }
     }
-    
-    @IBInspectable
-    var clipping: Bool {
-        get {
-            return clipsToBounds
-        }
-        set {
-            clipsToBounds = newValue
-        }
-    }
 }
 
 @IBDesignable
-class DesignImageView: UIImageView {
-    @IBInspectable
-    var clips: Bool {
-        get {
-            return self.clipsToBounds
-        }
-        set {
-            self.clipsToBounds = newValue
-        }
-    }
-}
+class DesignImageView: UIImageView {}
 
 @IBDesignable
 class DesignButton: UIButton {}
@@ -76,7 +56,30 @@ class DesignLabel: UILabel {}
 class DesignView: UIView {}
 
 @IBDesignable
-class DesignTextField: UITextField {}
+class DesignTextField: UITextField {
+    @IBInspectable
+    var placeholderColor: UIColor {
+        get {
+            return value(forKeyPath: "placeholderLabel.textColor") as? UIColor ?? .white
+        }
+        set {
+            setValue(newValue, forKeyPath: "placeholderLabel.textColor")
+        }
+    }
+}
+
+@IBDesignable
+class DesignNavigationBar: UINavigationBar {
+    @IBInspectable
+    var shouldHaveShadow: Bool {
+        get {
+            return shadowImage != UIImage()
+        }
+        set {
+            shadowImage = newValue ? nil : UIImage()
+        }
+    }
+}
 
 @IBDesignable
 class DesignTextView: UITextView {}

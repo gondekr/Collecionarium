@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date PickerVC-->
+        <scene sceneID="yiZ-rn-pwj">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerVC" modalPresentationStyle="overFullScreen" id="q4Q-hr-ZfT" customClass="DatePickerVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="74Z-Lc-hu0"/>
+                        <viewControllerLayoutGuide type="bottom" id="9pV-M0-IW6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZXx-xT-ZhL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-Go-ODn">
+                                <rect key="frame" x="0.0" y="60" width="414" height="240"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zp-Vt-WcI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="PLt-IG-MWH"/>
+                                            <barButtonItem systemItem="done" id="5MB-eI-O5e">
+                                                <color key="tintColor" name="Color"/>
+                                                <connections>
+                                                    <action selector="doneBtn" destination="q4Q-hr-ZfT" id="cvW-QP-bgX"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" name="Color"/>
+                                        <color key="barTintColor" name="NightSky"/>
+                                    </toolbar>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1dv-Fa-eyY">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="162"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="469569491.94736898">
+                                            <!--2015-11-18 19:58:11 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" name="Ashes"/>
+                                <constraints>
+                                    <constraint firstItem="8Zp-Vt-WcI" firstAttribute="leading" secondItem="3qg-Go-ODn" secondAttribute="leading" id="0f9-84-gbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="1dv-Fa-eyY" secondAttribute="trailing" id="AxD-3V-vdU"/>
+                                    <constraint firstItem="1dv-Fa-eyY" firstAttribute="leading" secondItem="3qg-Go-ODn" secondAttribute="leading" id="CQl-xd-eNZ"/>
+                                    <constraint firstItem="8Zp-Vt-WcI" firstAttribute="top" secondItem="3qg-Go-ODn" secondAttribute="top" id="G6G-cx-aso"/>
+                                    <constraint firstItem="1dv-Fa-eyY" firstAttribute="top" secondItem="8Zp-Vt-WcI" secondAttribute="bottom" id="HmB-I6-uZI"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Zp-Vt-WcI" secondAttribute="trailing" id="tG4-Ly-0lY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3qg-Go-ODn" secondAttribute="trailing" id="6QU-LB-HaQ"/>
+                            <constraint firstAttribute="bottom" secondItem="3qg-Go-ODn" secondAttribute="bottom" id="8La-Hc-WgK"/>
+                            <constraint firstItem="3qg-Go-ODn" firstAttribute="leading" secondItem="ZXx-xT-ZhL" secondAttribute="leading" id="Jsd-hL-GO2"/>
+                            <constraint firstItem="1dv-Fa-eyY" firstAttribute="bottom" secondItem="odT-MO-wKc" secondAttribute="bottom" id="uNY-ME-XfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="odT-MO-wKc"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="300"/>
+                    <connections>
+                        <outlet property="datePicker" destination="1dv-Fa-eyY" id="yNc-Hc-XtR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLP-Iz-rbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="-1369"/>
+        </scene>
+        <!--Custom PickerVC-->
+        <scene sceneID="YSM-Nc-dci">
+            <objects>
+                <viewController storyboardIdentifier="CustomPickerVC" modalPresentationStyle="overFullScreen" id="h2p-9x-0G4" customClass="CustomPickerVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OoW-9H-0LQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjz-jY-x69"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cyw-8y-aE0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-3U-4wJ">
+                                <rect key="frame" x="0.0" y="60" width="414" height="240"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ak8-ci-zxf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="hgs-DO-z84"/>
+                                            <barButtonItem systemItem="done" id="xYh-t1-ryD">
+                                                <color key="tintColor" name="Color"/>
+                                                <connections>
+                                                    <action selector="doneBtn" destination="h2p-9x-0G4" id="izM-zS-Vl8"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" name="Color"/>
+                                        <color key="barTintColor" name="NightSky"/>
+                                    </toolbar>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhV-7P-q7Y">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="h2p-9x-0G4" id="aga-sv-fOl"/>
+                                            <outlet property="delegate" destination="h2p-9x-0G4" id="lZW-Do-HHh"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" name="Ashes"/>
+                                <constraints>
+                                    <constraint firstItem="QhV-7P-q7Y" firstAttribute="top" secondItem="Ak8-ci-zxf" secondAttribute="bottom" id="Du7-TQ-fTR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ak8-ci-zxf" secondAttribute="trailing" id="FCg-LG-bPq"/>
+                                    <constraint firstAttribute="trailing" secondItem="QhV-7P-q7Y" secondAttribute="trailing" id="Q2w-3n-Gue"/>
+                                    <constraint firstItem="QhV-7P-q7Y" firstAttribute="leading" secondItem="hjk-3U-4wJ" secondAttribute="leading" id="dty-R4-hoW"/>
+                                    <constraint firstItem="Ak8-ci-zxf" firstAttribute="top" secondItem="hjk-3U-4wJ" secondAttribute="top" id="iGm-Ls-Pek"/>
+                                    <constraint firstItem="Ak8-ci-zxf" firstAttribute="leading" secondItem="hjk-3U-4wJ" secondAttribute="leading" id="jNi-wb-EaB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5eY-Hn-kZf" firstAttribute="trailing" secondItem="hjk-3U-4wJ" secondAttribute="trailing" id="JB6-Wr-lhP"/>
+                            <constraint firstAttribute="bottom" secondItem="hjk-3U-4wJ" secondAttribute="bottom" id="c1f-FX-YyN"/>
+                            <constraint firstItem="hjk-3U-4wJ" firstAttribute="leading" secondItem="cyw-8y-aE0" secondAttribute="leading" id="jWv-gg-O0h"/>
+                            <constraint firstItem="QhV-7P-q7Y" firstAttribute="bottom" secondItem="5eY-Hn-kZf" secondAttribute="bottom" id="sEc-8e-GdM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5eY-Hn-kZf"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <size key="freeformSize" width="414" height="300"/>
+                    <connections>
+                        <outlet property="pickerView" destination="QhV-7P-q7Y" id="Phy-X9-E2r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5z-xi-It8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="-1369"/>
+        </scene>
+        <!--Year PickerVC-->
+        <scene sceneID="HGf-2J-FpB">
+            <objects>
+                <viewController storyboardIdentifier="YearPickerVC" modalPresentationStyle="overFullScreen" id="boS-6m-Lfi" customClass="YearPickerVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j3t-vS-w4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="46i-5e-wv9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TMp-Kt-ry2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFi-fp-85E">
+                                <rect key="frame" x="0.0" y="60" width="414" height="240"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vt-Ga-jkg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="yEb-6d-RIc"/>
+                                            <barButtonItem systemItem="done" id="0E2-3K-VPq">
+                                                <color key="tintColor" name="Color"/>
+                                                <connections>
+                                                    <action selector="doneBtn" destination="boS-6m-Lfi" id="Y86-eV-4xH"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" name="Color"/>
+                                        <color key="barTintColor" name="NightSky"/>
+                                    </toolbar>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZJ-7q-hpt">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="boS-6m-Lfi" id="D9Z-M5-yjZ"/>
+                                            <outlet property="delegate" destination="boS-6m-Lfi" id="CLr-Ja-ZQ8"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" name="Ashes"/>
+                                <constraints>
+                                    <constraint firstItem="tZJ-7q-hpt" firstAttribute="leading" secondItem="VFi-fp-85E" secondAttribute="leading" id="DRN-ZI-bst"/>
+                                    <constraint firstItem="7Vt-Ga-jkg" firstAttribute="top" secondItem="VFi-fp-85E" secondAttribute="top" id="LjR-mN-e2c"/>
+                                    <constraint firstItem="tZJ-7q-hpt" firstAttribute="top" secondItem="7Vt-Ga-jkg" secondAttribute="bottom" id="RWz-Ly-fOf"/>
+                                    <constraint firstItem="7Vt-Ga-jkg" firstAttribute="leading" secondItem="VFi-fp-85E" secondAttribute="leading" id="ZPI-jH-pKW"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Vt-Ga-jkg" secondAttribute="trailing" id="dvV-ev-sHY"/>
+                                    <constraint firstAttribute="trailing" secondItem="tZJ-7q-hpt" secondAttribute="trailing" id="hrY-gK-iz6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VFi-fp-85E" firstAttribute="leading" secondItem="TMp-Kt-ry2" secondAttribute="leading" id="4Ic-Ku-cZG"/>
+                            <constraint firstAttribute="bottom" secondItem="VFi-fp-85E" secondAttribute="bottom" id="fqf-5x-O7A"/>
+                            <constraint firstItem="AV0-Wx-mYl" firstAttribute="trailing" secondItem="VFi-fp-85E" secondAttribute="trailing" id="lRu-df-0G8"/>
+                            <constraint firstItem="tZJ-7q-hpt" firstAttribute="bottom" secondItem="AV0-Wx-mYl" secondAttribute="bottom" id="yJs-4k-Q5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AV0-Wx-mYl"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <size key="freeformSize" width="414" height="300"/>
+                    <connections>
+                        <outlet property="pickerView" destination="tZJ-7q-hpt" id="vUZ-Vl-2uM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pa-3K-Go5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-1369"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Ashes">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NightSky">
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

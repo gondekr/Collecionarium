@@ -13,25 +13,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="groupTypeCell" rowHeight="68" id="KGk-i7-Jjw" customClass="GroupTypeCell" customModule="Collecionarium" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="372" height="68"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="groupTypeCell" rowHeight="62" id="KGk-i7-Jjw" customClass="GroupTypeCell" customModule="Collecionarium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="372" height="67.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="372" height="61.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-wu-NFc" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
-                        <rect key="frame" x="12" y="6" width="348" height="55.5"/>
+                        <rect key="frame" x="15" y="5.5" width="342" height="52"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="ov3-PT-FTX">
-                                <rect key="frame" x="6" y="0.0" width="55.5" height="55.5"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LlP-je-UsU" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="78" height="52"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="ov3-PT-FTX">
+                                        <rect key="frame" x="14" y="1" width="50" height="50"/>
+                                        <color key="tintColor" name="NightSky"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ov3-PT-FTX" secondAttribute="height" multiplier="1:1" id="2U4-Of-cBp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ov3-PT-FTX" secondAttribute="height" multiplier="1:1" id="2U4-Of-cBp"/>
+                                    <constraint firstItem="ov3-PT-FTX" firstAttribute="centerY" secondItem="LlP-je-UsU" secondAttribute="centerY" id="6sO-93-KXw"/>
+                                    <constraint firstItem="ov3-PT-FTX" firstAttribute="centerX" secondItem="LlP-je-UsU" secondAttribute="centerX" id="RmZ-T6-sZ1"/>
+                                    <constraint firstAttribute="width" secondItem="LlP-je-UsU" secondAttribute="height" multiplier="3:2" id="TbW-pm-QDX"/>
                                 </constraints>
-                            </imageView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChN-D6-fa4">
-                                <rect key="frame" x="73.5" y="12" width="268.5" height="31.5"/>
+                                <rect key="frame" x="93" y="10" width="243" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="oSN-1C-Hke"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,44 +56,41 @@
                         </subviews>
                         <color key="backgroundColor" name="NightSky"/>
                         <constraints>
-                            <constraint firstItem="ov3-PT-FTX" firstAttribute="top" secondItem="a6v-wu-NFc" secondAttribute="top" id="8kK-a1-GjM"/>
-                            <constraint firstItem="ov3-PT-FTX" firstAttribute="leading" secondItem="a6v-wu-NFc" secondAttribute="leading" constant="6" id="JHm-SF-lrG"/>
-                            <constraint firstAttribute="bottom" secondItem="ChN-D6-fa4" secondAttribute="bottom" constant="12" id="PvP-iZ-tyT"/>
-                            <constraint firstItem="ChN-D6-fa4" firstAttribute="leading" secondItem="ov3-PT-FTX" secondAttribute="trailing" constant="12" id="YkO-IA-ssM"/>
+                            <constraint firstItem="ChN-D6-fa4" firstAttribute="leading" secondItem="LlP-je-UsU" secondAttribute="trailing" constant="15" id="3Tw-IG-4yS"/>
+                            <constraint firstAttribute="bottom" secondItem="ChN-D6-fa4" secondAttribute="bottom" constant="10" id="PvP-iZ-tyT"/>
                             <constraint firstAttribute="trailing" secondItem="ChN-D6-fa4" secondAttribute="trailing" constant="6" id="YsJ-HZ-j1h"/>
-                            <constraint firstItem="ChN-D6-fa4" firstAttribute="top" secondItem="a6v-wu-NFc" secondAttribute="top" constant="12" id="wjQ-On-oaq"/>
-                            <constraint firstAttribute="bottom" secondItem="ov3-PT-FTX" secondAttribute="bottom" id="xxC-1Q-nJr"/>
+                            <constraint firstItem="LlP-je-UsU" firstAttribute="top" secondItem="a6v-wu-NFc" secondAttribute="top" id="krs-t7-VII"/>
+                            <constraint firstItem="ChN-D6-fa4" firstAttribute="top" secondItem="a6v-wu-NFc" secondAttribute="top" constant="10" id="wjQ-On-oaq"/>
+                            <constraint firstAttribute="bottom" secondItem="LlP-je-UsU" secondAttribute="bottom" id="zNo-LZ-81e"/>
+                            <constraint firstItem="LlP-je-UsU" firstAttribute="leading" secondItem="a6v-wu-NFc" secondAttribute="leading" id="zaL-I6-kzo"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="6"/>
-                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" name="Void"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="a6v-wu-NFc" secondAttribute="trailing" constant="12" id="2cS-9y-eFv"/>
-                    <constraint firstItem="a6v-wu-NFc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Gxv-bT-AbO"/>
-                    <constraint firstItem="a6v-wu-NFc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="JxJ-FS-QBB"/>
-                    <constraint firstAttribute="bottom" secondItem="a6v-wu-NFc" secondAttribute="bottom" constant="6" id="q16-Yy-tnL"/>
+                    <constraint firstAttribute="trailing" secondItem="a6v-wu-NFc" secondAttribute="trailing" constant="15" id="2cS-9y-eFv"/>
+                    <constraint firstItem="a6v-wu-NFc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Gxv-bT-AbO"/>
+                    <constraint firstItem="a6v-wu-NFc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JxJ-FS-QBB"/>
+                    <constraint firstItem="a6v-wu-NFc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KpL-cM-iGD"/>
+                    <constraint firstAttribute="bottom" secondItem="a6v-wu-NFc" secondAttribute="bottom" constant="5" id="q16-Yy-tnL"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgType" destination="ov3-PT-FTX" id="YXc-lm-5e3"/>
                 <outlet property="lblName" destination="ChN-D6-fa4" id="Qbd-Ig-t26"/>
             </connections>
-            <point key="canvasLocation" x="127.53623188405798" y="113.16964285714285"/>
+            <point key="canvasLocation" x="127.53623188405798" y="111.16071428571428"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Games" width="50" height="50"/>
         <namedColor name="NightSky">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Void">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

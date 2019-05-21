@@ -21,14 +21,17 @@ class GroupTypeRouter: GroupTypeRouterInput {
 
     // MARK: Communication
     func passDataToNextScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router which scenes it can communicate with
         if segue.identifier == newGroupSegue {
             passDataToNewGroupScene(segue)
+            return
         }
     }
 
     func passDataToNewGroupScene(_ segue: UIStoryboardSegue) {
-        guard let vc = segue.destination as? NewGroupVC
+        guard let vc = segue.destination as? NewGroupVC,
+            let selected = viewController.selectedItem
             else { return }
+
+        vc.baseGroup = selected
     }
 }

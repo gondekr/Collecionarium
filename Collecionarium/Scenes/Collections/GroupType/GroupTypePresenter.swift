@@ -20,7 +20,7 @@ class GroupTypePresenter: GroupTypePresenterInput {
 
     func formatTypes(_ types: [GroupData]) {
         let sorted = types.sorted { (data1, data2) -> Bool in
-            data1.name > data2.name
+            return data1.id < data2.id
         }
         output.showTypes(sorted)
     }

@@ -20,7 +20,13 @@ class GroupTypeVC: UIViewController {
 
     var items: [GroupData] = []
 
+    var selectedItem: GroupData?
+
     @IBOutlet weak var tableView: UITableView!
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -61,7 +67,8 @@ extension GroupTypeVC: UITableViewDataSource {
 
 extension GroupTypeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(items[indexPath.row])
+        selectedItem = items[indexPath.row]
+        router.navigateToNewGroup()
     }
 }
 

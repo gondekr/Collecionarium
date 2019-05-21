@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let fields: [String: DataType] = ["Name": .string, "Year": .year]
         let fields2: [String: DataType] = ["Name": .string, "URL": .string]
 
-        worker.saveGroup(name: "Grupo 1", color: "#00A5DB", fields: fields, title: "Name")
-        worker.saveGroup(name: "Grupo 2", color: "#FFFFFF", fields: fields2, title: "Name")
+        worker.saveGroup(name: "Grupo 3", color: "Watermelon", fields: fields, title: "Name")
+        worker.saveGroup(name: "Grupo 4", color: "Jeans", fields: fields2, title: "Name")
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         setupFirebase()
         checkUserLogged()
         setupBaseColor()
-        addCollection()
+//        addCollection()
 
         return true
     }

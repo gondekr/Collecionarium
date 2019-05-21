@@ -13,25 +13,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="98" id="KGk-i7-Jjw" customClass="GroupCell" customModule="Collecionarium" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="465" height="98"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="62" id="KGk-i7-Jjw" customClass="GroupCell" customModule="Collecionarium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="465" height="97.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="465" height="61.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-fo-zWG" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
-                        <rect key="frame" x="12" y="6" width="441" height="85.5"/>
+                        <rect key="frame" x="15" y="5.5" width="435" height="52"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nt9-kz-FIy">
-                                <rect key="frame" x="0.0" y="0.0" width="5" height="85.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="26" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="5" id="Sg7-xE-UsK"/>
+                                    <constraint firstAttribute="width" secondItem="Nt9-kz-FIy" secondAttribute="height" multiplier="1:2" id="9h4-5q-rXT"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Coleção" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12h-SO-VYk">
-                                <rect key="frame" x="15" y="10" width="416" height="65.5"/>
+                                <rect key="frame" x="31" y="10" width="389" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="qWF-oT-Lec"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,44 +42,47 @@
                         </subviews>
                         <color key="backgroundColor" name="NightSky"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="12h-SO-VYk" secondAttribute="trailing" constant="10" id="6Uv-Wd-RjK"/>
+                            <constraint firstAttribute="trailing" secondItem="12h-SO-VYk" secondAttribute="trailing" constant="15" id="6Uv-Wd-RjK"/>
+                            <constraint firstItem="Nt9-kz-FIy" firstAttribute="centerY" secondItem="Qdb-fo-zWG" secondAttribute="centerY" id="Duv-eN-SEq"/>
+                            <constraint firstItem="Nt9-kz-FIy" firstAttribute="height" secondItem="Qdb-fo-zWG" secondAttribute="height" id="N6H-rP-jDM"/>
                             <constraint firstItem="12h-SO-VYk" firstAttribute="top" secondItem="Qdb-fo-zWG" secondAttribute="top" constant="10" id="OKL-sk-xtt"/>
                             <constraint firstAttribute="bottom" secondItem="12h-SO-VYk" secondAttribute="bottom" constant="10" id="UHK-MM-ZL6"/>
                             <constraint firstItem="Nt9-kz-FIy" firstAttribute="leading" secondItem="Qdb-fo-zWG" secondAttribute="leading" id="Zlp-nH-8am"/>
-                            <constraint firstItem="12h-SO-VYk" firstAttribute="leading" secondItem="Nt9-kz-FIy" secondAttribute="trailing" constant="10" id="iHJ-2K-qNX"/>
-                            <constraint firstItem="Nt9-kz-FIy" firstAttribute="top" secondItem="Qdb-fo-zWG" secondAttribute="top" id="m7B-g9-CBU"/>
-                            <constraint firstAttribute="bottom" secondItem="Nt9-kz-FIy" secondAttribute="bottom" id="zmD-GU-n51"/>
+                            <constraint firstItem="12h-SO-VYk" firstAttribute="leading" secondItem="Nt9-kz-FIy" secondAttribute="trailing" constant="5" id="iHJ-2K-qNX"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="6"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="NightSky"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" name="Void"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Qdb-fo-zWG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Ic9-qm-tpA"/>
-                    <constraint firstAttribute="trailing" secondItem="Qdb-fo-zWG" secondAttribute="trailing" constant="12" id="QqC-9y-SHJ"/>
-                    <constraint firstAttribute="bottom" secondItem="Qdb-fo-zWG" secondAttribute="bottom" constant="6" id="jmO-xw-LQ3"/>
-                    <constraint firstItem="Qdb-fo-zWG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="oaH-Xm-cLx"/>
+                    <constraint firstItem="Qdb-fo-zWG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BMW-xu-UYO"/>
+                    <constraint firstItem="Qdb-fo-zWG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ic9-qm-tpA"/>
+                    <constraint firstAttribute="trailing" secondItem="Qdb-fo-zWG" secondAttribute="trailing" constant="15" id="QqC-9y-SHJ"/>
+                    <constraint firstAttribute="bottom" secondItem="Qdb-fo-zWG" secondAttribute="bottom" constant="5" id="nPO-VH-ZqL"/>
+                    <constraint firstItem="Qdb-fo-zWG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="oaH-Xm-cLx"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="lblName" destination="12h-SO-VYk" id="VsL-aa-uSG"/>
                 <outlet property="tagColor" destination="Nt9-kz-FIy" id="0HO-B2-fYA"/>
             </connections>
-            <point key="canvasLocation" x="152.89855072463769" y="180.80357142857142"/>
+            <point key="canvasLocation" x="152.89855072463769" y="185.49107142857142"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="NightSky">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Void">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

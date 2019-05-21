@@ -14,6 +14,6 @@ class GroupCell: UITableViewCell {
 
     func setupGroup(_ group: GroupData) {
         lblName.text = group.name
-        tagColor.backgroundColor = UIColor(hex: group.color)
+        tagColor.backgroundColor = UIColor(named: group.color) ?? .white
     }
 }

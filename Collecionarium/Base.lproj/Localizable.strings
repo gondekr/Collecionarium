@@ -6,6 +6,12 @@
  Copyright © 2015 BEPiD. All rights reserved.
  */
 
+STRING = "Texto";
+TEXT = "Parágrafo";
+NUMBER = "Número";
+YEAR = "Ano";
+DATE = "Data";
+
 DTT_STRING = "Small text";
 DTT_TEXT = "Bigger text";
 DTT_NUMBER = "Number";
@@ -27,7 +33,6 @@ INFORMATION = "Information";
 INFORMATIONS = "Informations";
 INFORMATIONS_ITEM = "Items' informations";
 TYPE = "Type";
-YEAR = "Year";
 PHOTOS = "Photos";
 
 CUSTOM = "Custom";

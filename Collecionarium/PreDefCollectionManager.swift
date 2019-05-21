@@ -12,6 +12,10 @@ enum DataType: String {
     case year = "year"
     case date = "date"
     case boolean = "boolean"
+
+    static func getAll() -> [DataType] {
+        return [.string, .text, .number, .year, .date, .boolean]
+    }
 }
 
 class PreDefCollectionManager {
