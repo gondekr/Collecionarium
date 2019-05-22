@@ -41,6 +41,16 @@ extension CustomPickerVC: UIPickerViewDataSource {
 }
 
 extension CustomPickerVC: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let item = items[row]
+        let string = localizedStrings ? item.localized() : item
+        let title = NSAttributedString(string: string, attributes: [
+            .font: UIFont(name: "Avenir Next", size: 18.0)!,
+            .foregroundColor: UIColor.white])
+
+        return title
+    }
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let title = items[row]
         return localizedStrings ? title.localized() : title

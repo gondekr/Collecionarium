@@ -18,17 +18,23 @@ extension NewGroupVC: NewGroupPresenterOutput {
             self.displayAlert(alert)
         }
     }
+
+    func showSuccess(_ success: Bool) {
+        DispatchQueue.main.async {
+            self.displaySuccess(success)
+        }
+    }
 }
 
 extension NewGroupInteractor: NewGroupVCOutput {
-    func askForSomething() {
-        fetchSomething()
+    func askForGroupSave(_ group: GroupData) {
+        saveGroup(group)
     }
 }
 
 extension NewGroupPresenter: NewGroupInteractorOutput {
-    func presentSomething() {
-        formatSomething()
+    func presentSuccess(_ success: Bool) {
+        formatSuccess(success)
     }
 }
 
@@ -45,6 +51,10 @@ class NewGroupConfigurator {
         presenter.output = viewController
 
         let interactor = NewGroupInteractor()
+
+        let worker = NewGroupWorker()
+        worker.dao = GroupDAO()
+        interactor.worker = worker
         interactor.output = presenter
 
         viewController.output = interactor

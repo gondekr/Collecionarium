@@ -33,11 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let worker = NewGroupWorker()
         worker.dao = GroupDAO()
 
-        let fields: [String: DataType] = ["Name": .string, "Year": .year]
-        let fields2: [String: DataType] = ["Name": .string, "URL": .string]
-
-        worker.saveGroup(name: "Grupo 3", color: "Watermelon", fields: fields, title: "Name")
-        worker.saveGroup(name: "Grupo 4", color: "Jeans", fields: fields2, title: "Name")
+        let fields = [FieldData(id: "", name: "Name", type: .string, isTitle: true)]
+        let fields2 = [FieldData(id: "", name: "Name", type: .string, isTitle: true), FieldData(id: "", name: "URL", type: .string, isTitle: false)]
+        let group1 = GroupData(id: "", name: "Coll 3", color: "Orange", fields: fields)
+        let group2 = GroupData(id: "", name: "Coll 5", color: "Leaf", fields: fields2)
+        worker.saveGroup(data: group1)
+        worker.saveGroup(data: group2)
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {

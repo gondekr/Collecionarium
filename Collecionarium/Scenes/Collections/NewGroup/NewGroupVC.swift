@@ -6,12 +6,12 @@
 import UIKit
 
 protocol NewGroupVCInput {
-    func displaySomething()
+    func displaySuccess(_ success: Bool)
     func displayAlert(_ alert: UIAlertController)
 }
 
 protocol NewGroupVCOutput {
-    func askForSomething()
+    func askForGroupSave(_ group: GroupData)
 }
 
 class NewGroupVC: UIViewController {
@@ -23,7 +23,9 @@ class NewGroupVC: UIViewController {
 
     var selectedField: FieldData?
 
+    @IBOutlet weak var header: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnChooseColor: UIButton!
 
     // MARK: - Lifecycle
@@ -35,7 +37,8 @@ class NewGroupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        setupFields()
+        setupHeader()
+        setupInitial()
     }
 
     func registerCell() {
@@ -45,18 +48,40 @@ class NewGroupVC: UIViewController {
         tableView.register(addNib, forCellReuseIdentifier: AddFieldCell.identifier)
     }
 
+    func setupInitial() {
+        txtName.text = baseGroup.name
+        setupFields()
+        updateColor()
+    }
+
     func setupFields() {
         fields = baseGroup.fields
         tableView.reloadData()
     }
 
+    func setupHeader() {
+        tableView.tableHeaderView = header
+    }
+
     func updateColor() {
         let name = baseGroup.color
-        btnChooseColor.backgroundColor = UIColor(named: name)
+        guard let color = UIColor(named: name) else {
+            baseGroup.color = "Orange"
+            updateColor()
+            return
+        }
+
+        btnChooseColor.backgroundColor = color
     }
 
     @IBAction func btnChooseColorPressed() {
         router.navigateToChooseColor()
+    }
+
+    @IBAction func btnSavePressed(_ sender: UIBarButtonItem) {
+        baseGroup.fields = fields
+        if let name = txtName.text { baseGroup.name = name }
+        output.askForGroupSave(baseGroup)
     }
 }
 
@@ -70,8 +95,17 @@ extension NewGroupVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let id = indexPath.row == fields.count ? AddFieldCell.identifier : FieldDetailsCell.identifier
+        let id = getCellId(row: indexPath.row)
         return tableView.dequeueReusableCell(withIdentifier: id, for: indexPath)
+    }
+
+    func getCellId(row: Int) -> String {
+        switch row {
+        case fields.count:
+            return AddFieldCell.identifier
+        default:
+            return FieldDetailsCell.identifier
+        }
     }
 }
 
@@ -102,13 +136,29 @@ extension NewGroupVC: ChooseColorDelegate {
 
 extension NewGroupVC: AddFieldDelegate {
     func didSaveField(_ field: FieldData) {
-        let index = fields.firstIndex(where: { $0.id == field.id })
+        if field.isTitle {
+            fields = fields.map {
+                var item = $0
+                item.isTitle = false
+                return item
+            }
+            tableView.reloadData()
+        }
+
+        guard let index = fields.firstIndex(where: { $0.id == field.id }) else {
+            fields.append(field)
+            tableView.reloadData()
+            return
+        }
+
+        fields[index] = field
+        tableView.reloadData()
     }
 }
 
 extension NewGroupVC: NewGroupVCInput {
-    func displaySomething() {
-        // Use results
+    func displaySuccess(_ success: Bool) {
+        if success { router.navigateToHome() }
     }
 
     func displayAlert(_ alert: UIAlertController) {

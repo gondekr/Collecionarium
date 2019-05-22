@@ -10,5 +10,4 @@ struct GroupData {
     var name: String = ""
     var color: String = ""
     var fields: [FieldData] = []
-    var predefined: Bool = false
 }

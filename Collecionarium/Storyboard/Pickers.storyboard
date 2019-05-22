@@ -48,7 +48,7 @@
                                         </date>
                                     </datePicker>
                                 </subviews>
-                                <color key="backgroundColor" name="Ashes"/>
+                                <color key="backgroundColor" name="NightSky"/>
                                 <constraints>
                                     <constraint firstItem="8Zp-Vt-WcI" firstAttribute="leading" secondItem="3qg-Go-ODn" secondAttribute="leading" id="0f9-84-gbe"/>
                                     <constraint firstAttribute="trailing" secondItem="1dv-Fa-eyY" secondAttribute="trailing" id="AxD-3V-vdU"/>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" name="Ashes"/>
+                                <color key="backgroundColor" name="NightSky"/>
                                 <constraints>
                                     <constraint firstItem="QhV-7P-q7Y" firstAttribute="top" secondItem="Ak8-ci-zxf" secondAttribute="bottom" id="Du7-TQ-fTR"/>
                                     <constraint firstAttribute="trailing" secondItem="Ak8-ci-zxf" secondAttribute="trailing" id="FCg-LG-bPq"/>
@@ -183,7 +183,7 @@
                                         </connections>
                                     </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" name="Ashes"/>
+                                <color key="backgroundColor" name="NightSky"/>
                                 <constraints>
                                     <constraint firstItem="tZJ-7q-hpt" firstAttribute="leading" secondItem="VFi-fp-85E" secondAttribute="leading" id="DRN-ZI-bst"/>
                                     <constraint firstItem="7Vt-Ga-jkg" firstAttribute="top" secondItem="VFi-fp-85E" secondAttribute="top" id="LjR-mN-e2c"/>
@@ -215,9 +215,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Ashes">
-            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

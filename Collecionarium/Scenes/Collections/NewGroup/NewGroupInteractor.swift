@@ -6,11 +6,11 @@
 import UIKit
 
 protocol NewGroupInteractorInput {
-    func fetchSomething()
+    func saveGroup(_ group: GroupData)
 }
 
 protocol NewGroupInteractorOutput {
-    func presentSomething()
+    func presentSuccess(_ success: Bool)
 }
 
 class NewGroupInteractor: NewGroupInteractorInput {
@@ -18,7 +18,8 @@ class NewGroupInteractor: NewGroupInteractorInput {
     var worker: NewGroupWorker!
 
     // MARK: Business logic
-    func fetchSomething() {
-        output.presentSomething()
+    func saveGroup(_ group: GroupData) {
+        let success = worker.saveGroup(data: group)
+        output.presentSuccess(success)
     }
 }

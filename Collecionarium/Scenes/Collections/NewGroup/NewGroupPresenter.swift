@@ -6,23 +6,24 @@
 import UIKit
 
 protocol NewGroupPresenterInput {
-    func presentError()
-    func formatSomething()
+    func formatError()
+    func formatSuccess(_ success: Bool)
 }
 
 protocol NewGroupPresenterOutput: class {
     func showAlert(_ alert: UIAlertController)
+    func showSuccess(_ success: Bool)
 }
 
 class NewGroupPresenter: NewGroupPresenterInput {
     weak var output: NewGroupPresenterOutput!
 
-    func presentError() {
+    func formatError() {
         let alert = UIAlertController()
         output.showAlert(alert)
     }
 
-    func formatSomething() {
-
+    func formatSuccess(_ success: Bool) {
+        output.showSuccess(success)
     }
 }

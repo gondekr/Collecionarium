@@ -6,10 +6,7 @@
 class NewGroupWorker {
     var dao: GroupDAO!
 
-    func saveGroup(name: String, color: String, fields: [String: DataType], title: String) {
-        let mapped = fields
-            .map { FieldData(id: "", name: $0.key, type: $0.value, isTitle: $0.key == title) }
-        let group = GroupData(id: "", name: name, color: color, fields: mapped, predefined: false)
-        dao.insertGroup(data: group)
+    func saveGroup(data: GroupData) -> Bool {
+        return dao.saveGroup(data: data)
     }
 }

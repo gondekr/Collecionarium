@@ -7,6 +7,7 @@ import UIKit
 
 protocol NewGroupRouterInput {
     func goBack()
+    func navigateToHome()
     func navigateToAddField()
     func navigateToChooseColor()
     func passDataToNextScene(_ segue: UIStoryboardSegue)
@@ -21,6 +22,10 @@ class NewGroupRouter: NewGroupRouterInput {
     // MARK: Navigation
     func goBack() {
         viewController.navigationController?.popViewController(animated: true)
+    }
+
+    func navigateToHome() {
+        viewController.navigationController?.popToRootViewController(animated: true)
     }
 
     func navigateToAddField() {

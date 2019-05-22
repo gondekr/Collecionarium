@@ -38,6 +38,9 @@ class GroupListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         output.askForGroups()
     }
 

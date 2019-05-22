@@ -11,6 +11,7 @@ TEXT = "Parágrafo";
 NUMBER = "Número";
 YEAR = "Ano";
 DATE = "Data";
+BOOLEAN = "Sim/Não";
 
 DTT_STRING = "Small text";
 DTT_TEXT = "Bigger text";

@@ -12,14 +12,18 @@ class GroupDAO: BaseDAO<Group> {
         self.init(entityName: "Group")
     }
 
-    private func newGroup() -> Group? {
-        let item = new()
-        item?.id = UUID()
-        return item
+    private func newGroup(id: String? = nil) -> Group? {
+        if let string = id, let item = get(id: string) {
+            return item
+        }
+
+        let group = new()
+        group?.id = UUID().uuidString
+        return group
     }
 
-    func insertGroup(data: GroupData) {
-        guard let group = newGroup() else { return }
+    func saveGroup(data: GroupData) -> Bool {
+        guard let group = newGroup(id: data.id) else { return false }
         group.name = data.name
         group.color = data.color
         let form: [Field] = data.fields.map({ (field) -> Field? in
@@ -33,5 +37,6 @@ class GroupDAO: BaseDAO<Group> {
         let set = NSOrderedSet(array: form)
         group.addToFields(set)
         save()
+        return true
     }
 }

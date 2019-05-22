@@ -34,8 +34,13 @@ class YearPickerVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         return years.count
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return years[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let year = years[row]
+        let title = NSAttributedString(string: year, attributes: [
+            .font: UIFont(name: "Avenir Next", size: 18.0)!,
+            .foregroundColor: UIColor.white])
+
+        return title
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
