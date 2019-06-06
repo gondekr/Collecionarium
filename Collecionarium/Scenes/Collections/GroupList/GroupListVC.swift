@@ -18,6 +18,8 @@ class GroupListVC: UIViewController {
     var router: GroupListRouter!
 
     var items = [GroupData]()
+    var selected: GroupData?
+
     @IBOutlet weak var tableView: UITableView!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -47,6 +49,11 @@ class GroupListVC: UIViewController {
     @IBAction func btnNewGroupPressed(_ sender: UIBarButtonItem) {
         router.navigateToGroupType()
     }
+
+    @IBAction func btnEditPressed(_ sender: UIBarButtonItem) {
+        isEditing = !isEditing
+        tableView.setEditing(isEditing, animated: true)
+    }
 }
 
 extension GroupListVC: UITableViewDataSource {
@@ -71,7 +78,11 @@ extension GroupListVC: UITableViewDataSource {
 
 extension GroupListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(items[indexPath.row])
+        selected = items[indexPath.row]
+        if (isEditing) {
+            router.navigateToEditGroup()
+            return
+        }
     }
 }
 

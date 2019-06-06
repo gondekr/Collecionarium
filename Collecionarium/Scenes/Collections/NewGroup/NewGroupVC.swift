@@ -38,6 +38,9 @@ class NewGroupVC: UIViewController {
         super.viewDidLoad()
         registerCell()
         setupHeader()
+    }
+
+    override func viewWillLayoutSubviews() {
         setupInitial()
     }
 

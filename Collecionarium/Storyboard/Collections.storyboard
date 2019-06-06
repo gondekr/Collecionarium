@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-3e-e2t">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-3e-e2t">
                                 <rect key="frame" x="0.0" y="10" width="414" height="746"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,11 +41,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Collecionarium" largeTitleDisplayMode="always" id="Dp9-Ap-WKj">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="bWq-ly-Wun"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="hYc-dQ-ZbT">
-                            <connections>
-                                <action selector="btnNewGroupPressed:" destination="vWh-Eg-RSE" id="h5M-lu-tYc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="add" id="hYc-dQ-ZbT">
+                                <connections>
+                                    <action selector="btnNewGroupPressed:" destination="vWh-Eg-RSE" id="h5M-lu-tYc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Editar" style="plain" id="FKM-6n-WbY">
+                                <connections>
+                                    <action selector="btnEditPressed:" destination="vWh-Eg-RSE" id="bpE-d1-EK1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="DrX-3e-e2t" id="3It-wa-0jI"/>
@@ -224,7 +231,7 @@
                                         </label>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-S5-BkV" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
                                             <rect key="frame" x="221.5" y="10" width="136.5" height="30"/>
-                                            <color key="backgroundColor" name="Orange"/>
+                                            <color key="backgroundColor" name="Ashes"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="N9o-SE-IYL"/>
                                             </constraints>
@@ -690,6 +697,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3H1-cV-wcE"/>
+        <segue reference="egu-pb-Osq"/>
     </inferredMetricsTieBreakers>
 </document>

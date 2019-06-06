@@ -7,6 +7,7 @@ import UIKit
 
 protocol GroupListRouterInput {
     func navigateToGroup()
+    func navigateToEditGroup()
     func navigateToGroupType()
     func passDataToNextScene(_ segue: UIStoryboardSegue)
 }
@@ -15,9 +16,14 @@ class GroupListRouter: GroupListRouterInput {
     weak var viewController: GroupListVC!
 
     let groupSegue = "group"
+    let editGroupSegue = "editGroup"
     let groupTypeSegue = "groupType"
 
     // MARK: Navigation
+    func navigateToEditGroup() {
+        viewController.performSegue(withIdentifier: editGroupSegue, sender: nil)
+    }
+
     func navigateToGroup() {
         viewController.performSegue(withIdentifier: groupSegue, sender: nil)
     }
@@ -37,6 +43,19 @@ class GroupListRouter: GroupListRouterInput {
             passDataToGroupTypeScene(segue)
             return
         }
+
+        if segue.identifier == editGroupSegue {
+            passDataToEditGroupScene(segue)
+            return
+        }
+    }
+
+    func passDataToEditGroupScene(_ segue: UIStoryboardSegue) {
+        guard let vc = segue.destination as? NewGroupVC,
+            let selected = viewController.selected
+            else { return }
+
+        vc.baseGroup = selected
     }
 
     func passDataToGroupScene(_ segue: UIStoryboardSegue) {
