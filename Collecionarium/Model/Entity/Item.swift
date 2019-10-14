@@ -10,5 +10,5 @@ public class Item: NSManagedObject {
     @NSManaged public var photos: NSObject?
     @NSManaged public var subtitle: NSObject?
     @NSManaged public var values: NSObject?
-    @NSManaged public var collection: Collection?
+    @NSManaged public var group: Group?
 }

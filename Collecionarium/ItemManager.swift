@@ -12,8 +12,8 @@ class ItemManager {
     
     // Default Methods
     lazy var managedObjectContext: NSManagedObjectContext = {
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.managedObjectContext
+        var stack = CoreDataManager.collecionarium
+        return stack.managedObjectContext
         }()
     
     // Create Item
