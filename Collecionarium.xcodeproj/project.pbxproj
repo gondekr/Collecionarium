@@ -19,6 +19,11 @@
 		627EFA371C0611ED00039BF5 /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627EFA391C0611ED00039BF5 /* Items.storyboard */; };
 		628BFDE61BF126A30005BB1D /* OnlineSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BFDE51BF126A30005BB1D /* OnlineSwitchCell.swift */; };
 		628BFDE81BF127BA0005BB1D /* SharedSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BFDE71BF127BA0005BB1D /* SharedSwitchCell.swift */; };
+		6297B0D72266C3DA0031F52B /* Collecionarium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6297B0D52266C3DA0031F52B /* Collecionarium.xcdatamodeld */; };
+		6297B0E32266C4680031F52B /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297B0D92266C4680031F52B /* Value.swift */; };
+		6297B0E42266C4680031F52B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297B0DA2266C4680031F52B /* Item.swift */; };
+		6297B0E52266C4680031F52B /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297B0DB2266C4680031F52B /* Field.swift */; };
+		6297B0EF2266C8050031F52B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297B0EE2266C8050031F52B /* Group.swift */; };
 		629A69451BF5240D0071CE6E /* UserItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629A69441BF5240D0071CE6E /* UserItemVC.swift */; };
 		62B9273F1BF39B42000D02DF /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9273E1BF39B42000D02DF /* NewsTVC.swift */; };
 		62B927411BF3A10F000D02DF /* SearchTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B927401BF3A10F000D02DF /* SearchTVC.swift */; };
@@ -26,14 +31,10 @@
 		62D613971C0B1DE2006C2365 /* Number.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D613991C0B1DE2006C2365 /* Number.xib */; };
 		62D6139C1C0B1E07006C2365 /* String.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D6139E1C0B1E07006C2365 /* String.xib */; };
 		62D613A11C0B1E50006C2365 /* Year.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D613A31C0B1E50006C2365 /* Year.xib */; };
-		62D61F741BE92BFB0058D1EF /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F6B1BE92BFB0058D1EF /* Collection.swift */; };
 		62D61F751BE92BFB0058D1EF /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F6C1BE92BFB0058D1EF /* CollectionManager.swift */; };
 		62D61F761BE92BFB0058D1EF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F6D1BE92BFB0058D1EF /* CoreDataManager.swift */; };
-		62D61F771BE92BFB0058D1EF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F6E1BE92BFB0058D1EF /* Item.swift */; };
 		62D61F781BE92BFB0058D1EF /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F6F1BE92BFB0058D1EF /* ItemManager.swift */; };
-		62D61F7B1BE92BFB0058D1EF /* PreDefCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F721BE92BFB0058D1EF /* PreDefCollection.swift */; };
 		62D61F7C1BE92BFB0058D1EF /* PreDefCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F731BE92BFB0058D1EF /* PreDefCollectionManager.swift */; };
-		62D61F7F1BE92D9D0058D1EF /* Collecionarium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F7D1BE92D9D0058D1EF /* Collecionarium.xcdatamodeld */; };
 		62D61FB51BE92DB70058D1EF /* AddNewFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F801BE92DB70058D1EF /* AddNewFieldCell.swift */; };
 		62D61FB61BE92DB70058D1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D61F811BE92DB70058D1EF /* AppDelegate.swift */; };
 		62D61FB71BE92DB70058D1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D61F821BE92DB70058D1EF /* Assets.xcassets */; };
@@ -89,6 +90,11 @@
 		627EFA381C0611ED00039BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Items.storyboard; sourceTree = "<group>"; };
 		628BFDE51BF126A30005BB1D /* OnlineSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineSwitchCell.swift; sourceTree = "<group>"; };
 		628BFDE71BF127BA0005BB1D /* SharedSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSwitchCell.swift; sourceTree = "<group>"; };
+		6297B0D62266C3DA0031F52B /* Collecionarium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Collecionarium.xcdatamodel; sourceTree = "<group>"; };
+		6297B0D92266C4680031F52B /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		6297B0DA2266C4680031F52B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6297B0DB2266C4680031F52B /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		6297B0EE2266C8050031F52B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Group.swift; path = /Users/gondekr/Workspace/Collecionarium/Collecionarium/Model/Entity/Group.swift; sourceTree = "<absolute>"; };
 		629A69441BF5240D0071CE6E /* UserItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserItemVC.swift; sourceTree = "<group>"; };
 		62B9273E1BF39B42000D02DF /* NewsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
 		62B927401BF3A10F000D02DF /* SearchTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTVC.swift; sourceTree = "<group>"; };
@@ -103,14 +109,10 @@
 		62D613A21C0B1E50006C2365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Year.xib; sourceTree = "<group>"; };
 		62D613A51C0B1E53006C2365 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Year.strings"; sourceTree = "<group>"; };
 		62D61F531BE92B870058D1EF /* Collecionarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collecionarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		62D61F6B1BE92BFB0058D1EF /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		62D61F6C1BE92BFB0058D1EF /* CollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		62D61F6D1BE92BFB0058D1EF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		62D61F6E1BE92BFB0058D1EF /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		62D61F6F1BE92BFB0058D1EF /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
-		62D61F721BE92BFB0058D1EF /* PreDefCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreDefCollection.swift; sourceTree = "<group>"; };
 		62D61F731BE92BFB0058D1EF /* PreDefCollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreDefCollectionManager.swift; sourceTree = "<group>"; };
-		62D61F7E1BE92D9D0058D1EF /* Collecionarium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Collecionarium.xcdatamodel; sourceTree = "<group>"; };
 		62D61F801BE92DB70058D1EF /* AddNewFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewFieldCell.swift; sourceTree = "<group>"; };
 		62D61F811BE92DB70058D1EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D61F821BE92DB70058D1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +187,33 @@
 			name = "Custom Picker";
 			sourceTree = "<group>";
 		};
+		6297B0B22266BF1B0031F52B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		6297B0D22266C3430031F52B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6297B0D52266C3DA0031F52B /* Collecionarium.xcdatamodeld */,
+				6297B0D32266C3430031F52B /* Entity */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6297B0D32266C3430031F52B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6297B0EE2266C8050031F52B /* Group.swift */,
+				6297B0DB2266C4680031F52B /* Field.swift */,
+				6297B0DA2266C4680031F52B /* Item.swift */,
+				6297B0D92266C4680031F52B /* Value.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		62B927421BF3A12B000D02DF /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,12 +234,13 @@
 			name = "Collection Stream";
 			sourceTree = "<group>";
 		};
-		62B927441BF3A183000D02DF /* Model */ = {
+		62B927441BF3A183000D02DF /* data */ = {
 			isa = PBXGroup;
 			children = (
-				62D61FE91BE92DD30058D1EF /* CoreData */,
+				6297B0B22266BF1B0031F52B /* Entity */,
+				62D61FE91BE92DD30058D1EF /* Stack */,
 			);
-			name = Model;
+			name = data;
 			sourceTree = "<group>";
 		};
 		62B927461BF3A279000D02DF /* Item Stream */ = {
@@ -244,10 +274,11 @@
 		62D61F551BE92B870058D1EF /* Collecionarium */ = {
 			isa = PBXGroup;
 			children = (
+				6297B0D22266C3430031F52B /* Model */,
 				62D61F811BE92DB70058D1EF /* AppDelegate.swift */,
 				62D61F931BE92DB70058D1EF /* Hey.swift */,
 				6222B33A1BEA692D00254324 /* DesignableView.swift */,
-				62B927441BF3A183000D02DF /* Model */,
+				62B927441BF3A183000D02DF /* data */,
 				62D61FEB1BE92EC00058D1EF /* Cells */,
 				626CF0B71BEC064200EBBA22 /* Custom Picker */,
 				62B927431BF3A146000D02DF /* Collection Stream */,
@@ -272,19 +303,15 @@
 			path = Collecionarium;
 			sourceTree = "<group>";
 		};
-		62D61FE91BE92DD30058D1EF /* CoreData */ = {
+		62D61FE91BE92DD30058D1EF /* Stack */ = {
 			isa = PBXGroup;
 			children = (
-				62D61F7D1BE92D9D0058D1EF /* Collecionarium.xcdatamodeld */,
-				62D61F6B1BE92BFB0058D1EF /* Collection.swift */,
 				62D61F6C1BE92BFB0058D1EF /* CollectionManager.swift */,
 				62D61F6D1BE92BFB0058D1EF /* CoreDataManager.swift */,
-				62D61F6E1BE92BFB0058D1EF /* Item.swift */,
 				62D61F6F1BE92BFB0058D1EF /* ItemManager.swift */,
-				62D61F721BE92BFB0058D1EF /* PreDefCollection.swift */,
 				62D61F731BE92BFB0058D1EF /* PreDefCollectionManager.swift */,
 			);
-			name = CoreData;
+			name = Stack;
 			sourceTree = "<group>";
 		};
 		62D61FEA1BE92E7E0058D1EF /* xib Cells */ = {
@@ -358,6 +385,7 @@
 				62D61F501BE92B870058D1EF /* Frameworks */,
 				62D61F511BE92B870058D1EF /* Resources */,
 				F435A4DA124AC59DF7541839 /* [CP] Embed Pods Frameworks */,
+				627B539022637F350017FEAB /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -381,6 +409,7 @@
 					62D61F521BE92B870058D1EF = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 7YCYVAN8PU;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -458,6 +487,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		627B539022637F350017FEAB /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" ea3e234e07314846d45b2919e38b625a4ffed334 49ec0d82c21549a45e33479fd94edcc74732df3051e3bcc34561b87014c1c779\n";
+		};
 		F435A4DA124AC59DF7541839 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,7 +515,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -475,7 +523,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -498,6 +546,7 @@
 				62B9273F1BF39B42000D02DF /* NewsTVC.swift in Sources */,
 				6222B33B1BEA692D00254324 /* DesignableView.swift in Sources */,
 				62D61FB61BE92DB70058D1EF /* AppDelegate.swift in Sources */,
+				6297B0E52266C4680031F52B /* Field.swift in Sources */,
 				62D61FDB1BE92DB70058D1EF /* NewFieldTableView.swift in Sources */,
 				62D61FD01BE92DB70058D1EF /* ItemIntCell.swift in Sources */,
 				628BFDE81BF127BA0005BB1D /* SharedSwitchCell.swift in Sources */,
@@ -509,24 +558,25 @@
 				62D61FD11BE92DB70058D1EF /* ItemPhotoCell.swift in Sources */,
 				62D61FE61BE92DB70058D1EF /* Tutorial.swift in Sources */,
 				62D61FCF1BE92DB70058D1EF /* ItemFieldDelegate.swift in Sources */,
-				62D61F771BE92BFB0058D1EF /* Item.swift in Sources */,
 				62D61FBB1BE92DB70058D1EF /* CollectionsTableView.swift in Sources */,
 				62D61FC61BE92DB70058D1EF /* FieldTypeCell.swift in Sources */,
 				62D61FCD1BE92DB70058D1EF /* ItemDetailCell.swift in Sources */,
 				6217D54D1BFA4140004D5E8E /* SignUpTVC.swift in Sources */,
+				6297B0E32266C4680031F52B /* Value.swift in Sources */,
 				62D61FD51BE92DB70058D1EF /* ItemTextCell.swift in Sources */,
+				6297B0D72266C3DA0031F52B /* Collecionarium.xcdatamodeld in Sources */,
 				6215AACB1BFCE79B007ADC84 /* YearPickerVC.swift in Sources */,
 				62FF3ED81BF65151006A134D /* UserItemPhotoCell.swift in Sources */,
 				62D61FD31BE92DB70058D1EF /* ItemsCollectionView.swift in Sources */,
+				6297B0E42266C4680031F52B /* Item.swift in Sources */,
 				628BFDE61BF126A30005BB1D /* OnlineSwitchCell.swift in Sources */,
 				62D61F781BE92BFB0058D1EF /* ItemManager.swift in Sources */,
-				62D61F7B1BE92BFB0058D1EF /* PreDefCollection.swift in Sources */,
+				6297B0EF2266C8050031F52B /* Group.swift in Sources */,
 				62D61FE51BE92DB70058D1EF /* TitleFieldCell.swift in Sources */,
 				62D61FCA1BE92DB70058D1EF /* ItemBoolCell.swift in Sources */,
 				62D61FBC1BE92DB70058D1EF /* CollNameCell.swift in Sources */,
 				62D61FD91BE92DB70058D1EF /* LoginViewController.swift in Sources */,
 				62D61FD71BE92DB70058D1EF /* ItemYearCell2.swift in Sources */,
-				62D61F7F1BE92D9D0058D1EF /* Collecionarium.xcdatamodeld in Sources */,
 				62B927411BF3A10F000D02DF /* SearchTVC.swift in Sources */,
 				62D61FC21BE92DB70058D1EF /* TradeEventsTVC.swift in Sources */,
 				62D61F761BE92BFB0058D1EF /* CoreDataManager.swift in Sources */,
@@ -534,7 +584,6 @@
 				62D61FC01BE92DB70058D1EF /* DetailTableView.swift in Sources */,
 				62D61FCC1BE92DB70058D1EF /* ItemDateCell.swift in Sources */,
 				62D61FDF1BE92DB70058D1EF /* PhotosTableViewCell.swift in Sources */,
-				62D61F741BE92BFB0058D1EF /* Collection.swift in Sources */,
 				62D61FE01BE92DB70058D1EF /* PreDefCell.swift in Sources */,
 				62D61F751BE92BFB0058D1EF /* CollectionManager.swift in Sources */,
 				6217D54F1BFA5FB1004D5E8E /* UserTVC.swift in Sources */,
@@ -625,6 +674,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -671,6 +721,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -763,12 +814,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		62D61F7D1BE92D9D0058D1EF /* Collecionarium.xcdatamodeld */ = {
+		6297B0D52266C3DA0031F52B /* Collecionarium.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				62D61F7E1BE92D9D0058D1EF /* Collecionarium.xcdatamodel */,
+				6297B0D62266C3DA0031F52B /* Collecionarium.xcdatamodel */,
 			);
-			currentVersion = 62D61F7E1BE92D9D0058D1EF /* Collecionarium.xcdatamodel */;
+			currentVersion = 6297B0D62266C3DA0031F52B /* Collecionarium.xcdatamodel */;
 			path = Collecionarium.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

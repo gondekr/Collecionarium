@@ -1,8 +1,8 @@
 target 'Collecionarium' do
-  platform = :ios, '9.0'
+  platform :ios, '9.0'
   use_frameworks!
   pod 'Kingfisher'
   pod 'Firebase/Core'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'Fabric', '~> 1.9.0'
+  pod 'Crashlytics', '~> 3.12.0'
 end

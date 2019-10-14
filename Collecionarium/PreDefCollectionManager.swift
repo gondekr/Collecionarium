@@ -5,11 +5,21 @@
 import CoreData
 import UIKit
 
+enum DataType: String {
+    case string = "string"
+    case text = "text"
+    case number = "number"
+    case year = "year"
+    case date = "date"
+    case boolean = "boolean"
+}
+
 class PreDefCollectionManager {
-    
+
     static let sharedInstance = PreDefCollectionManager()
     static let entityName = "PreDefCollection"
-    
+
+    let ids  = ["pre-01", "pre-02", "pre-03", "pre-04", "pre-05", "pre-06"]
     let names  = ["Miniaturas",
                   "Moedas",
                   "Ingressos",
@@ -22,12 +32,12 @@ class PreDefCollectionManager {
                   ["Nome", "Empresa", "Ano", "Genero"],
                   ["Título", "Autor", "Ano", "Editora"],
                   ["Ano", "Pais", "Valor"]]
-    let types  = [[3,0],
-                  [3,0,0],
-                  [3,0],
-                  [0,0,3,0],
-                  [0,0,3,0],
-                  [3,0,2]]
+    let types: [[DataType]] = [[.year, .string],
+                  [.year, .string, .string],
+                  [.year, .string],
+                  [.string, .string, .year, .string],
+                  [.string, .string, .year, .string],
+                  [.year, .string, .number]]
     let title  = [1,0,1,0,0,0]
 
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -35,9 +45,8 @@ class PreDefCollectionManager {
         return appDelegate.managedObjectContext
         }()
     
-    func newPreDefCollection() -> PreDefCollection {
-        let coll = (NSEntityDescription.insertNewObject(forEntityName: PreDefCollectionManager.entityName, into: managedObjectContext) as? PreDefCollection)!
-        coll.id = fetchPreDefCollections().count as NSNumber
+    func newPreDefCollection() -> Group {
+        let coll = (NSEntityDescription.insertNewObject(forEntityName: PreDefCollectionManager.entityName, into: managedObjectContext) as? Group)!
         return coll
     }
     
@@ -49,23 +58,23 @@ class PreDefCollectionManager {
         }
     }
     
-    func fetchPreDefCollections() -> Array<PreDefCollection> {
+    func fetchPreDefCollections() -> Array<Group> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: PreDefCollectionManager.entityName)
         
         do {
             let fetchedResults = try managedObjectContext.fetch(fetchRequest)
             
-            if let results = fetchedResults as? [PreDefCollection] {
+            if let results = fetchedResults as? [Group] {
                 return results;
             }
         } catch {
             
         }
         
-        return Array<PreDefCollection>()
+        return Array<Group>()
     }
     
-    func deletePreDefCollection(coll: PreDefCollection) {
+    func deletePreDefCollection(coll: Group) {
         managedObjectContext.delete(coll)
         save()
     }
@@ -81,12 +90,21 @@ class PreDefCollectionManager {
         for i in 0..<names.count {
             let coll = newPreDefCollection()
             coll.name = names[i]
-            coll.fields = fields[i]
-            coll.titleIndex = title[i] as NSNumber
-            for type in types[i] {
-                coll.types.append(dataTypes[type])
+            coll.id = ids[i]
+            for f in 0..<fields[i].count {
+                let field = newField()
+                field.id = "\(String(describing: coll.id))-\(f)"
+                field.isTitle = (title[i] == f) as NSNumber
+                field.name = fields[i][f]
+                field.type = types[i][f].rawValue
+                coll.addToFields(field)
             }
             save()
         }
+    }
+
+    func newField() -> Field {
+        let field = (NSEntityDescription.insertNewObject(forEntityName: "Field", into: managedObjectContext) as? Field)!
+        return field
     }
 }
