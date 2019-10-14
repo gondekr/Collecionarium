@@ -10,14 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Get dependencies
-      run: |
-        brew install ruby
-        brew link ruby
-        brew install swiftlint
-        brew link swiftlint
-        brew install carthage
-        brew link carthage
-        brew install node
-        brew link node
+      run: sudo gem install fastlane
     - name: Fastlane test
-      run: fastlane test
+      run: bundle exec fastlane test
