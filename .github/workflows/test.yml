@@ -12,4 +12,4 @@ jobs:
     - name: Get dependencies
       run: sudo gem install fastlane
     - name: Fastlane test
-      run: bundle exec fastlane test
+      run: fastlane test
