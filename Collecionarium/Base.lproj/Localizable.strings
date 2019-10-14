@@ -1,0 +1,81 @@
+/*
+ Localizable.strings
+ Collecionarium
+ 
+ Created by Rubens Gondek on 10/16/15.
+ Copyright © 2015 BEPiD. All rights reserved.
+ */
+
+DTT_STRING = "Small text";
+DTT_TEXT = "Bigger text";
+DTT_NUMBER = "Number";
+DTT_YEAR = "Year";
+DTT_DATE = "Date";
+
+DONE = "Done";
+EDIT = "Edit";
+CANCEL = "Cancel";  
+
+CAMERA = "Camera";
+PHOTO_LIBRARY = "Photo Library";
+
+YES = "Yes";
+NO = "No";
+
+ITEMS = "Items";
+INFORMATION = "Information";
+INFORMATIONS = "Informations";
+INFORMATIONS_ITEM = "Items' informations";
+TYPE = "Type";
+YEAR = "Year";
+PHOTOS = "Photos";
+
+CUSTOM = "Custom";
+
+WARNING = "Warning";
+
+LEAVE_WITHOUT_SAVE = "Do you really want to leave without saving?";
+ONLY_TEN = "You can have just 10 or less informations!";
+FILL_THE_FIELDS = "Please fill all the informations correctly!";
+FILL_INFO_NAME = "Insert a valid information name!";
+CHOOSE_INFO_TYPE = "Choose a type for this information!";
+SAVE_NO_PHOTOS = "Do you really want to save this without any photos?";
+
+DELETE_ITEM = "Delete Item";
+DELETE_PHOTO = "Delete Photo";
+
+DEL_PHOTO_CONFIRM = "Are you sure?";
+
+NO_COLLECTION = "You have no collections, tap on '+' to add one";
+NO_ITEM = "You have no items, tap on '+' to add one";
+
+ADD_PHOTO = "Add new photo";
+PHOTO_SOURCE = "Choose a photo source";
+
+EVENT_ADDED = "New trade added!";
+EVENT_REMOVED = "Trade removed!";
+
+ITEM_REMOVED_FROM_TRADE = "Item removed from the trades";
+
+SHARE_FACEBOOK = "Share on facebook";
+
+SHARED_COLLECTION = "Shared Collection";
+NEW_ITEM = "New item added";
+ITEM_SALE = "Item for sale";
+ITEM_TRADE = "Item for trade";
+
+ADD_SALE = "Sell item";
+ADD_TRADE = "Trade item";
+
+REMOVE_SALE = "Remove item from sale";
+REMOVE_TRADE = "Remove item from trade";
+
+INVALID_LOGIN = "Invalid login and/or password";
+SUCCESS = "Success";
+USER_CREATED = "The user \(username) has been created";
+
+LOGOUT = "Do you really want to logout?";
+
+PASSWORD_6 = "Password must have at least 6 characters";
+PASSWORD_MATCH = "Passwords don't match";
+

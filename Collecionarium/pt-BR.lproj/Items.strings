@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = ">"; ObjectID = "HMk-Qg-Tl7"; */
+"HMk-Qg-Tl7.normalTitle" = ">";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "RY8-jK-EA6"; */
+"RY8-jK-EA6.text" = "Título";
+
+/* Class = "UIButton"; normalTitle = "<"; ObjectID = "RlP-Pc-7zV"; */
+"RlP-Pc-7zV.normalTitle" = "<";
+
+/* Class = "UISegmentedControl"; oiU-gQ-7FR.segmentTitles[0] = "1"; ObjectID = "oiU-gQ-7FR"; */
+"oiU-gQ-7FR.segmentTitles[0]" = "1";
+
+/* Class = "UISegmentedControl"; oiU-gQ-7FR.segmentTitles[1] = "2"; ObjectID = "oiU-gQ-7FR"; */
+"oiU-gQ-7FR.segmentTitles[1]" = "2";
+
+/* Class = "UISegmentedControl"; oiU-gQ-7FR.segmentTitles[2] = "3"; ObjectID = "oiU-gQ-7FR"; */
+"oiU-gQ-7FR.segmentTitles[2]" = "3";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "uCb-6B-Ic1"; */
+"uCb-6B-Ic1.title" = "Salvar";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "vhg-lT-SjV"; */
+"vhg-lT-SjV.normalTitle" = "X";

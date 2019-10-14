@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>152497635673-k0k9bstgcmrpld3l65g8022dmfojs5u9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.152497635673-k0k9bstgcmrpld3l65g8022dmfojs5u9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB4i3wNj8ABpmKJfyowTSakfdyTDnPvHkI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>152497635673</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gondekr.collecionarium</string>
+	<key>PROJECT_ID</key>
+	<string>gondek-collecionarium-35dbd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gondek-collecionarium-35dbd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:152497635673:ios:fb41580a20af772a</string>
+	<key>DATABASE_URL</key>
+	<string>https://gondek-collecionarium-35dbd.firebaseio.com</string>
+</dict>
+</plist>

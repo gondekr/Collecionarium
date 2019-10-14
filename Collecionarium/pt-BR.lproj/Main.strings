@@ -1,0 +1,168 @@
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "1rr-kO-0DL"; */
+"1rr-kO-0DL.placeholder" = "usuário";
+
+/* Class = "UILabel"; text = "Titulo"; ObjectID = "2MK-ZG-jAU"; */
+"2MK-ZG-jAU.text" = "Titulo";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "4X7-U5-xMq"; */
+"4X7-U5-xMq.placeholder" = "email";
+
+/* Class = "UIButton"; normalTitle = "I WANT IT!"; ObjectID = "6be-gl-bCU"; */
+"6be-gl-bCU.normalTitle" = "EU QUERO!";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "70W-ts-drp"; */
+"70W-ts-drp.title" = "Mural";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "7WU-fM-sTm"; */
+"7WU-fM-sTm.normalTitle" = "Cadastre-se";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "9LY-9P-ujq"; */
+"9LY-9P-ujq.text" = "Título";
+
+/* Class = "UITabBarItem"; title = "Collections"; ObjectID = "Azo-dj-3Wj"; */
+"Azo-dj-3Wj.title" = "Coleções";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "BmL-ST-gzj"; */
+"BmL-ST-gzj.text" = "Usuário";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "BqQ-yF-qf0"; */
+"BqQ-yF-qf0.text" = "Detalhe";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "CXi-AN-MRJ"; */
+"CXi-AN-MRJ.title" = "Voltar";
+
+/* Class = "UITabBarItem"; title = "Trades"; ObjectID = "Ck6-T7-jQk"; */
+"Ck6-T7-jQk.title" = "Mural";
+
+/* Class = "UINavigationItem"; title = "News"; ObjectID = "EHg-g3-BcS"; */
+"EHg-g3-BcS.title" = "Notícias";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "Fl2-vq-q1b"; */
+"Fl2-vq-q1b.title" = "Sair";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "ILW-Wi-QtA"; */
+"ILW-Wi-QtA.text" = "Informação";
+
+/* Class = "UINavigationItem"; title = "Trades"; ObjectID = "IYH-z6-tih"; */
+"IYH-z6-tih.title" = "Mural";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "JIa-M7-6xI"; */
+"JIa-M7-6xI.placeholder" = "Buscar";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "JSw-g7-DbI"; */
+"JSw-g7-DbI.title" = "Salvar";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "JYO-Za-x1i"; */
+"JYO-Za-x1i.text" = "Detalhe";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LN4-lc-8Gw"; */
+"LN4-lc-8Gw.text" = "Rótulo";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "LVy-HA-xfP"; */
+"LVy-HA-xfP.text" = "Nome";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "OaQ-2Z-def"; */
+"OaQ-2Z-def.text" = "Título";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "P7p-1k-Mk7"; */
+"P7p-1k-Mk7.title" = "Editar";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Pin-3o-Bqe"; */
+"Pin-3o-Bqe.text" = "Detalhe";
+
+/* Class = "UILabel"; text = "Online"; ObjectID = "Q1K-pX-lmT"; */
+"Q1K-pX-lmT.text" = "Online";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Qga-kc-aHf"; */
+"Qga-kc-aHf.title" = "Salvar";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "RAn-6Q-KXH"; */
+"RAn-6Q-KXH.placeholder" = "senha";
+
+/* Class = "UINavigationItem"; title = "Collections"; ObjectID = "RDU-LG-7EF"; */
+"RDU-LG-7EF.title" = "Coleções";
+
+/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
+"RMx-3f-FxP.title" = "Master";
+
+/* Class = "UILabel"; text = "Item's label (Title)"; ObjectID = "SmB-Vz-B9m"; */
+"SmB-Vz-B9m.text" = "Rótulo do item (Título)";
+
+/* Class = "UICollectionViewController"; title = "Choose a type"; ObjectID = "UHn-Ui-YNH"; */
+"UHn-Ui-YNH.title" = "Escolha uma base";
+
+/* Class = "UIViewController"; title = "Details"; ObjectID = "VuE-Rl-QH7"; */
+"VuE-Rl-QH7.title" = "Detalhes";
+
+/* Class = "UITextField"; placeholder = "Collection's name"; ObjectID = "Xdf-9p-C79"; */
+"Xdf-9p-C79.placeholder" = "Nome da coleção";
+
+/* Class = "UITextField"; placeholder = "User"; ObjectID = "Y2S-WS-rBm"; */
+"Y2S-WS-rBm.placeholder" = "Usuário";
+
+/* Class = "UITextField"; placeholder = "confirm password"; ObjectID = "YGh-Ie-aeQ"; */
+"YGh-Ie-aeQ.placeholder" = "confirme a senha";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZpY-IO-YdT"; */
+"ZpY-IO-YdT.text" = "Detalhe";
+
+/* Class = "UINavigationItem"; title = "User"; ObjectID = "avr-vw-StF"; */
+"avr-vw-StF.title" = "Usuário";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bER-pS-nix"; */
+"bER-pS-nix.text" = "Rótulo";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "boE-77-TLf"; */
+"boE-77-TLf.text" = "Tipo";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "ceS-Dk-lS0"; */
+"ceS-Dk-lS0.text" = "usuário";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "ctS-fz-ypu"; */
+"ctS-fz-ypu.placeholder" = "Senha";
+
+/* Class = "UILabel"; text = "email@server.com.br"; ObjectID = "dOe-Jl-pe9"; */
+"dOe-Jl-pe9.text" = "email@server.com.br";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "eQR-vw-Euc"; */
+"eQR-vw-Euc.text" = "Título";
+
+/* Class = "UITableViewSection"; headerTitle = "Password"; ObjectID = "eS0-aT-73I"; */
+"eS0-aT-73I.headerTitle" = "Senha";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "fW3-p3-f3A"; */
+"fW3-p3-f3A.text" = "Email";
+
+/* Class = "UINavigationItem"; title = "Sign up"; ObjectID = "fpF-7R-eY5"; */
+"fpF-7R-eY5.title" = "Cadastro";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "iLD-Q9-W6h"; */
+"iLD-Q9-W6h.normalTitle" = "Login";
+
+/* Class = "UITabBarItem"; title = "User"; ObjectID = "ptD-m9-6iS"; */
+"ptD-m9-6iS.title" = "Usuário";
+
+/* Class = "UITextField"; placeholder = "Information"; ObjectID = "q4M-DA-cU7"; */
+"q4M-DA-cU7.placeholder" = "Informação";
+
+/* Class = "UILabel"; text = "Cloud"; ObjectID = "qIU-yg-e9B"; */
+"qIU-yg-e9B.text" = "Cloud";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qTK-GO-plN"; */
+"qTK-GO-plN.text" = "Título";
+
+/* Class = "UILabel"; text = "Local"; ObjectID = "sol-Id-rIK"; */
+"sol-Id-rIK.text" = "Local";
+
+/* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "tmx-Av-Kac"; */
+"tmx-Av-Kac.normalTitle" = "Foto";
+
+/* Class = "UILabel"; text = "Shared"; ObjectID = "ums-wZ-Jsg"; */
+"ums-wZ-Jsg.text" = "Compartilhada";
+
+/* Class = "UINavigationItem"; title = "New Collection"; ObjectID = "vc5-dF-mm3"; */
+"vc5-dF-mm3.title" = "Nova Coleção";
+
+/* Class = "UINavigationItem"; title = "New Information"; ObjectID = "zFh-xh-ReC"; */
+"zFh-xh-ReC.title" = "Nova Informação";
