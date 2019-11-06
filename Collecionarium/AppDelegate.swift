@@ -29,24 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     fileprivate func checkUserLogged() {}
 
-    fileprivate func addCollection() {
-        let worker = NewGroupWorker()
-        worker.dao = GroupDAO()
-
-        let fields = [FieldData(id: "", name: "Name", type: .string, isTitle: true)]
-        let fields2 = [FieldData(id: "", name: "Name", type: .string, isTitle: true), FieldData(id: "", name: "URL", type: .string, isTitle: false)]
-        let group1 = GroupData(id: "", name: "Coll 3", color: "Orange", fields: fields)
-        let group2 = GroupData(id: "", name: "Coll 5", color: "Leaf", fields: fields2)
-        worker.saveGroup(data: group1)
-        worker.saveGroup(data: group2)
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         setupFabric()
         setupFirebase()
         checkUserLogged()
         setupBaseColor()
-//        addCollection()
 
         return true
     }
