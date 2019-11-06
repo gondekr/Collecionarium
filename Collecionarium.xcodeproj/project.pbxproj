@@ -21,8 +21,11 @@
 		6215AACD1BFD0E4A007ADC84 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */; };
 		6217D54D1BFA4140004D5E8E /* SignUpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */; };
 		6217D54F1BFA5FB1004D5E8E /* UserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6217D54E1BFA5FB1004D5E8E /* UserTVC.swift */; };
+		6220E40122A8B8C8005AF5E3 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6220E40022A8B8C8005AF5E3 /* ItemList.swift */; };
+		6220E40322A8BA14005AF5E3 /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6220E40222A8BA14005AF5E3 /* ItemData.swift */; };
 		6222B33B1BEA692D00254324 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6222B33A1BEA692D00254324 /* DesignableView.swift */; };
 		625E596C2268F826003FFCEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 625E596B2268F826003FFCEF /* Login.storyboard */; };
+		6265CEAD22A972570004AC2F /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6265CEAC22A972570004AC2F /* GroupCellView.swift */; };
 		627632FF2267F6D000379B74 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627632F82267F6D000379B74 /* LoginPresenter.swift */; };
 		627633012267F6D000379B74 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627632FA2267F6D000379B74 /* LoginRouter.swift */; };
 		627633032267F6D000379B74 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627632FC2267F6D000379B74 /* LoginVC.swift */; };
@@ -141,9 +144,12 @@
 		6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTVC.swift; sourceTree = "<group>"; };
 		6217D54E1BFA5FB1004D5E8E /* UserTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTVC.swift; sourceTree = "<group>"; };
+		6220E40022A8B8C8005AF5E3 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		6220E40222A8BA14005AF5E3 /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		6222B33A1BEA692D00254324 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		623FD4D11BF91D8300154E16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		625E596B2268F826003FFCEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		6265CEAC22A972570004AC2F /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		627632F82267F6D000379B74 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		627632FA2267F6D000379B74 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		627632FC2267F6D000379B74 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 				6213C6BF2293763D00B27A07 /* FieldDetailsCell.xib */,
 				6213C6C222937FF800B27A07 /* AddFieldCell.swift */,
 				6213C6C322937FF800B27A07 /* AddFieldCell.xib */,
+				6265CEAC22A972570004AC2F /* GroupCellView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -303,6 +310,22 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		6220E3FE22A8B7F9005AF5E3 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				6220E3FF22A8B827005AF5E3 /* ItemList */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		6220E3FF22A8B827005AF5E3 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				6220E40022A8B8C8005AF5E3 /* ItemList.swift */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
 		625E596A2268F811003FFCEF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +346,7 @@
 		627632EC2267F68D00379B74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6220E3FE22A8B7F9005AF5E3 /* Items */,
 				62FCE2572276216B00272AC5 /* Collections */,
 				627632ED2267F68D00379B74 /* Login */,
 			);
@@ -622,6 +646,7 @@
 				62FCE2732277ED2700272AC5 /* GroupData.swift */,
 				6212A95B2277EE4B009F60C8 /* FieldData.swift */,
 				6212A95F2277F1AA009F60C8 /* Transformer.swift */,
+				6220E40222A8BA14005AF5E3 /* ItemData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -789,8 +814,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -798,8 +821,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -825,6 +846,7 @@
 				62D61FCB1BE92DB70058D1EF /* ItemCell.swift in Sources */,
 				6212A9602277F1AA009F60C8 /* Transformer.swift in Sources */,
 				62FCE262227630B900272AC5 /* GroupListConfigurator.swift in Sources */,
+				6265CEAD22A972570004AC2F /* GroupCellView.swift in Sources */,
 				628EEC62228E3DB100C3B48F /* GroupTypePresenter.swift in Sources */,
 				628EEC60228E3D8800C3B48F /* GroupTypeInteractor.swift in Sources */,
 				62B9273F1BF39B42000D02DF /* NewsTVC.swift in Sources */,
@@ -835,6 +857,7 @@
 				628EEC5E228E3D4D00C3B48F /* GroupTypeVC.swift in Sources */,
 				6213C6C02293763D00B27A07 /* FieldDetailsCell.swift in Sources */,
 				62CA09D522938A2400D561DA /* AddFieldVC.swift in Sources */,
+				6220E40322A8BA14005AF5E3 /* ItemData.swift in Sources */,
 				62D61FB61BE92DB70058D1EF /* AppDelegate.swift in Sources */,
 				6297B0E52266C4680031F52B /* Field.swift in Sources */,
 				62FCE25A227621D000272AC5 /* GroupListVC.swift in Sources */,
@@ -853,6 +876,7 @@
 				62D61FB51BE92DB70058D1EF /* AddNewFieldCell.swift in Sources */,
 				62903BA9228B971700D505A4 /* NewGroupVC.swift in Sources */,
 				6215AACD1BFD0E4A007ADC84 /* DatePickerVC.swift in Sources */,
+				6220E40122A8B8C8005AF5E3 /* ItemList.swift in Sources */,
 				627633052267F6D000379B74 /* LoginConfigurator.swift in Sources */,
 				62D61FDA1BE92DB70058D1EF /* NewCollectionTableView.swift in Sources */,
 				62D61FD11BE92DB70058D1EF /* ItemPhotoCell.swift in Sources */,
@@ -1076,7 +1100,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Collecionarium/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1101,7 +1125,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Collecionarium/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
