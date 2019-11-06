@@ -1,15 +1,12 @@
 name: CI
-
 on: [push]
-
 jobs:
   build:
-
+    name: First Job
     runs-on: macOS-latest
-    
     steps:
     - uses: actions/checkout@v1
     - name: Get dependencies
-      run: sudo gem install fastlane
+      run: gem install bundler && bundle update
     - name: Fastlane test
       run: fastlane test
