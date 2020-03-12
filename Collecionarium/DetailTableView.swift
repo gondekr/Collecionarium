@@ -27,23 +27,23 @@ class DetailTableView: UITableViewController, UIImagePickerControllerDelegate, U
     // MARK: - Public API
     var localItem: Item? {
         didSet {
-            newItem = false
-            values = localItem!.values
-            subs = localItem!.subtitle
-            if localColl?.titleIndex != -1 {
-                self.navigationItem.title = values[localColl!.titleIndex as! Int]
-            }
+//            newItem = false
+//            values = localItem!.values
+//            subs = localItem!.subtitle
+//            if localColl?.titleIndex != -1 {
+//                self.navigationItem.title = values[localColl!.titleIndex as! Int]
+//            }
         }
     }
-    var localColl: Collection? {
-        didSet {
-            fields = (localColl?.fields)!
-            types = (localColl?.types)!
-            for _ in 0..<fields.count {
-                values.append("")
-            }
-        }
-    }
+//    var localColl: Collection? {
+//        didSet {
+//            fields = (localColl?.fields)!
+//            types = (localColl?.types)!
+//            for _ in 0..<fields.count {
+//                values.append("")
+//            }
+//        }
+//    }
     
     // MARK: - Configuring Layout
     override func viewDidLoad() {

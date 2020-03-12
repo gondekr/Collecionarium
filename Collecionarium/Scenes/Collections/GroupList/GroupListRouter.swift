@@ -7,30 +7,63 @@ import UIKit
 
 protocol GroupListRouterInput {
     func navigateToGroup()
+    func navigateToEditGroup()
+    func navigateToGroupType()
+    func passDataToNextScene(_ segue: UIStoryboardSegue)
 }
 
 class GroupListRouter: GroupListRouterInput {
     weak var viewController: GroupListVC!
 
     let groupSegue = "group"
+    let editGroupSegue = "editGroup"
+    let groupTypeSegue = "groupType"
 
     // MARK: Navigation
+    func navigateToEditGroup() {
+        viewController.performSegue(withIdentifier: editGroupSegue, sender: nil)
+    }
+
     func navigateToGroup() {
         viewController.performSegue(withIdentifier: groupSegue, sender: nil)
     }
 
+    func navigateToGroupType() {
+        viewController.performSegue(withIdentifier: groupTypeSegue, sender: nil)
+    }
+
     // MARK: Communication
     func passDataToNextScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router which scenes it can communicate with
         if segue.identifier == groupSegue {
             passDataToGroupScene(segue)
+            return
+        }
+
+        if segue.identifier == groupTypeSegue {
+            passDataToGroupTypeScene(segue)
+            return
+        }
+
+        if segue.identifier == editGroupSegue {
+            passDataToEditGroupScene(segue)
+            return
         }
     }
 
-    func passDataToGroupScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router how to pass data to the next scene
+    func passDataToEditGroupScene(_ segue: UIStoryboardSegue) {
+        guard let vc = segue.destination as? NewGroupVC,
+            let selected = viewController.selected
+            else { return }
 
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereViewController.output.name = viewController.output.name
+        vc.baseGroup = selected
+    }
+
+    func passDataToGroupScene(_ segue: UIStoryboardSegue) {
+
+    }
+
+    func passDataToGroupTypeScene(_ segue: UIStoryboardSegue) {
+        guard let vc = segue.destination as? GroupTypeVC
+            else { return }
     }
 }

@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o0t-VI-Oao">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collecionarium-->
+        <scene sceneID="U1M-YH-thC">
+            <objects>
+                <viewController id="vWh-Eg-RSE" customClass="GroupListVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5vZ-YA-Zsz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-3e-e2t">
+                                <rect key="frame" x="0.0" y="10" width="414" height="746"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vWh-Eg-RSE" id="W0U-Gk-X5e"/>
+                                    <outlet property="delegate" destination="vWh-Eg-RSE" id="TH9-Vm-LwD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="kdS-mv-Gzx" firstAttribute="trailing" secondItem="DrX-3e-e2t" secondAttribute="trailing" id="0iE-KA-FYq"/>
+                            <constraint firstAttribute="bottom" secondItem="DrX-3e-e2t" secondAttribute="bottom" id="2JH-mn-fab"/>
+                            <constraint firstItem="DrX-3e-e2t" firstAttribute="leading" secondItem="kdS-mv-Gzx" secondAttribute="leading" id="7y1-kP-Bfo"/>
+                            <constraint firstItem="DrX-3e-e2t" firstAttribute="top" secondItem="kdS-mv-Gzx" secondAttribute="top" constant="10" id="bd0-gB-c1t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kdS-mv-Gzx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Collecionarium" largeTitleDisplayMode="always" id="Dp9-Ap-WKj">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="bWq-ly-Wun"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="add" id="hYc-dQ-ZbT">
+                                <connections>
+                                    <action selector="btnNewGroupPressed:" destination="vWh-Eg-RSE" id="h5M-lu-tYc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Editar" style="plain" id="FKM-6n-WbY">
+                                <connections>
+                                    <action selector="btnEditPressed:" destination="vWh-Eg-RSE" id="bpE-d1-EK1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="DrX-3e-e2t" id="3It-wa-0jI"/>
+                        <segue destination="xMg-yK-F7x" kind="show" identifier="groupType" id="Fvo-1E-FrP"/>
+                        <segue destination="RkN-G2-9vZ" kind="show" identifier="editGroup" id="egu-pb-Osq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-p1-qRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188.40579710144928" y="22.098214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DIZ-zd-LJF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0t-VI-Oao" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="8fu-no-msj" customClass="DesignNavigationBar" customModule="Collecionarium" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Void"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldHaveShadow" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vWh-Eg-RSE" kind="relationship" relationship="rootViewController" id="FGR-3G-o6T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQS-En-uDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="22"/>
+        </scene>
+        <!--Adicionar Coleção-->
+        <scene sceneID="mYd-2n-Kf0">
+            <objects>
+                <viewController title="Adicionar Coleção" id="xMg-yK-F7x" customClass="GroupTypeVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hgk-cQ-PBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-y3-W4d">
+                                <rect key="frame" x="0.0" y="10" width="414" height="746"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xMg-yK-F7x" id="eBN-Vw-5V1"/>
+                                    <outlet property="delegate" destination="xMg-yK-F7x" id="iIj-l2-E5k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="nUd-y3-W4d" firstAttribute="top" secondItem="Rpu-nk-gHW" secondAttribute="top" constant="10" id="0OQ-Xf-DcA"/>
+                            <constraint firstItem="Rpu-nk-gHW" firstAttribute="trailing" secondItem="nUd-y3-W4d" secondAttribute="trailing" id="BvP-AD-Wlq"/>
+                            <constraint firstItem="nUd-y3-W4d" firstAttribute="leading" secondItem="Rpu-nk-gHW" secondAttribute="leading" id="NJb-hx-pWb"/>
+                            <constraint firstAttribute="bottom" secondItem="nUd-y3-W4d" secondAttribute="bottom" id="ZKQ-FJ-kYW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rpu-nk-gHW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adicionar coleção" id="R7T-hG-fPe">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="vzo-Br-NYj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nUd-y3-W4d" id="2nl-SQ-tSN"/>
+                        <segue destination="RkN-G2-9vZ" kind="show" identifier="newGroup" id="3H1-cV-wcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8BM-0G-0QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="22"/>
+        </scene>
+        <!--Nova coleção-->
+        <scene sceneID="92z-wk-sMg">
+            <objects>
+                <viewController title="Nova coleção" id="RkN-G2-9vZ" customClass="NewGroupVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKM-hz-d1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yon-iO-yp6">
+                                <rect key="frame" x="0.0" y="10" width="414" height="746"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RkN-G2-9vZ" id="tbH-h1-93M"/>
+                                    <outlet property="delegate" destination="RkN-G2-9vZ" id="w1m-H3-GhK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="Yon-iO-yp6" firstAttribute="top" secondItem="Fvx-Dw-qZh" secondAttribute="top" constant="10" id="2k0-Kl-Jci"/>
+                            <constraint firstItem="Yon-iO-yp6" firstAttribute="leading" secondItem="Fvx-Dw-qZh" secondAttribute="leading" id="8hw-Td-mPE"/>
+                            <constraint firstItem="Yon-iO-yp6" firstAttribute="trailing" secondItem="Fvx-Dw-qZh" secondAttribute="trailing" id="Es5-WW-PJA"/>
+                            <constraint firstAttribute="bottom" secondItem="Yon-iO-yp6" secondAttribute="bottom" id="d8P-sc-4Qt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fvx-Dw-qZh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adicionar coleção" largeTitleDisplayMode="always" id="nxV-0r-zP9">
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="TlI-uf-Fdi"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="done" id="gkC-eF-l7C">
+                            <connections>
+                                <action selector="btnSavePressed:" destination="RkN-G2-9vZ" id="sqS-bZ-duG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnChooseColor" destination="aAY-S5-BkV" id="Qlu-nz-7So"/>
+                        <outlet property="header" destination="Gjy-gc-1ty" id="IJN-og-2Js"/>
+                        <outlet property="tableView" destination="Yon-iO-yp6" id="ZXq-Lk-cfH"/>
+                        <outlet property="txtName" destination="qXB-Tt-jbr" id="g6R-gx-T61"/>
+                        <segue destination="zpv-ZA-Ssr" kind="show" identifier="addField" id="RDm-5D-uHe"/>
+                        <segue destination="IsQ-MA-HH7" kind="show" identifier="chooseColor" id="aZL-Y8-1xd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGg-te-eVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Gjy-gc-1ty">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="r7Z-62-9o1">
+                            <rect key="frame" x="15" y="15" width="363" height="110"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUZ-0m-ZnH" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="363" height="45"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-eg-fYt">
+                                            <rect key="frame" x="10" y="5" width="71" height="35"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" name="Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome da coleção" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXB-Tt-jbr" customClass="DesignTextField" customModule="Collecionarium" customModuleProvider="target">
+                                            <rect key="frame" x="91" y="10" width="262" height="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="qXB-Tt-jbr" secondAttribute="trailing" constant="10" id="Bro-eo-W0E"/>
+                                        <constraint firstAttribute="height" constant="45" id="CcZ-bg-Try"/>
+                                        <constraint firstItem="qXB-Tt-jbr" firstAttribute="centerY" secondItem="tqU-eg-fYt" secondAttribute="centerY" id="WAa-Wx-plK"/>
+                                        <constraint firstItem="tqU-eg-fYt" firstAttribute="leading" secondItem="wUZ-0m-ZnH" secondAttribute="leading" constant="10" id="Xt5-9H-eGc"/>
+                                        <constraint firstItem="qXB-Tt-jbr" firstAttribute="leading" secondItem="tqU-eg-fYt" secondAttribute="trailing" constant="10" id="Zw1-CZ-f7S"/>
+                                        <constraint firstItem="tqU-eg-fYt" firstAttribute="top" secondItem="wUZ-0m-ZnH" secondAttribute="top" constant="5" id="pqF-Mw-lCT"/>
+                                        <constraint firstAttribute="bottom" secondItem="tqU-eg-fYt" secondAttribute="bottom" constant="5" id="zNN-mY-O8A"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="PkL-au-GAw"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-Ph-hi8" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60" width="363" height="50"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COR DE DESTAQUE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-y4-FSZ">
+                                            <rect key="frame" x="10" y="5" width="196.5" height="40"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" name="Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-S5-BkV" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                            <rect key="frame" x="221.5" y="10" width="136.5" height="30"/>
+                                            <color key="backgroundColor" name="Ashes"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="N9o-SE-IYL"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <color key="titleColor" name="NightSky"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="Color"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnChooseColorPressed" destination="RkN-G2-9vZ" eventType="touchUpInside" id="xky-sn-NQs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Ccd-y4-FSZ" firstAttribute="leading" secondItem="oeS-Ph-hi8" secondAttribute="leading" constant="10" id="1tv-vR-kar"/>
+                                        <constraint firstAttribute="height" constant="45" id="O5f-ek-wSM"/>
+                                        <constraint firstItem="Ccd-y4-FSZ" firstAttribute="top" secondItem="oeS-Ph-hi8" secondAttribute="top" constant="5" id="Oc8-n3-6zd"/>
+                                        <constraint firstItem="aAY-S5-BkV" firstAttribute="leading" secondItem="Ccd-y4-FSZ" secondAttribute="trailing" constant="15" id="gxx-CV-zbx"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ccd-y4-FSZ" secondAttribute="bottom" constant="5" id="nFh-dH-UVD"/>
+                                        <constraint firstItem="aAY-S5-BkV" firstAttribute="centerY" secondItem="Ccd-y4-FSZ" secondAttribute="centerY" id="vLF-By-h81"/>
+                                        <constraint firstAttribute="trailing" secondItem="aAY-S5-BkV" secondAttribute="trailing" constant="5" id="ySp-TN-hbz"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="r7Z-62-9o1" firstAttribute="top" secondItem="Gjy-gc-1ty" secondAttribute="top" constant="15" id="0NV-zG-OvK"/>
+                        <constraint firstItem="r7Z-62-9o1" firstAttribute="leading" secondItem="Gjy-gc-1ty" secondAttribute="leading" constant="15" id="AQs-CQ-3h0"/>
+                        <constraint firstAttribute="trailing" secondItem="r7Z-62-9o1" secondAttribute="trailing" constant="15" id="UVO-LF-JVV"/>
+                        <constraint firstAttribute="bottom" secondItem="r7Z-62-9o1" secondAttribute="bottom" constant="15" id="sr7-B3-2pV"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="mTa-95-NN7"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="642" y="783"/>
+        </scene>
+        <!--Escolher cor-->
+        <scene sceneID="ovd-Zv-6qw">
+            <objects>
+                <viewController id="IsQ-MA-HH7" customClass="ChooseColorVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ewV-0y-eyY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-15-OBn">
+                                <rect key="frame" x="15" y="114" width="384" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjK-cY-9WV" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Berry"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DjK-cY-9WV" secondAttribute="height" multiplier="1:1" id="caC-qJ-Mu9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="1jB-1s-zp0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgj-65-AuN" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="57.5" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Jeans"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="M7V-QS-8f0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTR-Qc-EIu" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="114.5" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Leaf"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="NE1-Xq-0rZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-MX-fBt" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="172" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Orange"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="RQn-bA-eUz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-lX-oJD" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="229.5" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Violet"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="1vR-6n-ARb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PQ-7a-MLE" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="286.5" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Watermelon"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="ZH2-x2-bwz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i52-X1-BhC" customClass="DesignButton" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="344" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Yolk"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectColor:" destination="IsQ-MA-HH7" eventType="touchUpInside" id="xej-Sc-YtH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wTR-Qc-EIu" firstAttribute="width" secondItem="wTR-Qc-EIu" secondAttribute="height" multiplier="1:1" id="FPj-jH-wNG"/>
+                                    <constraint firstItem="ft8-lX-oJD" firstAttribute="width" secondItem="ft8-lX-oJD" secondAttribute="height" multiplier="1:1" id="Wtm-rU-OP1"/>
+                                    <constraint firstItem="Cgj-65-AuN" firstAttribute="width" secondItem="Cgj-65-AuN" secondAttribute="height" multiplier="1:1" id="coC-gZ-aeC"/>
+                                    <constraint firstItem="1PQ-7a-MLE" firstAttribute="width" secondItem="1PQ-7a-MLE" secondAttribute="height" multiplier="1:1" id="f9F-lU-Not"/>
+                                    <constraint firstItem="0e6-MX-fBt" firstAttribute="width" secondItem="0e6-MX-fBt" secondAttribute="height" multiplier="1:1" id="fM3-f7-DPt"/>
+                                    <constraint firstAttribute="height" constant="40" id="pse-KK-9nV"/>
+                                    <constraint firstItem="i52-X1-BhC" firstAttribute="width" secondItem="i52-X1-BhC" secondAttribute="height" multiplier="1:1" id="uxM-mP-uzW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A cor de destaque aparecerá em alguns elementos como botões e textos no contexto da sua coleção." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saq-zE-z2S">
+                                <rect key="frame" x="15" y="25" width="384" height="74"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pré-visualização" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAF-N1-D5o">
+                                <rect key="frame" x="15" y="199" width="414" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JCS-WT-edE">
+                                <rect key="frame" x="15" y="244" width="384" height="52"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WO-IX-Hdt" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqE-eb-c9h">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="52"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="eqE-eb-c9h" secondAttribute="height" multiplier="1:2" id="MMt-sz-fKU"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Coleção" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-77-NWe">
+                                                <rect key="frame" x="31" y="10" width="338" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="bo8-5S-kDt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="NightSky"/>
+                                        <constraints>
+                                            <constraint firstItem="eqE-eb-c9h" firstAttribute="leading" secondItem="9WO-IX-Hdt" secondAttribute="leading" id="4ze-3n-nbd"/>
+                                            <constraint firstItem="eqE-eb-c9h" firstAttribute="centerY" secondItem="9WO-IX-Hdt" secondAttribute="centerY" id="EB4-z2-OBX"/>
+                                            <constraint firstItem="2Jq-77-NWe" firstAttribute="top" secondItem="9WO-IX-Hdt" secondAttribute="top" constant="10" id="QKF-v0-2Re"/>
+                                            <constraint firstItem="2Jq-77-NWe" firstAttribute="leading" secondItem="eqE-eb-c9h" secondAttribute="trailing" constant="5" id="c5j-kq-yHM"/>
+                                            <constraint firstItem="eqE-eb-c9h" firstAttribute="height" secondItem="9WO-IX-Hdt" secondAttribute="height" id="f3B-16-abx"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Jq-77-NWe" secondAttribute="bottom" constant="10" id="gFM-Sv-CXX"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Jq-77-NWe" secondAttribute="trailing" constant="15" id="qVz-4I-5AL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="NightSky"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundRadius" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="sAF-N1-D5o" firstAttribute="top" secondItem="BeT-15-OBn" secondAttribute="bottom" constant="45" id="Dqb-C0-ORj"/>
+                            <constraint firstAttribute="trailing" secondItem="BeT-15-OBn" secondAttribute="trailing" constant="15" id="JTb-zs-qOt"/>
+                            <constraint firstItem="BeT-15-OBn" firstAttribute="leading" secondItem="xVA-We-RNj" secondAttribute="leading" constant="15" id="O1y-NQ-3XZ"/>
+                            <constraint firstItem="BeT-15-OBn" firstAttribute="top" secondItem="Saq-zE-z2S" secondAttribute="bottom" constant="15" id="Qa7-a6-bXo"/>
+                            <constraint firstItem="sAF-N1-D5o" firstAttribute="trailing" secondItem="xVA-We-RNj" secondAttribute="trailing" constant="15" id="UUK-oe-w2f"/>
+                            <constraint firstItem="Saq-zE-z2S" firstAttribute="leading" secondItem="xVA-We-RNj" secondAttribute="leading" constant="15" id="faU-YU-ma5"/>
+                            <constraint firstItem="JCS-WT-edE" firstAttribute="leading" secondItem="ewV-0y-eyY" secondAttribute="leading" constant="15" id="hxF-4n-n9p"/>
+                            <constraint firstItem="Saq-zE-z2S" firstAttribute="top" secondItem="xVA-We-RNj" secondAttribute="top" constant="25" id="itb-uz-tb9"/>
+                            <constraint firstAttribute="trailing" secondItem="JCS-WT-edE" secondAttribute="trailing" constant="15" id="k0T-Q5-ELe"/>
+                            <constraint firstAttribute="trailing" secondItem="Saq-zE-z2S" secondAttribute="trailing" constant="15" id="os4-8B-L6R"/>
+                            <constraint firstItem="sAF-N1-D5o" firstAttribute="leading" secondItem="xVA-We-RNj" secondAttribute="leading" constant="15" id="xN5-GD-KWb"/>
+                            <constraint firstItem="JCS-WT-edE" firstAttribute="top" secondItem="sAF-N1-D5o" secondAttribute="bottom" constant="20" id="yfz-cE-Yag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xVA-We-RNj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Escolher cor" id="I6a-nh-arO">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="done" id="Rk3-4a-bRj">
+                            <connections>
+                                <action selector="btnSavePressed:" destination="IsQ-MA-HH7" id="f7Y-Tj-Z3N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cellTag" destination="eqE-eb-c9h" id="vl1-U3-FPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EyU-KS-oWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="1088"/>
+        </scene>
+        <!--Adicionar campo-->
+        <scene sceneID="I5P-Om-ORN">
+            <objects>
+                <viewController title="Adicionar campo" id="zpv-ZA-Ssr" customClass="AddFieldVC" customModule="Collecionarium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqW-bu-OTT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kQS-Ve-U7f">
+                                <rect key="frame" x="15" y="25" width="384" height="156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N44-LU-HZx" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfE-eV-BOI">
+                                                <rect key="frame" x="10" y="5" width="71" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="kSZ-dX-Drg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do campo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INT-fH-jas" customClass="DesignTextField" customModule="Collecionarium" customModuleProvider="target">
+                                                <rect key="frame" x="91" y="8.5" width="283" height="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" name="Ashes"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="INT-fH-jas" firstAttribute="leading" secondItem="HfE-eV-BOI" secondAttribute="trailing" constant="10" id="Fv9-Zt-4BY"/>
+                                            <constraint firstAttribute="bottom" secondItem="HfE-eV-BOI" secondAttribute="bottom" constant="5" id="PMK-4O-tmX"/>
+                                            <constraint firstItem="HfE-eV-BOI" firstAttribute="leading" secondItem="N44-LU-HZx" secondAttribute="leading" constant="10" id="RrM-ue-Q3C"/>
+                                            <constraint firstItem="INT-fH-jas" firstAttribute="centerY" secondItem="HfE-eV-BOI" secondAttribute="centerY" id="TXN-5z-QEX"/>
+                                            <constraint firstAttribute="trailing" secondItem="INT-fH-jas" secondAttribute="trailing" constant="10" id="cyY-ZW-Gg6"/>
+                                            <constraint firstItem="HfE-eV-BOI" firstAttribute="top" secondItem="N44-LU-HZx" secondAttribute="top" constant="5" id="h04-so-13i"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcS-aV-IHM" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="57" width="384" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="TIPO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwL-Qj-2Tg">
+                                                <rect key="frame" x="10" y="5" width="54.5" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="ckL-IN-4ud"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-la-KSe">
+                                                <rect key="frame" x="79.5" y="2.5" width="289.5" height="37"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <state key="normal" title="Texto">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnTypePressed" destination="zpv-ZA-Ssr" eventType="touchUpInside" id="ByZ-fM-xXk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="CwL-Qj-2Tg" secondAttribute="bottom" constant="5" id="LiM-eS-Bm6"/>
+                                            <constraint firstAttribute="trailing" secondItem="pmb-la-KSe" secondAttribute="trailing" constant="15" id="USG-Ss-6l4"/>
+                                            <constraint firstItem="CwL-Qj-2Tg" firstAttribute="top" secondItem="tcS-aV-IHM" secondAttribute="top" constant="5" id="ciI-KB-Usg"/>
+                                            <constraint firstItem="pmb-la-KSe" firstAttribute="leading" secondItem="CwL-Qj-2Tg" secondAttribute="trailing" constant="15" id="diT-h3-16d"/>
+                                            <constraint firstItem="CwL-Qj-2Tg" firstAttribute="leading" secondItem="tcS-aV-IHM" secondAttribute="leading" constant="10" id="iUi-xJ-LY9"/>
+                                            <constraint firstItem="pmb-la-KSe" firstAttribute="centerY" secondItem="CwL-Qj-2Tg" secondAttribute="centerY" id="tC3-Re-5os"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6L-e6-FQH" customClass="DesignView" customModule="Collecionarium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="384" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEFINIR COMO TÍTULO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5n-pS-j0d">
+                                                <rect key="frame" x="10" y="5" width="305" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="3zl-mv-Qx9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nk3-XQ-G96">
+                                                <rect key="frame" x="325" y="5.5" width="51" height="31"/>
+                                                <color key="tintColor" name="Ashes"/>
+                                                <color key="onTintColor" name="Ashes"/>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="t5n-pS-j0d" firstAttribute="leading" secondItem="T6L-e6-FQH" secondAttribute="leading" constant="10" id="7dd-Zp-waG"/>
+                                            <constraint firstAttribute="bottom" secondItem="t5n-pS-j0d" secondAttribute="bottom" constant="5" id="CqL-d9-NUG"/>
+                                            <constraint firstItem="t5n-pS-j0d" firstAttribute="top" secondItem="T6L-e6-FQH" secondAttribute="top" constant="5" id="HU1-Hg-5TD"/>
+                                            <constraint firstItem="Nk3-XQ-G96" firstAttribute="leading" secondItem="t5n-pS-j0d" secondAttribute="trailing" constant="10" id="W6l-Lq-mLZ"/>
+                                            <constraint firstItem="Nk3-XQ-G96" firstAttribute="centerY" secondItem="t5n-pS-j0d" secondAttribute="centerY" id="YBK-hK-leh"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nk3-XQ-G96" secondAttribute="trailing" constant="10" id="uA0-ux-Q5Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Void"/>
+                        <constraints>
+                            <constraint firstItem="MJM-Y2-yN5" firstAttribute="trailing" secondItem="kQS-Ve-U7f" secondAttribute="trailing" constant="15" id="Etz-EI-SWO"/>
+                            <constraint firstItem="kQS-Ve-U7f" firstAttribute="leading" secondItem="MJM-Y2-yN5" secondAttribute="leading" constant="15" id="c9f-GX-ELk"/>
+                            <constraint firstItem="kQS-Ve-U7f" firstAttribute="top" secondItem="MJM-Y2-yN5" secondAttribute="top" constant="25" id="yIr-sD-5fw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MJM-Y2-yN5"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Adicionar campo" id="3oM-pE-9ju">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="done" id="a4G-Hj-57f">
+                            <connections>
+                                <action selector="btnSavePressed:" destination="zpv-ZA-Ssr" id="4JK-rS-gFH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnType" destination="pmb-la-KSe" id="UZI-R9-Z5B"/>
+                        <outlet property="swTitle" destination="Nk3-XQ-G96" id="kOJ-5x-vSM"/>
+                        <outlet property="txtName" destination="INT-fH-jas" id="X1b-CI-9wS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfo-c0-GSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="342"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Ashes">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Berry">
+            <color red="0.76078431372549016" green="0.094117647058823528" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Jeans">
+            <color red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Leaf">
+            <color red="0.14901960784313725" green="0.65098039215686276" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NightSky">
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="0.96078431372549022" green="0.48627450980392156" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Violet">
+            <color red="0.31764705882352939" green="0.17647058823529413" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Void">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Watermelon">
+            <color red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yolk">
+            <color red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="egu-pb-Osq"/>
+    </inferredMetricsTieBreakers>
+</document>

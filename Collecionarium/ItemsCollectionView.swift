@@ -15,12 +15,6 @@ class ItemsCollectionView: UICollectionViewController, UIGestureRecognizerDelega
     var activity: UIActivityIndicatorView!
     
     // MARK: - Public API
-    var localColl: Collection! {
-        didSet {
-            load()
-            self.navigationItem.title = localColl.name
-        }
-    }
     
 //    @IBAction func itemsPerRow(sender: UISegmentedControl) {
 //        itemsRow = sender.selectedSegmentIndex + 1

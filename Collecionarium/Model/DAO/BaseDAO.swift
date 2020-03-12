@@ -23,6 +23,7 @@ class BaseDAO<T: NSManagedObject> {
 
     func save() {
         try? managedObjectContext.save()
+        CoreDataManager.collecionarium.saveChanges()
     }
 
     func delete(item: T) {

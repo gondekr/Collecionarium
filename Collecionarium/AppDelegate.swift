@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     fileprivate func setupBaseColor() {
         self.window?.tintColor = UIColor(red: 210/255, green: 77/255, blue: 87/255, alpha: 1)
-        UIApplication.shared.statusBarStyle = .default
     }
 
     fileprivate func checkUserLogged() {}
@@ -35,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         setupFirebase()
         checkUserLogged()
         setupBaseColor()
-        
+
         return true
     }
 

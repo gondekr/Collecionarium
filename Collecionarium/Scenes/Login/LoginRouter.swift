@@ -10,7 +10,7 @@ protocol LoginRouterInput {
 }
 
 class LoginRouter: LoginRouterInput {
-    weak var viewController: LoginViewController!
+    weak var viewController: LoginVC!
 
     let homeSegue = "showHome"
 

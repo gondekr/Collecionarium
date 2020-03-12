@@ -1,0 +1,14 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    name: First Job
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Get dependencies
+      run: gem install bundler && bundle update
+    - name: Cocoapods
+      run: pod install
+    - name: Fastlane test
+      run: fastlane test
