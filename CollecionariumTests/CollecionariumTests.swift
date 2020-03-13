@@ -1,7 +1,4 @@
 //
-//  CollecionariumTests.swift
-//  CollecionariumTests
-//
 //  Created by Rubens Gondek on 11/6/19.
 //  Copyright © 2019 Gondek. All rights reserved.
 //
