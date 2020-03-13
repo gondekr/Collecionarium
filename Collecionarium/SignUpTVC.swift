@@ -35,7 +35,7 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     func configureLoading() {
         loadingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(style: .whiteLarge)
+        activity = UIActivityIndicatorView(style: .large)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
         loadingView.isHidden = true
@@ -97,7 +97,7 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // MARK: TextField
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField.tag {
         case 0: txtEmail.becomeFirstResponder()
         case 1: txtPass1.becomeFirstResponder()
@@ -130,7 +130,7 @@ class SignUpTVC: UITableViewController, UIImagePickerControllerDelegate, UINavig
 //        self.presentViewController(aSheet, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        guard let img = info[UIImagePickerControllerEditedImage] else {
 //            return
 //        }

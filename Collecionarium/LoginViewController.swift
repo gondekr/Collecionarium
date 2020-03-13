@@ -21,7 +21,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SignUpDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         txtPass.text = ""
-        UIApplication.shared.setStatusBarStyle(.default, animated: true)
+//        UIApplication.shared.setStatusBarStyle(.default, animated: true)
     }
     
     func didSignUp(user: String) {
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SignUpDelegate
         }
         else if segue.identifier == "SignUp" {
             ((segue.destination as! UINavigationController).viewControllers.first as! SignUpTVC).delegate = self
-            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+//            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
         }
     }
 
