@@ -51,7 +51,7 @@ class CollectionsTableView: UITableViewController {
     func configureLoading() {
 //        loadingView = UIView(frame: CGRect(0, 0, tableView.frame.width, tableView.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(style: .whiteLarge)
+        activity = UIActivityIndicatorView(style: .large)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
         loadingView.isHidden = true

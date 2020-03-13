@@ -49,7 +49,7 @@ class PhotosTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         return UICollectionViewCell()
     }
 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        if indexPath.item == photos.count {
 //            NSNotificationCenter.defaultCenter().postNotificationName("AddPhoto", object: nil)
 //        }

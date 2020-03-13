@@ -28,7 +28,7 @@ class TradeEventsTVC: UITableViewController {
     func configureLoading() {
         loadingView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(style: .whiteLarge)
+        activity = UIActivityIndicatorView(style: .large)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
         loadingView.isHidden = true

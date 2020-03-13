@@ -20,7 +20,7 @@ class SearchTVC: UITableViewController, UISearchBarDelegate {
     func configureLoading() {
         loadingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height-64))
         loadingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        activity = UIActivityIndicatorView(style: .whiteLarge)
+        activity = UIActivityIndicatorView(style: .large)
         activity.frame = loadingView.frame
         loadingView.addSubview(activity)
         loadingView.isHidden = true
@@ -74,8 +74,8 @@ class SearchTVC: UITableViewController, UISearchBarDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "userCollection" {
-            let view = segue.destination as! UserCollectionVC
-            let index = tableView.indexPathForSelectedRow?.row
+            let _ = segue.destination as! UserCollectionVC
+            let _ = tableView.indexPathForSelectedRow?.row
         }
     }
 }

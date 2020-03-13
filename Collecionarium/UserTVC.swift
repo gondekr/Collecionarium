@@ -82,7 +82,7 @@ class UserTVC: UITableViewController, UIImagePickerControllerDelegate, UINavigat
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let img = info[.editedImage] else {
+        guard let _ = info[.editedImage] else {
             return
         }
         

@@ -103,17 +103,17 @@ class DetailTableView: UITableViewController, UIImagePickerControllerDelegate, U
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            if /* empty photos */ false {
-                let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("SAVE_NO_PHOTOS", comment: ""), preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("NO", comment: ""), style: .default, handler: nil))
-                alert.addAction(UIAlertAction(title: NSLocalizedString("YES", comment: ""), style: .default, handler: { (al: UIAlertAction) -> Void in
-                    self.save()
-                }))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                self.save()
-            }
+//            if /* empty photos */ false {
+//                let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("SAVE_NO_PHOTOS", comment: ""), preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: NSLocalizedString("NO", comment: ""), style: .default, handler: nil))
+//                alert.addAction(UIAlertAction(title: NSLocalizedString("YES", comment: ""), style: .default, handler: { (al: UIAlertAction) -> Void in
+//                    self.save()
+//                }))
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//            else {
+//                self.save()
+//            }
         }
     }
     
