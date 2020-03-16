@@ -6,11 +6,4 @@ platform :ios do
   before_all do
     setup_ci(force: true)
   end
-
-  desc "Tests"
-  lane :test do
-    run_tests(scheme: "Collecionarium", 
-              slack_url: "https://hooks.slack.com/services/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",
-              slack_channel: "#fastlane")
-  end
 end
