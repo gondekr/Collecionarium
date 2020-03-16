@@ -9,5 +9,4 @@ class AddFieldCell: UITableViewCell {
     static let nibName = "AddFieldCell"
     static let identifier = "addFieldCell"
 
-
 }

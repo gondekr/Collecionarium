@@ -38,12 +38,12 @@ class NewGroupRouter: NewGroupRouterInput {
 
     // MARK: Communication
     func passDataToNextScene(_ segue: UIStoryboardSegue) {
-        if (segue.identifier == addFieldSegue) {
+        if segue.identifier == addFieldSegue {
             passDataToAddFieldScene(segue)
             return
         }
 
-        if (segue.identifier == chooseColorSegue) {
+        if segue.identifier == chooseColorSegue {
             passDataToChooseColorScene(segue)
             return
         }

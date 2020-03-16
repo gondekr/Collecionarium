@@ -21,7 +21,8 @@ class AddFieldRouter: AddFieldRouterInput {
 
     func chooseType() {
         let storyboard = UIStoryboard(name: "Pickers", bundle: nil)
-        guard let picker = storyboard.instantiateViewController(withIdentifier: CustomPickerVC.identifier) as? CustomPickerVC
+        let vc = storyboard.instantiateViewController(withIdentifier: CustomPickerVC.identifier)
+        guard let picker = vc as? CustomPickerVC
             else { return }
 
         picker.delegate = viewController

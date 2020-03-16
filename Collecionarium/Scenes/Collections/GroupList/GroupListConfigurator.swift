@@ -61,4 +61,3 @@ class GroupListConfigurator {
         viewController.router = router
     }
 }
-

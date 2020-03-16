@@ -23,7 +23,7 @@ class GroupListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        get { return .lightContent }
+        return .lightContent
     }
 
     // MARK: - Lifecycle
@@ -79,7 +79,7 @@ extension GroupListVC: UITableViewDataSource {
 extension GroupListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = items[indexPath.row]
-        if (isEditing) {
+        if isEditing {
             router.navigateToEditGroup()
             return
         }
@@ -92,4 +92,3 @@ extension GroupListVC: GroupListVCInput {
         tableView.reloadData()
     }
 }
-
