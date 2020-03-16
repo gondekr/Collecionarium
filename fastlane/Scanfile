@@ -1,0 +1,6 @@
+scheme("Collecionarium")
+devices(["iPhone 8", "iPhone X"])
+
+clean(true)
+
+output_types("html")
