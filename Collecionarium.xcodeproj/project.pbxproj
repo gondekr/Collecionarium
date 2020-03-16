@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29128D0C54F3553C07A190A0 /* libPods-CollecionariumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80185C25425572153AC606A7 /* libPods-CollecionariumTests.a */; };
+		3D40119D8BC0AAF5D496A6EB /* libPods-Collecionarium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C840C588EFBA2C6BD3018411 /* libPods-Collecionarium.a */; };
 		6212A95C2277EE4B009F60C8 /* FieldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A95B2277EE4B009F60C8 /* FieldData.swift */; };
 		6212A9602277F1AA009F60C8 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A95F2277F1AA009F60C8 /* Transformer.swift */; };
 		6212A964227862B5009F60C8 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212A962227862B5009F60C8 /* GroupCell.swift */; };
@@ -21,6 +23,7 @@
 		6215AACD1BFD0E4A007ADC84 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */; };
 		6217D54D1BFA4140004D5E8E /* SignUpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */; };
 		6217D54F1BFA5FB1004D5E8E /* UserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6217D54E1BFA5FB1004D5E8E /* UserTVC.swift */; };
+		621F6171241BF2C4008A5056 /* GroupTypeWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F6170241BF2C4008A5056 /* GroupTypeWorkerTests.swift */; };
 		6220E40122A8B8C8005AF5E3 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6220E40022A8B8C8005AF5E3 /* ItemList.swift */; };
 		6220E40322A8BA14005AF5E3 /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6220E40222A8BA14005AF5E3 /* ItemData.swift */; };
 		6222B33B1BEA692D00254324 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6222B33A1BEA692D00254324 /* DesignableView.swift */; };
@@ -127,7 +130,6 @@
 		62FCE2702277EBE200272AC5 /* GroupListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCE26F2277EBE200272AC5 /* GroupListWorker.swift */; };
 		62FCE2742277ED2700272AC5 /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCE2732277ED2700272AC5 /* GroupData.swift */; };
 		62FF3ED81BF65151006A134D /* UserItemPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF3ED71BF65151006A134D /* UserItemPhotoCell.swift */; };
-		D399B4C8CCF53F32D71877E1 /* Pods_Collecionarium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A06C89D9972185FF5E8110C /* Pods_Collecionarium.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +143,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A06C89D9972185FF5E8110C /* Pods_Collecionarium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collecionarium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6212A95B2277EE4B009F60C8 /* FieldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldData.swift; sourceTree = "<group>"; };
 		6212A95F2277F1AA009F60C8 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		6212A962227862B5009F60C8 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		6215AACC1BFD0E4A007ADC84 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		6217D54C1BFA4140004D5E8E /* SignUpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTVC.swift; sourceTree = "<group>"; };
 		6217D54E1BFA5FB1004D5E8E /* UserTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTVC.swift; sourceTree = "<group>"; };
+		621F6170241BF2C4008A5056 /* GroupTypeWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTypeWorkerTests.swift; sourceTree = "<group>"; };
 		6220E40022A8B8C8005AF5E3 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		6220E40222A8BA14005AF5E3 /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		6222B33A1BEA692D00254324 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -272,8 +274,12 @@
 		62FCE26F2277EBE200272AC5 /* GroupListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupListWorker.swift; path = ../GroupListWorker.swift; sourceTree = "<group>"; };
 		62FCE2732277ED2700272AC5 /* GroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupData.swift; sourceTree = "<group>"; };
 		62FF3ED71BF65151006A134D /* UserItemPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserItemPhotoCell.swift; sourceTree = "<group>"; };
+		80185C25425572153AC606A7 /* libPods-CollecionariumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollecionariumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		812C9AEA3E3A2DADFBB2578F /* Pods-Collecionarium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collecionarium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Collecionarium/Pods-Collecionarium.release.xcconfig"; sourceTree = "<group>"; };
 		87ADA26F324D4D3A82C7FD33 /* Pods-Collecionarium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collecionarium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Collecionarium/Pods-Collecionarium.debug.xcconfig"; sourceTree = "<group>"; };
+		8C250A10E4EA2146E43126EA /* Pods-CollecionariumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollecionariumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollecionariumTests/Pods-CollecionariumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C840C588EFBA2C6BD3018411 /* libPods-Collecionarium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Collecionarium.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1BE1C62A55E674282D6A41 /* Pods-CollecionariumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollecionariumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollecionariumTests/Pods-CollecionariumTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29128D0C54F3553C07A190A0 /* libPods-CollecionariumTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +295,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D399B4C8CCF53F32D71877E1 /* Pods_Collecionarium.framework in Frameworks */,
+				3D40119D8BC0AAF5D496A6EB /* libPods-Collecionarium.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +338,14 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		621F616F241BF288008A5056 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				621F6170241BF2C4008A5056 /* GroupTypeWorkerTests.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		6220E3FE22A8B7F9005AF5E3 /* Items */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +365,7 @@
 		6249C1412373358100FAF68F /* CollecionariumTests */ = {
 			isa = PBXGroup;
 			children = (
+				621F616F241BF288008A5056 /* Workers */,
 				6249C1422373358100FAF68F /* CollecionariumTests.swift */,
 				6249C1442373358100FAF68F /* Info.plist */,
 			);
@@ -678,7 +694,8 @@
 		E2BD718361BFFA813308D1DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A06C89D9972185FF5E8110C /* Pods_Collecionarium.framework */,
+				C840C588EFBA2C6BD3018411 /* libPods-Collecionarium.a */,
+				80185C25425572153AC606A7 /* libPods-CollecionariumTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -688,6 +705,8 @@
 			children = (
 				87ADA26F324D4D3A82C7FD33 /* Pods-Collecionarium.debug.xcconfig */,
 				812C9AEA3E3A2DADFBB2578F /* Pods-Collecionarium.release.xcconfig */,
+				8C250A10E4EA2146E43126EA /* Pods-CollecionariumTests.debug.xcconfig */,
+				FD1BE1C62A55E674282D6A41 /* Pods-CollecionariumTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -699,6 +718,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6249C1492373358100FAF68F /* Build configuration list for PBXNativeTarget "CollecionariumTests" */;
 			buildPhases = (
+				CE060708E68F7FBBED56519A /* [CP] Check Pods Manifest.lock */,
 				6249C13C2373358100FAF68F /* Sources */,
 				6249C13D2373358100FAF68F /* Frameworks */,
 				6249C13E2373358100FAF68F /* Resources */,
@@ -721,7 +741,6 @@
 				62D61F4F1BE92B870058D1EF /* Sources */,
 				62D61F501BE92B870058D1EF /* Frameworks */,
 				62D61F511BE92B870058D1EF /* Resources */,
-				F435A4DA124AC59DF7541839 /* [CP] Embed Pods Frameworks */,
 				627B539022637F350017FEAB /* Crashlytics */,
 			);
 			buildRules = (
@@ -857,28 +876,26 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" ea3e234e07314846d45b2919e38b625a4ffed334 49ec0d82c21549a45e33479fd94edcc74732df3051e3bcc34561b87014c1c779\n";
 		};
-		F435A4DA124AC59DF7541839 /* [CP] Embed Pods Frameworks */ = {
+		CE060708E68F7FBBED56519A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"$(DERIVED_FILE_DIR)/Pods-CollecionariumTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Collecionarium/Pods-Collecionarium-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -889,6 +906,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6249C1432373358100FAF68F /* CollecionariumTests.swift in Sources */,
+				621F6171241BF2C4008A5056 /* GroupTypeWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,6 +1084,7 @@
 /* Begin XCBuildConfiguration section */
 		6249C1472373358100FAF68F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C250A10E4EA2146E43126EA /* Pods-CollecionariumTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1103,6 +1122,7 @@
 		};
 		6249C1482373358100FAF68F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1BE1C62A55E674282D6A41 /* Pods-CollecionariumTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

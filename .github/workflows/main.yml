@@ -11,4 +11,4 @@ jobs:
     - name: Cocoapods
       run: pod install
     - name: Fastlane test
-      run: fastlane test
+      run: fastlane scan
