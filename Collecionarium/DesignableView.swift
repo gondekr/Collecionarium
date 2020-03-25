@@ -11,7 +11,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-    
+
     @IBInspectable
     var borderColor: UIColor {
         get {
@@ -21,7 +21,7 @@ extension UIView {
             layer.borderColor = newValue.cgColor
         }
     }
-    
+
     @IBInspectable
     var cornerRadius: CGFloat {
         get {
@@ -31,7 +31,7 @@ extension UIView {
             layer.cornerRadius = newValue
         }
     }
-    
+
     @IBInspectable
     var roundRadius: Bool {
         get {
@@ -92,4 +92,3 @@ class DesignCollectionViewCell: UICollectionViewCell {}
 
 @IBDesignable
 class DesignCollectionView: UICollectionView {}
-

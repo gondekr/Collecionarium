@@ -122,7 +122,7 @@ extension NewGroupVC: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.row < fields.count) {
+        if indexPath.row < fields.count {
             selectedField = fields[indexPath.row]
         }
 

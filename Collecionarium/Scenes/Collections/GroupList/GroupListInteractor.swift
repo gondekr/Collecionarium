@@ -22,4 +22,3 @@ class GroupListInteractor: GroupListInteractorInput {
         output.presentGroups(groups)
     }
 }
-

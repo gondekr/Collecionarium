@@ -9,7 +9,7 @@ import Firebase
 import Crashlytics
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var coreDataStack = CoreDataManager.collecionarium
@@ -18,19 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         FirebaseApp.configure()
     }
 
-    // Fabric.io Crashlytics
-    fileprivate func setupFabric() {
-        Fabric.with([Crashlytics.self()])
-    }
-
     fileprivate func setupBaseColor() {
         self.window?.tintColor = UIColor(red: 210/255, green: 77/255, blue: 87/255, alpha: 1)
     }
 
     fileprivate func checkUserLogged() {}
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        setupFabric()
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         setupFirebase()
         checkUserLogged()
         setupBaseColor()

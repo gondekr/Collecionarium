@@ -63,7 +63,7 @@ class GroupListRouter: GroupListRouterInput {
     }
 
     func passDataToGroupTypeScene(_ segue: UIStoryboardSegue) {
-        guard let _ = segue.destination as? GroupTypeVC
-            else { return }
+//        guard let _ = segue.destination as? GroupTypeVC
+//            else { return }
     }
 }
