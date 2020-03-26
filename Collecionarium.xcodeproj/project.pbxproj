@@ -220,6 +220,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052E62EE5FA6529D0DF3E161B1EA85BA /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				3453428265968FF795DD97E63167543A /* ItemList.swift */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		308EAC86AC56DFFFE3526E79F077E9F4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0D714936E46C11D9D529729E42F8C36E /* Field.swift */,
+				168302FC2BBEFEB7D5437964356D412E /* Group.swift */,
+				704715FB4CFD375A80039181EB664288 /* Item.swift */,
+				5AA53AF4849FAD310AF4ABCA4EEA972B /* Value.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3FCF576200BC1BB37DE71B79E6F8B36F /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				976472C1D311DD136A2DC450B3BECCC0 /* Groups */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		4300A8FC5D5D407C5D96C94C0544AFAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74495C30B9F6F940DCD3C85BD4F7324A /* Collecionarium.app */,
+				6D3BBB5DC873A52B5B769102475DCE79 /* CollecionariumTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		50222F371CADEA60DE3407060107FDF3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,38 +272,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		921F2B0A48B18F097A15C828340322CD /* AddField */ = {
+		5F7ABAF39E74FC259E18C1A52CB7547A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A6BBA38B04F08C4EDE72FE9353765189 /* AddFieldConfigurator.swift */,
-				C36C34D5A901192E8B12F6C21227073A /* AddFieldRouter.swift */,
-				DCCE3309B30036C802C71946E3F84BBE /* AddFieldVC.swift */,
+				4763C460587D6A37200FDA2B4904037C /* LoginConfigurator.swift */,
+				FC80CB4E626EE97B2F117F9AE5FD9DAF /* LoginInteractor.swift */,
+				1049FD96AE529084D6DDD74E14EE987E /* LoginPresenter.swift */,
+				9B596F68C0D90516694EB5566778F4B9 /* LoginRouter.swift */,
+				1CF34C1DF2F01CC030E4E88B2E1234B5 /* LoginVC.swift */,
 			);
-			path = AddField;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		F6D8A53B319C5668CE5D33CDAA12551F /* Workers */ = {
+		62B319D07CC4CAA29E7818B205187CCE /* GroupList */ = {
 			isa = PBXGroup;
 			children = (
-				91E509603376E91FC5C414EACED23E83 /* GroupTypeWorkerTests.swift */,
+				7394ECF916B72CCE75048FA4EF101ACD /* GroupListConfigurator.swift */,
+				193DAA9604545B0A3E29F83FA3949504 /* GroupListInteractor.swift */,
+				FE6A4058FA1AED096AA00E390C11FE27 /* GroupListPresenter.swift */,
+				38D767E0B5EAA020EE71991889B2F698 /* GroupListRouter.swift */,
+				E83F683414ED6D4FB6D1D5872644D6F7 /* GroupListVC.swift */,
 			);
-			path = Workers;
-			sourceTree = "<group>";
-		};
-		DB89EC3CE6C121083C15F3475072B7EA /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				052E62EE5FA6529D0DF3E161B1EA85BA /* ItemList */,
-			);
-			path = Items;
-			sourceTree = "<group>";
-		};
-		052E62EE5FA6529D0DF3E161B1EA85BA /* ItemList */ = {
-			isa = PBXGroup;
-			children = (
-				3453428265968FF795DD97E63167543A /* ItemList.swift */,
-			);
-			path = ItemList;
+			path = GroupList;
 			sourceTree = "<group>";
 		};
 		6310F34EF18148D22DFA1EA92786CEB4 /* CollecionariumTests */ = {
@@ -299,28 +325,34 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		5F7ABAF39E74FC259E18C1A52CB7547A /* Login */ = {
+		7AA3BCA7407D59348238446AF4E4FFA6 = {
 			isa = PBXGroup;
 			children = (
-				4763C460587D6A37200FDA2B4904037C /* LoginConfigurator.swift */,
-				FC80CB4E626EE97B2F117F9AE5FD9DAF /* LoginInteractor.swift */,
-				1049FD96AE529084D6DDD74E14EE987E /* LoginPresenter.swift */,
-				9B596F68C0D90516694EB5566778F4B9 /* LoginRouter.swift */,
-				1CF34C1DF2F01CC030E4E88B2E1234B5 /* LoginVC.swift */,
+				B42C2CBD78AD27AD8290A967D2B15896 /* Collecionarium */,
+				6310F34EF18148D22DFA1EA92786CEB4 /* CollecionariumTests */,
+				9F0B997F90FA703DF2744BE1F6D1DB00 /* Frameworks */,
+				BDC523CE5F7E74CAD5963CB3B2A5E7BB /* Pods */,
+				4300A8FC5D5D407C5D96C94C0544AFAF /* Products */,
 			);
-			path = Login;
 			sourceTree = "<group>";
 		};
-		F3699EC77E16317E0417513B4E631091 /* GroupType */ = {
+		921F2B0A48B18F097A15C828340322CD /* AddField */ = {
 			isa = PBXGroup;
 			children = (
-				BA96A8BE9A02CDEFCF8A7E96A1ABA072 /* GroupTypeConfigurator.swift */,
-				875B41909C6E512F1374D0E9829454B3 /* GroupTypeInteractor.swift */,
-				E82C2B6D4B351587E702DF91EA2D8836 /* GroupTypePresenter.swift */,
-				15AC48BBDFFC560576830CE8DE5A6960 /* GroupTypeRouter.swift */,
-				1474ABAB07FEE9DDA5CD19A51178E7FF /* GroupTypeVC.swift */,
+				A6BBA38B04F08C4EDE72FE9353765189 /* AddFieldConfigurator.swift */,
+				C36C34D5A901192E8B12F6C21227073A /* AddFieldRouter.swift */,
+				DCCE3309B30036C802C71946E3F84BBE /* AddFieldVC.swift */,
 			);
-			path = GroupType;
+			path = AddField;
+			sourceTree = "<group>";
+		};
+		933717B1834216CB66B299142BC79A3D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0120A2DE2C14E65B7DB0A8888850217 /* Color.swift */,
+				01261E02E5017B4BA8CE7B1090D99EAD /* String.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		976472C1D311DD136A2DC450B3BECCC0 /* Groups */ = {
@@ -333,88 +365,13 @@
 			path = Groups;
 			sourceTree = "<group>";
 		};
-		933717B1834216CB66B299142BC79A3D /* Helpers */ = {
+		9F0B997F90FA703DF2744BE1F6D1DB00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0120A2DE2C14E65B7DB0A8888850217 /* Color.swift */,
-				01261E02E5017B4BA8CE7B1090D99EAD /* String.swift */,
+				2DCB51255EFFE54994EC2231D5DB5E91 /* libPods-Collecionarium.a */,
+				9FE7E833B248FB5AF2066EB14FEC7662 /* libPods-CollecionariumTests.a */,
 			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		DE64017FF75C35656AD5EFD2305B11D4 /* NewGroup */ = {
-			isa = PBXGroup;
-			children = (
-				5F3C485FAF7FF5A408A20D9EED28737B /* NewGroupConfigurator.swift */,
-				1BEC51AC0BE18F9A2679F028D84E6204 /* NewGroupInteractor.swift */,
-				53061D8858014576E96D89E9E5ECF53A /* NewGroupPresenter.swift */,
-				11F1C4B597E10D8DAC2FDD8CAA70C92C /* NewGroupRouter.swift */,
-				3E871F52B5BAD17EDFC7386889471206 /* NewGroupVC.swift */,
-			);
-			path = NewGroup;
-			sourceTree = "<group>";
-		};
-		FF5DB404FB6BB512966B693CBDF03CD3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B42CFF516A7C4BB1806ACFA749A1CAB9 /* DAO */,
-				C4B04E50750CD8CE5C34B7C12BAC2A14 /* Data */,
-				308EAC86AC56DFFFE3526E79F077E9F4 /* Entity */,
-				549163A14EF4DB945EFEEF1B84B8230F /* Collecionarium.xcdatamodeld */,
-				8EA319F6F4E1EE69FAE59E8B6ACD2ACD /* CoreDataManager.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		308EAC86AC56DFFFE3526E79F077E9F4 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				0D714936E46C11D9D529729E42F8C36E /* Field.swift */,
-				168302FC2BBEFEB7D5437964356D412E /* Group.swift */,
-				704715FB4CFD375A80039181EB664288 /* Item.swift */,
-				5AA53AF4849FAD310AF4ABCA4EEA972B /* Value.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		D1E2D3C4324B2C73B39BBAA072A785FA /* ChooseColor */ = {
-			isa = PBXGroup;
-			children = (
-				649F30E05737CA3F2AAAD91F1D36085A /* ChooseColorConfigurator.swift */,
-				82BDA90D87DDBCC822ED865701A1F235 /* ChooseColorRouter.swift */,
-				DF85522F46E8742D25ACD3D0FD5974D6 /* ChooseColorVC.swift */,
-			);
-			path = ChooseColor;
-			sourceTree = "<group>";
-		};
-		E8BC73E5A1F573F748AD6F135660A4F7 /* Pickers */ = {
-			isa = PBXGroup;
-			children = (
-				0A12E709F514B7437264882B45087C62 /* CustomPickerVC.swift */,
-				FB244D8525FC8E7CCA7222CEA9640F31 /* DatePickerVC.swift */,
-				974542FFE928EB0F2AA297B97CEB0FE6 /* YearPickerVC.swift */,
-			);
-			path = Pickers;
-			sourceTree = "<group>";
-		};
-		7AA3BCA7407D59348238446AF4E4FFA6 = {
-			isa = PBXGroup;
-			children = (
-				B42C2CBD78AD27AD8290A967D2B15896 /* Collecionarium */,
-				6310F34EF18148D22DFA1EA92786CEB4 /* CollecionariumTests */,
-				9F0B997F90FA703DF2744BE1F6D1DB00 /* Frameworks */,
-				BDC523CE5F7E74CAD5963CB3B2A5E7BB /* Pods */,
-				4300A8FC5D5D407C5D96C94C0544AFAF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		4300A8FC5D5D407C5D96C94C0544AFAF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				74495C30B9F6F940DCD3C85BD4F7324A /* Collecionarium.app */,
-				6D3BBB5DC873A52B5B769102475DCE79 /* CollecionariumTests.xctest */,
-			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B42C2CBD78AD27AD8290A967D2B15896 /* Collecionarium */ = {
@@ -444,6 +401,16 @@
 			path = Collecionarium;
 			sourceTree = "<group>";
 		};
+		B42CFF516A7C4BB1806ACFA749A1CAB9 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				821D43303B57CA05686C35B8F0D737A8 /* BaseDAO.swift */,
+				B309867F2EDF960CE59525547271496B /* FieldDAO.swift */,
+				761BC8941D82B396F05A0A2A261552EE /* GroupDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
 		BB65E18EF31B61AD8122348FDBBE9584 /* xib Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,46 +425,15 @@
 			name = "xib Cells";
 			sourceTree = "<group>";
 		};
-		D6BE918F356CE340F59327A1CCF27A08 /* Collections */ = {
+		BDC523CE5F7E74CAD5963CB3B2A5E7BB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				921F2B0A48B18F097A15C828340322CD /* AddField */,
-				D1E2D3C4324B2C73B39BBAA072A785FA /* ChooseColor */,
-				62B319D07CC4CAA29E7818B205187CCE /* GroupList */,
-				F3699EC77E16317E0417513B4E631091 /* GroupType */,
-				DE64017FF75C35656AD5EFD2305B11D4 /* NewGroup */,
+				3AD0113367316B79DFABC1F1E8188A20 /* Pods-Collecionarium.debug.xcconfig */,
+				833E1381BFB6526598A7019CF487FC44 /* Pods-Collecionarium.release.xcconfig */,
+				06CE573C94F486ACAE0DF32147117284 /* Pods-CollecionariumTests.debug.xcconfig */,
+				4FBD4F8A464DCAAC879630D8E8668123 /* Pods-CollecionariumTests.release.xcconfig */,
 			);
-			path = Collections;
-			sourceTree = "<group>";
-		};
-		62B319D07CC4CAA29E7818B205187CCE /* GroupList */ = {
-			isa = PBXGroup;
-			children = (
-				7394ECF916B72CCE75048FA4EF101ACD /* GroupListConfigurator.swift */,
-				193DAA9604545B0A3E29F83FA3949504 /* GroupListInteractor.swift */,
-				FE6A4058FA1AED096AA00E390C11FE27 /* GroupListPresenter.swift */,
-				38D767E0B5EAA020EE71991889B2F698 /* GroupListRouter.swift */,
-				E83F683414ED6D4FB6D1D5872644D6F7 /* GroupListVC.swift */,
-			);
-			path = GroupList;
-			sourceTree = "<group>";
-		};
-		3FCF576200BC1BB37DE71B79E6F8B36F /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-				976472C1D311DD136A2DC450B3BECCC0 /* Groups */,
-			);
-			path = Workers;
-			sourceTree = "<group>";
-		};
-		B42CFF516A7C4BB1806ACFA749A1CAB9 /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-				821D43303B57CA05686C35B8F0D737A8 /* BaseDAO.swift */,
-				B309867F2EDF960CE59525547271496B /* FieldDAO.swift */,
-				761BC8941D82B396F05A0A2A261552EE /* GroupDAO.swift */,
-			);
-			path = DAO;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C4B04E50750CD8CE5C34B7C12BAC2A14 /* Data */ = {
@@ -512,48 +448,93 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		9F0B997F90FA703DF2744BE1F6D1DB00 /* Frameworks */ = {
+		D1E2D3C4324B2C73B39BBAA072A785FA /* ChooseColor */ = {
 			isa = PBXGroup;
 			children = (
-				2DCB51255EFFE54994EC2231D5DB5E91 /* libPods-Collecionarium.a */,
-				9FE7E833B248FB5AF2066EB14FEC7662 /* libPods-CollecionariumTests.a */,
+				649F30E05737CA3F2AAAD91F1D36085A /* ChooseColorConfigurator.swift */,
+				82BDA90D87DDBCC822ED865701A1F235 /* ChooseColorRouter.swift */,
+				DF85522F46E8742D25ACD3D0FD5974D6 /* ChooseColorVC.swift */,
 			);
-			name = Frameworks;
+			path = ChooseColor;
 			sourceTree = "<group>";
 		};
-		BDC523CE5F7E74CAD5963CB3B2A5E7BB /* Pods */ = {
+		D6BE918F356CE340F59327A1CCF27A08 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				3AD0113367316B79DFABC1F1E8188A20 /* Pods-Collecionarium.debug.xcconfig */,
-				833E1381BFB6526598A7019CF487FC44 /* Pods-Collecionarium.release.xcconfig */,
-				06CE573C94F486ACAE0DF32147117284 /* Pods-CollecionariumTests.debug.xcconfig */,
-				4FBD4F8A464DCAAC879630D8E8668123 /* Pods-CollecionariumTests.release.xcconfig */,
+				921F2B0A48B18F097A15C828340322CD /* AddField */,
+				D1E2D3C4324B2C73B39BBAA072A785FA /* ChooseColor */,
+				62B319D07CC4CAA29E7818B205187CCE /* GroupList */,
+				F3699EC77E16317E0417513B4E631091 /* GroupType */,
+				DE64017FF75C35656AD5EFD2305B11D4 /* NewGroup */,
 			);
-			name = Pods;
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		DB89EC3CE6C121083C15F3475072B7EA /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				052E62EE5FA6529D0DF3E161B1EA85BA /* ItemList */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		DE64017FF75C35656AD5EFD2305B11D4 /* NewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				5F3C485FAF7FF5A408A20D9EED28737B /* NewGroupConfigurator.swift */,
+				1BEC51AC0BE18F9A2679F028D84E6204 /* NewGroupInteractor.swift */,
+				53061D8858014576E96D89E9E5ECF53A /* NewGroupPresenter.swift */,
+				11F1C4B597E10D8DAC2FDD8CAA70C92C /* NewGroupRouter.swift */,
+				3E871F52B5BAD17EDFC7386889471206 /* NewGroupVC.swift */,
+			);
+			path = NewGroup;
+			sourceTree = "<group>";
+		};
+		E8BC73E5A1F573F748AD6F135660A4F7 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				0A12E709F514B7437264882B45087C62 /* CustomPickerVC.swift */,
+				FB244D8525FC8E7CCA7222CEA9640F31 /* DatePickerVC.swift */,
+				974542FFE928EB0F2AA297B97CEB0FE6 /* YearPickerVC.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		F3699EC77E16317E0417513B4E631091 /* GroupType */ = {
+			isa = PBXGroup;
+			children = (
+				BA96A8BE9A02CDEFCF8A7E96A1ABA072 /* GroupTypeConfigurator.swift */,
+				875B41909C6E512F1374D0E9829454B3 /* GroupTypeInteractor.swift */,
+				E82C2B6D4B351587E702DF91EA2D8836 /* GroupTypePresenter.swift */,
+				15AC48BBDFFC560576830CE8DE5A6960 /* GroupTypeRouter.swift */,
+				1474ABAB07FEE9DDA5CD19A51178E7FF /* GroupTypeVC.swift */,
+			);
+			path = GroupType;
+			sourceTree = "<group>";
+		};
+		F6D8A53B319C5668CE5D33CDAA12551F /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				91E509603376E91FC5C414EACED23E83 /* GroupTypeWorkerTests.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		FF5DB404FB6BB512966B693CBDF03CD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B42CFF516A7C4BB1806ACFA749A1CAB9 /* DAO */,
+				C4B04E50750CD8CE5C34B7C12BAC2A14 /* Data */,
+				308EAC86AC56DFFFE3526E79F077E9F4 /* Entity */,
+				549163A14EF4DB945EFEEF1B84B8230F /* Collecionarium.xcdatamodeld */,
+				8EA319F6F4E1EE69FAE59E8B6ACD2ACD /* CoreDataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFB0F7528BE367534A15258CC671F1EB /* CollecionariumTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D1C18F1331F2100EEB49D5803B517A7 /* Build configuration list for PBXNativeTarget "CollecionariumTests" */;
-			buildPhases = (
-				71984423FF9AC5EF13E824AFA858300C /* [CP] Check Pods Manifest.lock */,
-				61B060B4B2F7CFEE71331265074C30C1 /* Sources */,
-				68BA9EB62F6A002F53724FD377866BC7 /* Frameworks */,
-				33AAFE6A62717D81D5BA979148663C97 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2FDFB32742298C6EE6C4F1DD67A0382C /* PBXTargetDependency */,
-			);
-			name = CollecionariumTests;
-			productName = CollecionariumTests;
-			productReference = 6D3BBB5DC873A52B5B769102475DCE79 /* CollecionariumTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		047850F485121A6D79FC17A6452780C9 /* Collecionarium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64C650D54C92F0F087840983C34FEAFC /* Build configuration list for PBXNativeTarget "Collecionarium" */;
@@ -574,6 +555,25 @@
 			productReference = 74495C30B9F6F940DCD3C85BD4F7324A /* Collecionarium.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CFB0F7528BE367534A15258CC671F1EB /* CollecionariumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D1C18F1331F2100EEB49D5803B517A7 /* Build configuration list for PBXNativeTarget "CollecionariumTests" */;
+			buildPhases = (
+				71984423FF9AC5EF13E824AFA858300C /* [CP] Check Pods Manifest.lock */,
+				61B060B4B2F7CFEE71331265074C30C1 /* Sources */,
+				68BA9EB62F6A002F53724FD377866BC7 /* Frameworks */,
+				33AAFE6A62717D81D5BA979148663C97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FDFB32742298C6EE6C4F1DD67A0382C /* PBXTargetDependency */,
+			);
+			name = CollecionariumTests;
+			productName = CollecionariumTests;
+			productReference = 6D3BBB5DC873A52B5B769102475DCE79 /* CollecionariumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -584,12 +584,6 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Gondek;
 				TargetAttributes = {
-					CFB0F7528BE367534A15258CC671F1EB = {
-						CreatedOnToolsVersion = 11.2;
-						DevelopmentTeam = 7YCYVAN8PU;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 047850F485121A6D79FC17A6452780C9;
-					};
 					047850F485121A6D79FC17A6452780C9 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 7YCYVAN8PU;
@@ -602,6 +596,12 @@
 								enabled = 0;
 							};
 						};
+					};
+					CFB0F7528BE367534A15258CC671F1EB = {
+						CreatedOnToolsVersion = 11.2;
+						DevelopmentTeam = 7YCYVAN8PU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 047850F485121A6D79FC17A6452780C9;
 					};
 				};
 			};
@@ -665,6 +665,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		71984423FF9AC5EF13E824AFA858300C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CollecionariumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7214CCE537926B367F61B8B60EB94FC7 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" ea3e234e07314846d45b2919e38b625a4ffed334 49ec0d82c21549a45e33479fd94edcc74732df3051e3bcc34561b87014c1c779\n";
+		};
 		93F3AF8521A718A33A5CE3FC864CD8A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,43 +737,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		7214CCE537926B367F61B8B60EB94FC7 /* Crashlytics */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			name = Crashlytics;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" ea3e234e07314846d45b2919e38b625a4ffed334 49ec0d82c21549a45e33479fd94edcc74732df3051e3bcc34561b87014c1c779\n";
-		};
-		71984423FF9AC5EF13E824AFA858300C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CollecionariumTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -824,22 +824,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF666AB5105BF13790D9D210DBEC6728 /* Main.storyboard */ = {
+		21FC5543E800C80A7CBEDD374EFC0F44 /* Year.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC1477D2E2E8196F0CD9CE029F14ECBD /* Base */,
-				C2990B2435729D797BB7BC6EA05F11D9 /* pt-BR */,
+				C2753F1E09619FF6204EF29500A6E5EA /* Base */,
+				DE2EB9AA23AB4735D942E4EA7CB1C3F7 /* pt-BR */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BC6A0ACA184DC2EBF50B758E9BA0BF8 /* Items.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2079EF8F40653378B5C16027B4482FD5 /* Base */,
-				DD3117857B89AB5020F50D8A1D642B6F /* pt-BR */,
-			);
-			name = Items.storyboard;
+			name = Year.xib;
 			sourceTree = "<group>";
 		};
 		237E6D8BA8E82EF25F391D1979F3F52A /* Localizable.strings */ = {
@@ -849,6 +840,15 @@
 				4468D8B4A55CB56359BB4E53E2EB2135 /* pt-BR */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5BC6A0ACA184DC2EBF50B758E9BA0BF8 /* Items.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2079EF8F40653378B5C16027B4482FD5 /* Base */,
+				DD3117857B89AB5020F50D8A1D642B6F /* pt-BR */,
+			);
+			name = Items.storyboard;
 			sourceTree = "<group>";
 		};
 		5D2581AB1D8DF27151467E0B8D85B931 /* Number.xib */ = {
@@ -869,18 +869,42 @@
 			name = String.xib;
 			sourceTree = "<group>";
 		};
-		21FC5543E800C80A7CBEDD374EFC0F44 /* Year.xib */ = {
+		EF666AB5105BF13790D9D210DBEC6728 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C2753F1E09619FF6204EF29500A6E5EA /* Base */,
-				DE2EB9AA23AB4735D942E4EA7CB1C3F7 /* pt-BR */,
+				AC1477D2E2E8196F0CD9CE029F14ECBD /* Base */,
+				C2990B2435729D797BB7BC6EA05F11D9 /* pt-BR */,
 			);
-			name = Year.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5844F5CEC2CC66CD8F26C2E3CE655D76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 833E1381BFB6526598A7019CF487FC44 /* Pods-Collecionarium.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Collecionarium/Collecionarium.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7YCYVAN8PU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Collecionarium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		6E00C02786C8E352705A4D99799485A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06CE573C94F486ACAE0DF32147117284 /* Pods-CollecionariumTests.debug.xcconfig */;
@@ -956,6 +980,59 @@
 			};
 			name = Release;
 		};
+		8123F3D80E35D5E9BD5DE25B6EDF10F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_CODE_COVERAGE = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		D24B59C60DCEDD4D29A42C5AADEBC975 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -963,6 +1040,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_CODE_COVERAGE = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -1014,58 +1092,6 @@
 			};
 			name = Debug;
 		};
-		8123F3D80E35D5E9BD5DE25B6EDF10F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		DB46625C3F87F4BF9E2598BDCA69CD28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AD0113367316B79DFABC1F1E8188A20 /* Pods-Collecionarium.debug.xcconfig */;
@@ -1091,30 +1117,6 @@
 			};
 			name = Debug;
 		};
-		5844F5CEC2CC66CD8F26C2E3CE655D76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833E1381BFB6526598A7019CF487FC44 /* Pods-Collecionarium.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Collecionarium/Collecionarium.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7YCYVAN8PU;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Collecionarium/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gondekr.collecionarium;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1127,20 +1129,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB38BDED81379BECF69948F0F05F1A76 /* Build configuration list for PBXProject "Collecionarium" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D24B59C60DCEDD4D29A42C5AADEBC975 /* Debug */,
-				8123F3D80E35D5E9BD5DE25B6EDF10F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		64C650D54C92F0F087840983C34FEAFC /* Build configuration list for PBXNativeTarget "Collecionarium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB46625C3F87F4BF9E2598BDCA69CD28 /* Debug */,
 				5844F5CEC2CC66CD8F26C2E3CE655D76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB38BDED81379BECF69948F0F05F1A76 /* Build configuration list for PBXProject "Collecionarium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24B59C60DCEDD4D29A42C5AADEBC975 /* Debug */,
+				8123F3D80E35D5E9BD5DE25B6EDF10F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

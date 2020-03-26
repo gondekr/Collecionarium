@@ -1,0 +1,6 @@
+xcodeproj: Collecionarium.xcodeproj
+workspace: Collecionarium.xcworkspace
+scheme: Collecionarium
+output_directory: slather_output
+ignore:
+  - Pods/*

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62D61F521BE92B870058D1EF"
+               BlueprintIdentifier = "047850F485121A6D79FC17A6452780C9"
                BuildableName = "Collecionarium.app"
                BlueprintName = "Collecionarium"
                ReferencedContainer = "container:Collecionarium.xcodeproj">
@@ -26,22 +26,33 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62D61F521BE92B870058D1EF"
+            BlueprintIdentifier = "047850F485121A6D79FC17A6452780C9"
             BuildableName = "Collecionarium.app"
             BlueprintName = "Collecionarium"
             ReferencedContainer = "container:Collecionarium.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "047850F485121A6D79FC17A6452780C9"
+            BuildableName = "Collecionarium.app"
+            BlueprintName = "Collecionarium"
+            ReferencedContainer = "container:Collecionarium.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6249C13F2373358100FAF68F"
+               BlueprintIdentifier = "CFB0F7528BE367534A15258CC671F1EB"
                BuildableName = "CollecionariumTests.xctest"
                BlueprintName = "CollecionariumTests"
                ReferencedContainer = "container:Collecionarium.xcodeproj">
@@ -63,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62D61F521BE92B870058D1EF"
+            BlueprintIdentifier = "047850F485121A6D79FC17A6452780C9"
             BuildableName = "Collecionarium.app"
             BlueprintName = "Collecionarium"
             ReferencedContainer = "container:Collecionarium.xcodeproj">
@@ -80,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62D61F521BE92B870058D1EF"
+            BlueprintIdentifier = "047850F485121A6D79FC17A6452780C9"
             BuildableName = "Collecionarium.app"
             BlueprintName = "Collecionarium"
             ReferencedContainer = "container:Collecionarium.xcodeproj">

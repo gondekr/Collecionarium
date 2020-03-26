@@ -6,4 +6,18 @@ platform :ios do
   before_all do
     setup_ci(force: true)
   end
+
+  # Run coverage
+  lane :test_xcov do 
+    xcov(
+      workspace: "Collecionarium.xcworkspace",
+      scheme: "Collecionarium",
+      output_directory: "xcov_output"
+    )  
+  end
+
+  # Run coverage
+  lane :test_slather do 
+    slather(html: true)
+  end
 end
