@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 BUNDLE=$(if $(rbenv > /dev/null), rbenv exec bundle, bundle)
 FASTLANE=$(BUNDLE) exec fastlane
+PROJECT_PATH=Collecionarium.xcodeproj/project.pbxproj
 
 install: ## install required dependencies
 	make install_bundle
@@ -8,6 +9,9 @@ install: ## install required dependencies
 
 install_bundle: ## install gems
 	$(BUNDLE) install
+
+uniquify: ## uniquify and sort the pbxproj file using xUnique.py script
+	python build-scripts/xUnique.py -usp $(PROJECT_PATH)
 
 xcode_wipe: ## delete all xcode cached outputs, kill and reset all simulators
 	-rm -rf ~/Library/Developer/Xcode/{DerivedData,Archives,Products}
