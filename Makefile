@@ -3,6 +3,9 @@ BUNDLE=$(if $(rbenv > /dev/null), rbenv exec bundle, bundle)
 FASTLANE=$(BUNDLE) exec fastlane
 PROJECT_PATH=Collecionarium.xcodeproj/project.pbxproj
 
+setup_bundle: ## install bundle and update it
+	gem install bundler && bundle update
+
 install: ## install required dependencies
 	make install_bundle
 	$(FASTLANE) install

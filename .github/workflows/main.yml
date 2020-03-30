@@ -6,9 +6,7 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Get dependencies
-      run: gem install bundler && bundle update
-    - name: Cocoapods
-      run: pod install
-    - name: Fastlane test
-      run: fastlane scan
+    - name: Install dependencies
+      run: make install
+    - name: Run tests
+      run: make test_xcov

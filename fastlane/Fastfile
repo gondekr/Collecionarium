@@ -4,7 +4,9 @@ default_platform(:ios)
 
 platform :ios do
   before_all do
-    setup_ci(force: true)
+    if is_ci do 
+      setup_ci()
+    end
   end
 
   # Run coverage
@@ -12,12 +14,13 @@ platform :ios do
     xcov(
       workspace: "Collecionarium.xcworkspace",
       scheme: "Collecionarium",
-      output_directory: "xcov_output"
+      output_directory: "xcov_output",
+      coveralls_repo_token: "iLlWpn6p1OuKIz4O4Q6KBMXfeWPs4SqgH"
     )  
   end
 
   # Run coverage
   lane :test_slather do 
-    slather(html: true)
+    slather(html: true, coveralls: true)
   end
 end
