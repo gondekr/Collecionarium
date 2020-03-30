@@ -46,7 +46,7 @@ coverage_xcov: ## create coverage file
 	$(FASTLANE) coverage_xcov
 
 coverage_slather: ## create coverage file
-	$(FASTLANE) coverage_xcov
+	$(FASTLANE) coverage_slather
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

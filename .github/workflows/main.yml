@@ -4,10 +4,18 @@ jobs:
   build:
     name: First Job
     runs-on: macOS-latest
-    env: 
+    env:
+      GITHUB: ${{ toJson(github) }}
       COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      CI_NAME: "Github Actions"
+      CI_BUILD_NUMBER: ${{ toJson(github.run_number) }}
+      CI_BUILD_ID: ${{ toJson(github.run_id) }}
+      CI_BUILD_URL: "https://github.com/gondekr/Collecionarium/runs/$(CI_BUILD_ID)"
+      CI_BRANCH: ${{ toJson(github.ref) }}
     steps:
     - uses: actions/checkout@v1
+    - name: Check github output
+      run: echo $GITHUB
     - name: Install dependencies
       run: make install
     - name: Run tests
