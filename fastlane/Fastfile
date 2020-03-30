@@ -8,18 +8,22 @@ platform :ios do
     cocoapods
   end
 
+  lane :test do
+    scan()
+  end
+
   # Run coverage
-  lane :test_xcov do 
+  lane :coverage_xcov do 
     xcov(
       workspace: "Collecionarium.xcworkspace",
       scheme: "Collecionarium",
       output_directory: "xcov_output",
-      coveralls_repo_token: "iLlWpn6p1OuKIz4O4Q6KBMXfeWPs4SqgH"
+      coveralls_repo_token: ENV["COVERALLS_REPO_TOKEN"]
     )  
   end
 
   # Run coverage
-  lane :test_slather do 
+  lane :coverage_slather do 
     slather(html: true, coveralls: true)
   end
 end

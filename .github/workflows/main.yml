@@ -4,9 +4,13 @@ jobs:
   build:
     name: First Job
     runs-on: macOS-latest
+    env: 
+      COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
       run: make install
     - name: Run tests
-      run: make test_xcov
+      run: make test
+    - name: Gather coverage data
+      run: make coverage_xcov

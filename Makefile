@@ -39,11 +39,14 @@ reset_profiles: ## removes all Provisioning profiles currently installed
 install_certificates: ## fetch and install certificates for code signing
 	$(FASTLANE) fetch_certificates
 
-test_xcov: ## run unit tests
-	$(FASTLANE) test_xcov
+test: 
+	$(FASTLANE) test
 
-test_slather: ## run unit tests
-	$(FASTLANE) test_slather
+coverage_xcov: ## create coverage file
+	$(FASTLANE) coverage_xcov
+
+coverage_slather: ## create coverage file
+	$(FASTLANE) coverage_xcov
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

@@ -1,5 +1,5 @@
 scheme("Collecionarium")
-devices(["iPhone 8", "iPhone X"])
+devices(["iPhone 8"])
 
 clean(true)
 
