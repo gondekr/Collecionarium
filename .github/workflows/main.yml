@@ -4,11 +4,21 @@ jobs:
   build:
     name: First Job
     runs-on: macOS-latest
+    env:
+      GITHUB: ${{ toJson(github) }}
+      COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      CI_NAME: "Github Actions"
+      CI_BUILD_NUMBER: ${{ toJson(github.run_number) }}
+      CI_BUILD_ID: ${{ toJson(github.run_id) }}
+      CI_BUILD_URL: "https://github.com/gondekr/Collecionarium/runs/$(CI_BUILD_ID)"
+      CI_BRANCH: ${{ toJson(github.ref) }}
     steps:
     - uses: actions/checkout@v1
-    - name: Get dependencies
-      run: gem install bundler && bundle update
-    - name: Cocoapods
-      run: pod install
-    - name: Fastlane test
-      run: fastlane scan
+    - name: Check github output
+      run: echo $GITHUB
+    - name: Install dependencies
+      run: make install
+    - name: Run tests
+      run: make test
+    - name: Gather coverage data
+      run: make coverage_xcov
