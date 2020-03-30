@@ -3,10 +3,9 @@ update_fastlane
 default_platform(:ios)
 
 platform :ios do
-  before_all do
-    if is_ci do 
-      setup_ci()
-    end
+  # Install dependencies
+  lane :install do
+    cocoapods
   end
 
   # Run coverage
